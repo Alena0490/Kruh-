@@ -1,0 +1,1021 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*::before, *::after {
+    box-sizing: border-box;
+}
+
+
+body {
+    flex-direction: column;
+    background: 
+        linear-gradient(180deg, #591C2180, #04404080) no-repeat, 
+        url(gym.webp) repeat;
+    background-size: cover, cover;
+    background-position: center, center;
+    background-attachment: fixed;
+    position: relative;
+    scrollbar-color: #8C1F28;
+}
+
+    body::-webkit-scrollbar{
+        width:12px
+    
+    }
+
+    body::-webkit-scrollbar-thumb{
+        background-color:#8C1F28;border-radius:7px
+    }
+
+    body::-webkit-scrollbar-track{
+        background-color:(rgba(255,255,255,.63))
+    }
+
+    header {
+        display: flex;       
+        justify-content: center;
+    }
+
+    .menu-background {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0;
+        top: 0;
+        width: 100%;
+        height: 80px;
+        max-width: 1400px;
+        background: #8C1F28b0;
+        z-index: 500;
+    }
+
+    nav {
+        position: fixed;
+        top: -26%;
+        margin-bottom: 0;
+        height: 100px;
+        width: 100%;
+        z-index: 700;
+    }
+
+    nav ul {
+        padding: 0;
+        margin: 0;
+    }
+    nav ul li {
+        float: left;
+        margin-right: 0;
+        font-family: Montserrat, sans-serif;
+        text-align: center;
+        width: 20%;
+        list-style-type: none;
+    }
+    
+    
+    .first:hover {
+        background-color: #00000060;
+        color: #F2F2F2;
+        border: none;
+    }
+    
+    .first.active {
+        background-color: #00000060;
+        color: #F2F2F2;
+        border: none;
+    }
+
+       .first {
+        color: #F2F2F2;
+        background: #8C1F2860;
+        font-weight: 400;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        font-size: 100% !important;
+        height: 83px;
+        top: 20px;
+        margin-left: 0;
+        cursor: pointer;
+        letter-spacing: 1px;
+        z-index: 1000;
+        text-transform: uppercase;
+        transition: background-color 1s, color 0.5s;
+        text-decoration: none;
+        }
+
+    .burger-menu {
+        display: none;
+        position: absolute;
+        top: 10px;
+        right: 83%;
+        width: 15%;
+        height: auto;
+        max-width: 40%;
+        border: none;
+        color: #fff;
+        box-shadow: none;
+        z-index: 799;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container {
+       /* display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;*/
+        position: relative !important;
+        margin: 80px auto 0 !important;
+        padding: 6%;
+        width: 100%;
+        max-width: 1400px;
+       /* margin: 100px auto 0;*/
+        background-color: #00000080;
+        padding: 0% 6% 0% 6%;
+    }
+
+    #logo {
+        height: auto;
+        cursor: pointer;
+        box-shadow: none;
+        z-index: 100;
+
+    }
+
+    #logo img {
+        position: absolute;
+        top: -65px;
+        right: 1%;
+        width: 170px;
+        background-color: #00000000;
+        height: auto;
+        max-width: 100%;
+        border: none;
+        z-index: 1009;
+        margin-bottom: 5px;
+        box-shadow: none;
+        padding: 5px;
+        filter: opacity(0.8);
+    }
+
+    .burger-menu {
+        position: absolute;
+        display: none;
+    }
+    
+    .welcome {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: url("img/crossfit.jpeg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 60vh;
+        padding: 20px;
+        margin-bottom: 50px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #f54d4d;
+        font-size: 400%;
+        font-family: Arial, Helvetica, sans-serif;
+        letter-spacing: 1px;
+        font-size: 4rem;
+    }
+
+    h2 {
+        text-align: center;
+        color: #25d9d4;
+        margin-bottom: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        letter-spacing: 1px;
+        font-size: 2.5rem;
+    }
+
+    .before {
+        position: relative;
+        margin-bottom: 20px;
+        text-align: center;
+        margin-top: 40px;
+        width: 100%;
+    }
+    
+    .before:before {
+        content: ""; 
+        margin-top:0;
+        margin-bottom: 85px;
+        display: block;
+        width: 100%;
+        border-bottom: 2px solid #ffffffa4;
+        position: absolute;
+        bottom: -5px; /* Posunutí čáry pod text */
+        left: 0;
+    }
+
+    p {
+        color: #F2F2F2;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: justify;
+        font-size: 1.7rem;
+        line-height: 130%;
+    }
+
+    .introduction {
+        font-weight: 600;
+        font-size: 2rem;
+        text-align: center;
+        margin: 50px;
+        line-height: 150%;
+        padding-top: 5px;
+        text-shadow: #000000 -5px 5px 7px;
+    }
+
+    a:not(.fb-logo,.our-games, .first, .burger-menu) {
+        color: #ee5050;
+        font-size: 105%;
+        text-decoration: none;
+        transition: color 0.5s;
+        font-family: Lato, sans-serif;
+    }
+
+    a:not(.fb-logo,.our-games, .first, .burger-menu):hover {
+        color: #ff7474;
+    }
+
+    .rezervace {
+        display: inline-block;
+        text-align: center;
+        font-size: 2rem !important;
+        margin: 10px auto; 
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    img:not(.fb-logo img, .slide img, .reference img, .burger-menu, .photo-segment li img) {
+        margin: 100px;
+        border-radius: 10px;
+    }
+    .col3 {
+         display: flex;
+         gap: 5%;
+    }
+
+    .vip {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: unset;
+    }
+
+    .reference {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .reference img {
+        margin-bottom: 50px;
+        margin-top: 40px;
+        border-radius: 50%;
+        width: 50%;
+        border: 3px solid #044040;
+    }
+        
+    .slider {
+        position:relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .slider-wrapper {
+        position:relative;
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+        max-width: 950px;
+        margin: 0 auto;
+        border-radius: 5px;
+        border: 3px solid #044040;
+    }
+
+    .slider-wrapper:hover{
+        filter:brightness(1.1);
+        box-shadow:#25d9d4 2px 2px 5px;
+        border:1px solid #F2F2F2;transition:
+        transform 1s,
+        filter .5s,
+        box-shadow .5s,border .5s
+    }
+
+    .slides {
+        display: flex;
+        width: 500%;
+        height: 100%;
+        transition: margin-left 1s;
+    }
+
+    .slide {
+        position: relative;
+        width: 20%;
+        transition: 1s;
+    }
+
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+        border: none;
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+    }
+
+
+    #r1:checked~.s1 {
+        margin-left: 0;
+    }
+
+    #r2:checked ~ .s1 {
+        margin-left: -20%;
+    }
+    
+    #r3:checked ~ .s1 {
+        margin-left: -40%;
+    }
+    
+    #r4:checked ~ .s1 {
+        margin-left: -60%;
+    }
+    
+    #r5:checked ~ .s1 {
+        margin-left: -80%;
+    }
+
+    input[name="r"] {
+        display: none;
+    }
+
+    .bar {
+        width: 110px;
+        height: 17px;
+        border: 2px solid #F2F2F2;
+        margin: 7px;
+        cursor: pointer;
+    }
+
+    .bar:hover{
+        background:#F2F2F2;
+    }
+
+.album {
+    cursor: pointer;
+}
+
+.address {
+    flex: 1;
+    min-width: 300px;
+    max-width: 45%;
+}
+
+.col {
+    display: block;
+    float: left;
+    margin: 1% 0 1% 15%;
+}
+
+ul:not(nav ul) {
+    font-size: 1.7rem;
+    line-height: 130%;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    z-index: 999;
+    margin-top: 65px;
+    color: #F2F2F2;
+    font-family: Lato, sans-serif;
+}
+
+.visit {
+    display: flex;
+    flex-direction: column;
+}
+
+.map-container{
+    flex:1;
+    min-width:300px;
+    max-width:50%;
+    margin-right: 50px;
+}
+
+form {
+    width: 100%;
+    border: 1px solid #044040;
+    padding: 20px;
+    background-color: #25d9d453;
+    margin: 20px auto 70px;
+    border-radius: 5px;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    margin-bottom: 2px;
+    font-family: Lato, sans-serif;
+    color: white;
+    font-weight: 700;
+    margin-left: 2px;
+}
+
+form input[type=email], form input[type=text], form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #044040;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background: #ffffffD0;
+    color: #591C2180;
+    outline: 0;
+}
+
+form textarea {
+    grid-column: span 2;
+    height: 150px;
+    margin-top: 0 !important;
+    width: 208%;
+    margin-bottom: 20px;
+}
+
+input[type=submit] {
+    grid-column: span 2;
+    cursor: pointer;
+    font-weight: 700;
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    background-color: #044040;
+    transition: background .5s;
+}
+
+input[type=submit]:hover {
+    color: #044040;
+    background-color: #F2F2F2;
+}
+
+.form-result{
+    color: #F2F2F2;
+    width:84%!important;
+    padding:10px!important;
+    margin:0 auto 20px!important;
+    font-size:120%!important;
+    text-align:center;
+    font-weight:700!important;
+    font-family:Lato,sans-serif;
+    line-height:1.4!important;
+    border-radius:5px!important
+}
+
+.success{
+    border:1px solid #56a73b!important;
+    background:#56a73b80!important
+}
+
+    .error{
+        border:1px solid #ee5050!important;
+        background:#ee505080!important
+    }
+
+    .gallery {
+        width: 100%;
+    }
+
+    .photo-gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px auto;
+        z-index: 1;
+        position: relative;
+    }
+
+.photos {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 100%;
+ }
+
+.photo-segment li {
+    margin-left: 2px;
+    width: 21.5%;
+    padding: 5px;
+    margin: 1%;
+    display: inline-block;
+    box-sizing:border-box;
+}
+
+.photo-segment li:first-child {
+    margin-left:2px;
+}
+
+.photo-segment li img{
+    width:100%;
+    height:auto;
+    object-fit:cover;
+    border-radius: 10px;
+    transition:transform 1s,filter 1s,box-shadow 1s,border 1s
+}
+
+.photo-segment li img:hover{
+    transform:scale(1.1);
+    filter:brightness(1.5);
+    box-shadow:#25d9d4 2px 2px 5px;
+    border:1.5px solid #F2F2F2
+}
+
+
+footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    margin: 0 auto;
+    background-color: #044040B0;
+    padding-bottom: 40px;
+}
+
+.ff {
+    max-width: 1400px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: end;
+    padding: 10px 40px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+.copyright {
+    color: #F2F2F2;
+    font-size: 18px;
+    text-align: right;
+    flex-grow: 1;
+    font-family: Lato, sans-serif;
+}
+
+.fb-logo {
+    display: inline-block;
+    margin: 10px;
+    width: auto;
+    height: 40px;
+    flex-shrink: 0;
+    filter: none;
+    mix-blend-mode: normal;
+    justify-items: center;
+    align-items: center;
+    color: #F2F2F2;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Lato, sans-serif;
+}
+
+.fb-logo img {
+    border: none !important;
+    margin: 0;
+    box-shadow: none !important;
+    color: #F2F2F2;
+    margin-right: 20px;
+    position: relative;
+    top: 25%;
+}
+
+#cookie-banner {
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #fd5f5a80 !important;
+    color: #dfc7ec30 !important;
+    padding: 15px 20px;
+    z-index: 1000;
+    font-size: 16px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.row2 {
+width: 45%;
+}
+
+/*Grid*/
+.row:after,.section{clear:both}.section{padding:0;margin:0}.row{zoom:1}.row:after,.row:before{content:"";display:table}.col{display:block;float:left;margin:1% 0 1% 1.6%}.col:first-child{margin-left:0}.span-2-of-2,.span-3-of-3{width:100%}.span-1-of-2{width:49.2%}.span-2-of-3{width:66.13%}.span-1-of-3{width:32.26%}@media only screen and (max-width:480px){.col{margin:0}.span-1-of-2,.span-1-of-3,.span-2-of-2,.span-2-of-3,.span-3-of-3{width:100%}}
+
+
+/*Queries*/
+
+@media only screen and (max-width: 900px) {
+    #logo img {
+        position: relative;
+        margin: 10px;
+    }
+
+    .introduction {
+        margin: 0%;
+    }
+
+    .vip {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    ul:not(nav ul, .photo-segment) {
+        display: block;
+        font-size: 1.7rem;
+        line-height: 130%;
+        padding-top: 10px;
+        margin-left: 20%;
+    }
+
+    .welcome {
+        height: 75vh;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 768px) {
+
+        body {
+            background-size: contain, contain;
+        }
+
+        .burger-menu {
+            display: inline-block;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 83%;
+            width: 15%;
+            height: auto;
+            max-width: 40%;
+            border: none !important;
+            box-shadow: none;
+            z-index: 799;
+        }
+
+        nav {
+            margin-bottom: 0;
+            height: 100px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+        }
+
+        nav ul {
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            padding:0;
+            margin:100px 0 0
+            }
+
+            nav ul li {
+                text-align: left;
+                font-size: 1.7rem;
+                display: block;
+                line-height: 130%;
+                width: 100%;
+                margin: 15px;
+                padding: 5px 0;
+                color: #F2F2F2;
+                margin-left: 40px;
+            }
+
+        .menu-background {
+            width: 100%;
+            max-width: 1000px;
+            position: fixed;
+            top: 0;
+         }
+
+         .first:not(.album,.our-games){
+                justify-content:center;
+                align-items:center;
+                color:#fff!important;
+                font-size:125%!important;
+                text-align:left;
+                font-weight:700;
+                background:0 0;
+                cursor:pointer;
+                border:none!important;
+                padding-left:20px;
+                margin-top:12px;
+                height:25px;
+                width:260px;
+                text-transform:uppercase;
+                z-index:1002;
+                display:none
+            }
+
+            .introduction {
+                margin: 0%;
+            }
+
+            img:not(.fb-logo img, .slide img, .reference img, .burger-menu) {
+                width: 100%;
+                margin: 0 auto;
+            }
+            
+            .album{
+                text-align:center;
+                width:65%!important;
+                justify-content:center;
+                align-items:center
+            }
+                
+            .menu-background{
+                position:fixed;
+                width:100%;
+                max-width:1000px;
+                top:0;
+                left:50%;
+                transform:translateX(-50%);
+                padding:0;
+                background:#000000D0;
+                z-index:1000
+            }
+
+            .mobile-nav-back {
+                height:400px;
+                position:fixed;
+                top:100px;
+                width:72%;
+                background-color:#000000A0;
+                z-index:-1;
+                display:none
+            }
+            
+            
+        .row {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+         }
+
+        .row2 {
+             width: 80%;
+             }
+            
+            
+
+        .photo-segment li {
+            width: 50% !important;
+            padding-left: 10px;
+            box-sizing: border-box;
+            margin: 0 auto !important;
+            display: inline-block;
+        }
+        .container {
+          /*  display: flex; */
+             width: 100%;
+             max-width: 1000px;
+        }
+
+        footer {
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .col3 {
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        a:not(.fb-logo,.our-games .first,.burger-menu) {
+            font-size: 95%;
+            text-decoration: none;
+        }
+    }
+
+    #lightbox-mobile {
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background-color:rgba(0,0,0,.8);
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        visibility:hidden!important;
+        opacity:0;transition:opacity .3s ease-in-out;
+        z-index:1000 
+       }
+    
+    #lightbox-mobile:target {
+        visibility:visible!important;
+        opacity:1 
+        }
+    
+    #lightbox-mobile img {
+        max-width:90%;
+        max-height:90%;
+        border:5px solid #044040;
+        box-shadow:0 0 15px rgba(0,0,0,.5)
+        } 
+
+    .close { 
+        position:absolute;
+        top:20px;
+        left: 10px;
+        font-size:30px;
+        color:#fff!important;
+        text-decoration:none;
+        font-weight:700;
+        z-index:1001;
+        cursor:pointer
+    }
+
+    .introduction {
+        font-size: 1.5rem;
+    }
+
+    }
+
+    @media only screen and (min-width: 700px) and (max-width: 770px) {
+    .burger-menu {
+        top: -3px;
+        right: 83%;
+        width: 15% !important;
+        max-width: 40%;
+    }
+
+    #logo2 img {
+        top: 0px;
+        right: 2.5%;
+        width: 30%;
+    }
+
+    .burger-menu .jq--nav-icon {
+        width: 15%;
+    }  
+}
+
+@media only screen and (min-width: 700px) and (max-width: 770px) {
+    .burger-menu {
+        top: -3px;
+        right: 83%;
+        width: 15% !important;
+        max-width: 40%;
+    }
+
+    #logo2 img {
+        top: 0px;
+        right: 2.5%;
+        width: 30%;
+    }
+
+    .burger-menu .jq--nav-icon {
+        width: 13%;
+    }
+}
+
+@media (max-width: 480px) {
+    a:not(.fb-logo,.our-games .first,.burger-menu) {
+        font-size: 95%;
+        text-decoration: none;
+    }
+
+    img:not(.fb-logo img, .slide img, .reference img, .burger-menu) {
+        margin: 0px auto;
+        width: 90;
+        height: auto;
+    }
+
+    #logo img {
+        width: 150px;
+        margin: auto;
+}
+
+@media (max-width:435px){
+    a:not(.fb-logo,.our-games,
+    .first,.burger-menu) {
+
+        font-size:95%;
+
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width:350px) {
+
+    #logo2 img {
+        right: 4%;
+        width: 40%;
+    }
+
+    .burger-menu {
+            top: 10px;
+            right: 73%;
+            width: 20% !important;
+    }
+
+    .close {
+         width: 20%;
+    }
+
+    nav {
+        margin-bottom: 0;
+        height: 100px;
+        width: 100%;
+        padding: 0 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    img:not(.fb-logo img, .slide img, .reference img, .burger-menu) {
+        margin: 0px auto;
+    }
+
+footer {
+    width: 100%;
+    /* max-width: 1000px; */
+    box-sizing: border-box;
+}
+
+.benefit, .benefit2 {
+    width: 100%;
+}
+
+form {
+    padding:10px;
+    margin:0 auto;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;max-width:600px;display:block;
+    margin-bottom: 40px;
+    }
+
+form textarea {
+    height:150px;margin-top:5px!important;
+    width:100%
+}
+
+.address iframe{
+    width:80%
+}
+
+a:not(.fb-logo,.our-games .first,.burger-menu){
+    font-size:85%
+}
+    ul:not(nav ul){
+        font-size:120%
+    }
+        
+.b404 {
+        height:65px!important;
+        padding:2px
+    }
+}
+
+}
