@@ -1,0 +1,367 @@
+*{
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+}
+
+h1{
+color: #ed1b24;	
+}
+
+#list {
+
+
+}
+
+.box1{
+	width: 250px;
+	height: 250px;
+	background: indianred;
+	margin-left: 0px;
+}
+
+.box2{
+	width: 250px;
+	height: 250px;
+	background: steelblue;
+
+
+}
+
+.box3{
+	width: 250px;
+	height: 250px;
+	background: darkolivegreen;
+	display: none;
+
+}
+
+.four {
+  transition: filter 2s, box-shadow 2s;
+}
+
+.highlight {
+  filter: brightness(1.3);
+  box-shadow: black 10px 10px 5px !important;
+  transition: filter 2s, box-shadow 2s !important;
+}
+
+/*Lightbox*/
+
+.lb-loader,.lightbox{
+	text-align:center;
+	line-height:0
+}body
+
+.lb-disable-scrolling{
+	overflow:hidden
+}
+
+.lightboxOverlay{
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:9999;
+	background-color:#000;
+	opacity:.8;
+	display:none
+}
+
+.lightbox{
+	position:absolute;
+	left:0;
+	width:100%;
+	z-index:10000;
+	font-weight:400;
+	outline:0
+}.lightbox 
+
+.lb-image{
+	display:block;
+	height:auto;
+	max-width:inherit;
+	max-height:none;
+	border-radius:3px;
+	border:4px solid #fff
+}
+
+.lightbox a img{
+	border:none
+}
+
+.lb-outerContainer{
+	position:relative;
+	width:250px;
+	height:250px;
+	margin:0 auto;
+	border-radius:4px;
+	background-color:#fff
+}
+
+.lb-loader,.lb-nav{
+	position:absolute;
+	left:0
+}
+
+.lb-outerContainer:after{
+	content:"";
+	display:table;
+	clear:both
+}
+
+.lb-nav a.lb-prev::before,
+.lb-nav a.lb-next::before,
+.lb-close::before {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 45px;
+    background-size: contain;
+    opacity: 1; /* Pro zobrazení bez hoveru */
+    transition: opacity .6s;
+}
+
+.lb-nav a.lb-prev::before {
+    width: 45px;
+    height: 45px;
+    position: relative;
+    top: 43%;
+    background: url("C:/Users/AlenaPumprová/OneDrive - cbData Services, s.r.o/Desktop/JQ/IMG/prev.png") no-repeat;
+    background-size: contain;
+    display: block;
+}
+
+.lb-nav a.lb-next::before {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 45px;
+    right:0;
+    float:right;
+    background: url("C:/Users/AlenaPumprová/OneDrive - cbData Services, s.r.o/Desktop/JQ/IMG/next.png") no-repeat;
+    background-size: contain;
+    position: relative;
+    top: 43%;
+    opacity: 1; /* Pro zobrazení bez hoveru */
+    z-index: 1000;
+    transition: opacity .6s;
+}
+
+.lb-close::before {
+    background: url("C:/Users/AlenaPumprová/OneDrive - cbData Services, s.r.o/Desktop/JQ/IMG/close.png") top right no-repeat;
+}
+
+.lb-loader{
+	top:43%;
+	height:25%;
+	width:100%;
+}
+.lb-loader::before {
+    content: "";
+    background: url("C:/Users/AlenaPumprová/OneDrive - cbData Services, s.r.o/Desktop/JQ/IMG/loading.gif") no-repeat center;
+    background-size: contain;
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.lb-cancel::before{
+	display:block;
+	width:32px;
+	height:32px;
+	margin:0 auto;
+	z-index: 1000;
+	background:url("C:/Users/AlenaPumprová/OneDrive - cbData Services, s.r.o/Desktop/JQ/IMG/loading.gif") no-repeat
+}
+
+.lb-nav{
+	top:0;
+	height:100%;
+	width:100%;
+	z-index:10
+}
+
+.lb-container>.nav{
+	left:0
+}
+
+.lb-nav a{
+	outline:0;
+	background-image:url(data:IMG/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==)
+}
+
+	.lb-next,.lb-prev{
+		height:100%;
+		cursor:pointer;
+		display:block
+	}
+
+
+		
+		.lb-nav a.lb-prev:hover{opacity:1}
+
+		/*.lb-nav a.lb-prev::before {
+		    content: "";
+		    display: inline-block;
+		    width: 32px;
+		    height: 32px;
+		    background: url("C:/Users/AlenaPumprová/OneDrive - cbData Services, s.r.o/Desktop/JQ/IMG/prev.png") left 48% no-repeat;
+		    opacity: 0;
+		    transition: opacity .6s;
+    }*/
+
+		.lb-nav a.lb-next:hover{
+			opacity:1
+		}
+
+		.lb-dataContainer{
+			margin:0 auto;
+			padding-top:5px;
+			width:100%;
+			border-bottom-left-radius:4px;
+			border-bottom-right-radius:4px
+		}
+
+		.lb-dataContainer:after{
+			content:"";display:table;clear:both
+		}
+
+		.lb-data{
+			padding:0 4px;
+			color:#ccc
+		}
+
+		.lb-data .lb-details{
+			width:85%;
+			float:left;
+			text-align:left;
+			line-height:1.1em
+		}
+
+		.lb-data .lb-caption{
+			font-size:13px;
+			font-weight:700;
+			line-height:1em
+		}
+		.lb-data .lb-caption a{
+			color:#4ae
+		}
+
+		.lb-data .lb-number{
+			display:block;
+			clear:left;
+			padding-bottom:1em;
+			font-size:12px;
+			color:#999
+		}.lb-data 
+
+.lb-close{
+	display:block;
+	float:right;
+	width:30px;
+	height:30px;
+	}
+
+.lb-close::before {
+    content: "";
+    background: url("C:/Users/AlenaPumprová/OneDrive - cbData Services, s.r.o/Desktop/JQ/IMG/close.png") top right no-repeat;
+    text-align: right;
+    outline: 0;
+    opacity: .7;
+    -webkit-transition: opacity .2s;
+    -moz-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s;
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+
+.lb-cancel, .lb-next, .lb-prev, .lb-close::before {
+    background-size: contain;
+}
+
+/* Form */
+/* Form */
+form {
+    border: 1px solid #c7bb6d;
+    padding: 20px;
+    background-color: #c7bb6d33;
+    margin: 20px auto;
+    border-radius: 5px;
+    max-width: 600px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dva sloupce */
+    gap: 20px; /* Vzdálenost mezi poli */
+}
+
+/* Labely nad poli */
+form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px; /* Menší mezera mezi labelem a textovým polem */
+}
+
+/* Nastavení inputů a textarea */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%; /* Šířka 100% pro vyplnění sloupce */
+    padding: 10px;
+    border: 2px solid #c7bb6d;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background: #ffffffD0;
+    color: #83673f;
+    outline: none;
+}
+
+/* Textarea přes celou šířku */
+form textarea {
+    grid-column: span 2; /* Textarea bude přes oba sloupce */
+    height: 150px;
+    margin-top: 0px !important;
+    width: 208%;
+}
+
+/* Tlačítko pro odeslání */
+input[type="submit"] {
+    grid-column: span 2; /* Tlačítko bude přes oba sloupce */
+    padding: 10px;
+    background: linear-gradient(90deg, #83673f, #b59950, #c9a955, #e6d880, #c9a955, #b59950, #83673f);
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: background 0.5s;
+}
+
+
+#cookie-banner {
+    display: none; 
+    position: fixed; 
+    bottom: 0; 
+    width: 100%; 
+    background-color: #333; 
+    color: white; 
+    padding: 10px; 
+    text-align: center; 
+    z-index: 1000;
+}
+
+#accept-cookies {
+    margin-left: 10px; 
+    padding: 5px 10px; 
+    background-color: #555; 
+    color: white; 
+    border: none; 
+    cursor: pointer;
+}
