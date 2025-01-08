@@ -454,7 +454,7 @@ form {
     padding: 20px;
     background-color: #F2B807A0;
     margin: 20px auto 70px;
-    border-radius: 5px;
+    border-radius: 7px;
     max-width: 1000px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -476,7 +476,7 @@ form input[type=email], form input[type=text], form textarea {
     width: 100%;
     padding: 10px;
     border: 2px solid #F2B807;
-    border-radius: 5px;
+    border-radius: 7px;
     box-sizing: border-box;
     background: #ffffffD0;
     color: #734022;
@@ -497,16 +497,16 @@ input[type=submit] {
     font-weight: 700;
     width: 100%;
     padding: 10px;
-    color: #fff;
+    color: #f2f2f2;
     font-size: 18px;
     border-radius: 5px;
     border: none;
-    background-color: #ff5343;
+    background-color: #734022;
     transition: background .5s;
 }
 
 input[type=submit]:hover {
-    color: #BF372A;
+    color: #734022;
     background-color: #F2B807;
 }
 
@@ -520,7 +520,7 @@ input[type=submit]:hover {
     font-weight:700!important;
     font-family: "Roboto", "Arial", sans-serif;
     line-height:1.4!important;
-    border-radius:5px!important;
+    border-radius:7px!important;
     letter-spacing: 1px;
 }
 
