@@ -12,13 +12,13 @@
 body {
     flex-direction: column;
     background: 
-        linear-gradient(180deg, #591C2180, #04404080) no-repeat, 
+        linear-gradient(180deg,#00000040, #ed423240) no-repeat, 
         url(gym.webp) repeat;
     background-size: cover, cover;
     background-position: center, center;
     background-attachment: fixed;
     position: relative;
-    scrollbar-color: #8C1F28;
+    scrollbar-color: #ed4232;
 }
 
     body::-webkit-scrollbar{
@@ -27,7 +27,7 @@ body {
     }
 
     body::-webkit-scrollbar-thumb{
-        background-color:#8C1F28;border-radius:7px
+        background-color:#ed4232;border-radius:7px
     }
 
     body::-webkit-scrollbar-track{
@@ -48,7 +48,7 @@ body {
         width: 100%;
         height: 80px;
         max-width: 1400px;
-        background: #8C1F28b0;
+        background: #ed4232;
         z-index: 500;
     }
 
@@ -68,7 +68,7 @@ body {
     nav ul li {
         float: left;
         margin-right: 0;
-        font-family: Montserrat, sans-serif;
+        font-family: "Roboto", "Arial", sans-serif;
         text-align: center;
         width: 20%;
         list-style-type: none;
@@ -76,26 +76,26 @@ body {
     
     
     .first:hover {
-        background-color: #00000060;
+        background-color: #ff5343;
         color: #F2F2F2;
         border: none;
     }
     
     .first.active {
-        background-color: #00000060;
+        background-color: #ed4232;
         color: #F2F2F2;
         border: none;
     }
 
        .first {
-        color: #F2F2F2;
-        background: #8C1F2860;
+        color: #fff;
+        background: #dca500;
         font-weight: 400;
         display: flex;
         position: relative;
         justify-content: center;
         align-items: center;
-        font-size: 100% !important;
+        font-size: 110% !important;
         height: 83px;
         top: 20px;
         margin-left: 0;
@@ -137,7 +137,7 @@ body {
         width: 100%;
         max-width: 1400px;
        /* margin: 100px auto 0;*/
-        background-color: #00000080;
+        background-color:#000000B0;
         padding: 0% 6% 0% 6%;
     }
 
@@ -186,18 +186,20 @@ body {
 
     h1 {
         text-align: center;
-        color: #f54d4d;
+        color: #ff5343;
         font-size: 400%;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: "Teko", "Arial", sans-serif;
         letter-spacing: 1px;
-        font-size: 4rem;
+        font-size: 4.1rem;
+        font-weight: 750;
+        text-transform: uppercase;
     }
 
     h2 {
         text-align: center;
-        color: #25d9d4;
+        color: #F2B807;
         margin-bottom: 30px;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: "Teko", "Arial", sans-serif;
         letter-spacing: 1px;
         font-size: 2.5rem;
     }
@@ -216,7 +218,7 @@ body {
         margin-bottom: 85px;
         display: block;
         width: 100%;
-        border-bottom: 2px solid #ffffffa4;
+        border-bottom: 2px solid #BF996Ba4;
         position: absolute;
         bottom: -5px; /* Posunutí čáry pod text */
         left: 0;
@@ -224,46 +226,64 @@ body {
 
     p {
         color: #F2F2F2;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: "Roboto", "Arial", sans-serif;
         text-align: justify;
-        font-size: 1.7rem;
+        font-size: 1.6rem;
         line-height: 130%;
+        word-wrap: break-word;
+        letter-spacing: 1px;
+        font-weight: 400;
     }
 
     .introduction {
         font-weight: 600;
-        font-size: 2rem;
+        font-size: 1.8rem;
         text-align: center;
         margin: 50px;
         line-height: 150%;
         padding-top: 5px;
         text-shadow: #000000 -5px 5px 7px;
+        font-family: "Roboto", "Arial" sans-serif;
     }
 
     a:not(.fb-logo,.our-games, .first, .burger-menu) {
-        color: #ee5050;
-        font-size: 105%;
+        color: #F2B807;
+        font-size: 1.6rem;
         text-decoration: none;
         transition: color 0.5s;
-        font-family: Lato, sans-serif;
+        font-family: "Roboto", "Arial", sans-serif;
+        word-wrap: break-word;
+        font-weight: 500;
     }
 
     a:not(.fb-logo,.our-games, .first, .burger-menu):hover {
-        color: #ff7474;
+        color: #ff5343;
     }
 
     .rezervace {
         display: inline-block;
         text-align: center;
-        font-size: 2rem !important;
-        margin: 10px auto; 
+        font-size: 1.7rem !important;
+        margin: 15px auto; 
         width: 100%;
+        letter-spacing: 1px;
         margin-bottom: 40px;
+        font-family: "Roboto", "Arial", sans-serif;
+        text-transform: uppercase;
     }
 
     img:not(.fb-logo img, .slide img, .reference img, .burger-menu, .photo-segment li img) {
         margin: 100px;
         border-radius: 10px;
+    }
+
+    img:not(.fb-logo img, .slide img, .reference img, .burger-menu, .photo-segment li img):hover {
+        filter:brightness(1.1);
+        box-shadow:#F2F2F2 2px 2px 5px;
+        border:1px solid #f2f2f2;transition:
+        transform 1s,
+        filter .5s,
+        box-shadow .5s,border .5s
     }
     .col3 {
          display: flex;
@@ -288,7 +308,7 @@ body {
         margin-top: 40px;
         border-radius: 50%;
         width: 50%;
-        border: 3px solid #044040;
+        border: 3px solid #ff5343;
     }
         
     .slider {
@@ -305,13 +325,13 @@ body {
         max-width: 950px;
         margin: 0 auto;
         border-radius: 5px;
-        border: 3px solid #044040;
+        border: 3px solid #ff5343;
     }
 
     .slider-wrapper:hover{
         filter:brightness(1.1);
-        box-shadow:#25d9d4 2px 2px 5px;
-        border:1px solid #F2F2F2;transition:
+        box-shadow:#F2F2F2 2px 2px 5px;
+        border:2px solid #ff5343;transition:
         transform 1s,
         filter .5s,
         box-shadow .5s,border .5s
@@ -424,11 +444,15 @@ ul:not(nav ul) {
     margin-right: 50px;
 }
 
+.map {
+    margin: 60px !important;
+}
+
 form {
     width: 100%;
-    border: 1px solid #044040;
+    border: 1px solid #F2B807;
     padding: 20px;
-    background-color: #25d9d453;
+    background-color: #F2B807A0;
     margin: 20px auto 70px;
     border-radius: 5px;
     max-width: 1000px;
@@ -441,20 +465,21 @@ form label {
     display: block;
     margin-bottom: 5px;
     margin-bottom: 2px;
-    font-family: Lato, sans-serif;
+    font-family: Roboto, sans-serif;
     color: white;
     font-weight: 700;
     margin-left: 2px;
+    font-size: 1.2rem;
 }
 
 form input[type=email], form input[type=text], form textarea {
     width: 100%;
     padding: 10px;
-    border: 2px solid #044040;
+    border: 2px solid #F2B807;
     border-radius: 5px;
     box-sizing: border-box;
     background: #ffffffD0;
-    color: #591C2180;
+    color: #734022;
     outline: 0;
 }
 
@@ -462,7 +487,7 @@ form textarea {
     grid-column: span 2;
     height: 150px;
     margin-top: 0 !important;
-    width: 208%;
+    width: 204.5%;
     margin-bottom: 20px;
 }
 
@@ -476,13 +501,13 @@ input[type=submit] {
     font-size: 18px;
     border-radius: 5px;
     border: none;
-    background-color: #044040;
+    background-color: #ff5343;
     transition: background .5s;
 }
 
 input[type=submit]:hover {
-    color: #044040;
-    background-color: #F2F2F2;
+    color: #BF372A;
+    background-color: #F2B807;
 }
 
 .form-result{
@@ -493,9 +518,10 @@ input[type=submit]:hover {
     font-size:120%!important;
     text-align:center;
     font-weight:700!important;
-    font-family:Lato,sans-serif;
+    font-family: "Roboto", "Arial", sans-serif;
     line-height:1.4!important;
-    border-radius:5px!important
+    border-radius:5px!important;
+    letter-spacing: 1px;
 }
 
 .success{
@@ -553,8 +579,8 @@ input[type=submit]:hover {
 .photo-segment li img:hover{
     transform:scale(1.1);
     filter:brightness(1.5);
-    box-shadow:#25d9d4 2px 2px 5px;
-    border:1.5px solid #F2F2F2
+    box-shadow:#F2F2F2 2px 2px 5px;
+    border:1.5px solid #ff5343
 }
 
 
@@ -563,10 +589,9 @@ footer {
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 40px;
     margin: 0 auto;
-    background-color: #044040B0;
-    padding-bottom: 40px;
+    background-color: #ed4232;
+    padding-bottom: 20px;
 }
 
 .ff {
@@ -575,9 +600,9 @@ footer {
     width: 100%;
     justify-content: space-between;
     align-items: end;
-    padding: 10px 40px;
+    padding: 0px 40px;
     margin: 0 auto;
-    padding-bottom: 40px;
+    padding-bottom: 15px;
 }
 
 .copyright {
@@ -601,6 +626,7 @@ footer {
     color: #F2F2F2;
     text-decoration: none;
     font-size: 18px;
+    padding: 15px 0;
     font-family: Lato, sans-serif;
 }
 
@@ -622,8 +648,8 @@ footer {
     position: fixed;
     bottom: 0;
     left: 0;
-    background-color: #fd5f5a80 !important;
-    color: #dfc7ec30 !important;
+    background-color: #F2B807 !important;
+    color: #BF372A30 !important;
     padding: 15px 20px;
     z-index: 1000;
     font-size: 16px;
@@ -736,7 +762,7 @@ width: 45%;
          .first:not(.album,.our-games){
                 justify-content:center;
                 align-items:center;
-                color:#fff!important;
+                color:#F2F2F2!important;
                 font-size:125%!important;
                 text-align:left;
                 font-weight:700;
@@ -776,7 +802,7 @@ width: 45%;
                 left:50%;
                 transform:translateX(-50%);
                 padding:0;
-                background:#000000D0;
+                background:#734022D0;
                 z-index:1000
             }
 
@@ -785,7 +811,7 @@ width: 45%;
                 position:fixed;
                 top:100px;
                 width:72%;
-                background-color:#000000A0;
+                background-color:#734022A0;
                 z-index:-1;
                 display:none
             }
@@ -926,8 +952,12 @@ width: 45%;
 
     img:not(.fb-logo img, .slide img, .reference img, .burger-menu) {
         margin: 0px auto;
-        width: 90;
+        width: 25vh;
         height: auto;
+    }
+
+    img:not(.fb-logo img, .slide img, .reference img, .burger-menu, .photo-segment li img) {
+        margin: 0 auto;
     }
 
     #logo img {
