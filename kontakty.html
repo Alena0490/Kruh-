@@ -18,11 +18,14 @@
 
 <body>
     <header>
+        <div class="menu-background-under">
+
+        </div>
         <div class="menu-background">
             <nav>
                 <ul>
                     <li><a class="first" href="index.html">Hlavní stránka</a></li>
-                    <li><a class="first" href="treninky.html">Tréninky</a></li>
+                    <li><a class="first" href="o-nas.html">O nás</a></li>
                     <li><a class="first" href="fotogalerie.html">Fotogalerie</a></li>
                     <li><a class="first" href="rezervace.html">Rezervace</a></li>
                     <li><a class="first active" href="kontakty.html">Kontakty</a></li>
@@ -36,14 +39,17 @@
         </div>
     </header> 
 
-    <div class="container">
-        <main>
-            <div class="welcome">
+    <div class="welcome">
                 <a id="logo" aria-label="Kontakty" href="index.html">
                     <img src="img/logo.webp" alt="Logo">
                 </a>
                 <h1>Kontakty</h1>
-            </div>
+    </div>
+
+    <div class="container">
+
+        <main>
+        
                 <br>
                 <h2 class="vip">Kontaktní údaje</h2>
                 <p> Máte otázky nebo nebo nové nápady? Neváhejte nás kontaktovat přes&nbsp;<strong>e-mail</strong>, <strong>telefon</strong> nebo pomocí <a href="#" class="jq--scroll-form">formuláře</a> níže. Rádi vám odpovíme!</p>
@@ -56,10 +62,11 @@
             </ul> 
               
             <br>
-            
+            <hr>
+            <br>
             <section class="visit">
                 <section class="vip">
-                    <h2 class="before">Lázně Bělohrad</h2>
+                    <h2>Lázně Bělohrad</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex natus nesciunt quis ratione veritatis odit provident quibusdam beatae, quaerat dolorum magnam, debitis magni suscipit! Earum quis praesentium deserunt quaerat magni.</p>
                     <br>
                         <div class="col address-content">
@@ -78,10 +85,10 @@
                         </div>
                 </section> 
                 <br>
-                <br>
+                <hr>
                 <section class="visit">
                     <section class="vip">
-                        <h2 class="before">Jičín</h2>
+                        <h2>Jičín</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex natus nesciunt quis ratione veritatis odit provident quibusdam beatae, quaerat dolorum magnam, debitis magni suscipit! Earum quis praesentium deserunt quaerat magni.</p>
                         <br>
                             <div class="col address-content">
@@ -100,10 +107,9 @@
                             </div>
                     </section>
             </section>
-        
-            
                 <br>
-            
+                <hr>
+                
                 <h2 id="contact-form" class="contacts jq--form">Napište nám</h2>
                 <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, quasi repudiandae id quaerat deserunt autem nulla mollitia, qui architecto reprehenderit esse doloremque alias ullam! Eum, atque velit. Beatae, eius facere.<br><strong>Budeme se těšit na&nbsp;vaši zprávu! </strong></p>
                 <br>
@@ -111,35 +117,43 @@
 <div class="form-result success">Odeslání proběhlo úspěšně</div>;
 <div class="form-result error">Odeslání selhalo. Zkuste to prosím znovu.</div>;
 
-            <form action="" method="post">
+            <form  action="" method="post">
                 <div>
                     <label for="name">Jméno</label>
                     <input type="text" id="name" name="name" required>
                 </div>
+
                 <div>
                     <label for="surname">Příjmení</label>
                     <input type="text" id="surname" name="surname" required>
                 </div>
+
                 <div>
                     <label for="email">E-mail</label>
                     <input type="email" id="email" name="email" required>
                 </div>
+
                 <div>
                     <label for="phone">Telefon (nepovinné)</label>
                     <input type="text" id="phone" name="phone">
                 </div>
+
                 <div>
                     <label for="message">Vaše zpráva</label>
                     <textarea id="message" name="message" required></textarea>
                 </div>
+                
                 <input type="submit" value="Odeslat">
             </form>
+            <br>
             
             </div>
-
+            <div id="cookie-banner">
+                Tento web používá cookies, bla bla bla... 
+                <button id="accept-cookies">Souhlasím</button>
+            </div>
         </main>
     </div>
-
     <footer>
         <div class="ff">
             <div class="foot">
