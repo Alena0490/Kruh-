@@ -29,12 +29,6 @@ $(document).ready(function () {
     $("iframe").hide().fadeIn(4000);
 });
 
-
-//Upozornění při otevření stránky
-$(function(){
-$(".warning").slideUp(7000);
-  });
-
 //FAQ
 document.addEventListener("DOMContentLoaded", function() {
     const accordions = document.querySelectorAll(".accordion");

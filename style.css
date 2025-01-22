@@ -211,7 +211,7 @@ body {
         letter-spacing: 1px;
         font-size: 4.1rem;
         font-weight: 750;
-        text-shadow: #000000 3px 3px 4px;
+        text-shadow: #000000 1px 1px 2px;
         text-transform: uppercase;
     }
 
@@ -219,7 +219,7 @@ body {
         text-align: center;
         color:  #F2B807;
         margin-top: 30px;
-        text-shadow: #000000 2px 1px 3px;
+        text-shadow: #000000 1px 1px 2px;
         font-family: "Teko", "Arial", sans-serif;
         letter-spacing: 1px;
         font-size: 2.5rem;
@@ -253,7 +253,7 @@ body {
         word-wrap: break-word;
         letter-spacing: 1px;
         font-weight: 400;
-        text-shadow: #000000 2px 1px 3px;
+        text-shadow: #000000 1px 1px 2px;
     }
 
     .introduction {
@@ -329,7 +329,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 50px;
+        margin-bottom: 10px;
     }
 
     .reference img {
@@ -656,6 +656,49 @@ input[type=submit]:hover {
     filter:brightness(1.1);
 }
 
+.our-games {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.col2 {
+    margin-left: 1%;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    gap: 15%;
+}
+
+.col {
+    display: block;
+    float: left;
+    margin: 1% 0 1% 1.6%;
+}
+
+.schedule {
+    text-transform: uppercase;
+    color: #ff5343;
+    font-weight: 600;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.7rem !important;
+    position: relative;
+    left: -32px;
+    margin: auto;
+    width: 100%;
+    letter-spacing: 1px;
+    font-family: "Roboto", "Arial", sans-serif;
+    text-transform: uppercase;
+}
+
+.schedule:hover {
+    color: #F2B807;
+    cursor: pointer;
+}
 
 footer {
     display: flex;
@@ -721,7 +764,7 @@ footer {
     position: fixed;
     bottom: 0;
     left: 0;
-    background-color: #00000080 !important;
+    background-color: #000000B0 !important;
     color: #fff !important;
     padding: 15px 20px;
     z-index: 1000;
@@ -731,7 +774,7 @@ footer {
 #accept-cookies {
     margin-left: 10px;
     padding: 5px 10px;
-    background-color: #ff5343 !important;
+    background-color: #bf372a !important;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -787,7 +830,11 @@ width: 45%;
 /****Lightbox****/
 .lb-loader,.lightbox{
     text-align:center;
-    line-height:0
+    line-height:0;
+}
+
+.lb-loader {
+    padding-left: 45%;
 }
 
 body.lb-disable-scrolling{
@@ -1010,6 +1057,14 @@ body.lb-disable-scrolling{
         height: 75vh;
     }
 
+    .reference {
+        margin-left: 1%;
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        gap: 10%;
+    }
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -1214,6 +1269,14 @@ body.lb-disable-scrolling{
         font-size: 1.5rem;
     }
 
+    .reference {
+        margin-left: 1%;
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        gap: 5%;
+    }
+
     }
 
     @media only screen and (min-width: 700px) and (max-width: 770px) {
@@ -1273,6 +1336,24 @@ body.lb-disable-scrolling{
     #logo img {
         width: 150px;
         margin: auto;
+    }
+
+    .col2 {
+        display: flex;
+        gap: 5%;
+        flex-direction: column;
+    }
+
+        .reference {
+            margin-left: 1%;
+            width: 90%;
+            justify-content: center;
+            display: flex;
+            gap: 2%;
+        }
+    .training-time {
+        font-size: 1.5rem !important;
+    }
 }
 
 @media (max-width:435px){
@@ -1365,4 +1446,3 @@ a:not(.fb-logo,.our-games .first,.burger-menu){
 }
 
 
-}

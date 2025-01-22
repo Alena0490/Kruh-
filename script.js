@@ -9,6 +9,23 @@ $(document).ready(function () {
     });
 });
 
+
+/*Scrolování k adrese*/
+$(document).ready(function () {
+    // Detekuj kotvu z URL při načtení stránky
+    const hash = window.location.hash;
+    if (hash) {
+        const target = $(hash);
+        if (target.length) {
+            $('html, body').animate({
+                scrollTop: target.offset().top - 90 // Posun s ohledem na pevné menu
+            }, 1000); // Plynulý přechod za 1 sekundu
+        }
+    }
+});
+
+
+
 /* Change Hamburger to Cross vice versa */
 $(document).ready(function () {
     $('.jq--nav-icon').click(function (event) {
