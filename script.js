@@ -98,6 +98,27 @@ window.addEventListener("scroll", function() {
     });
 });
 
+
+// Automatický text
+const heading = document.querySelector(".introduction")
+const text ="Získej energii, sebevědomí a sílu! Přijď si vyzkoušet kondiční cvičení na vlastní kůži!     "
+let idLetter = 1
+let delay = 100
+
+function printText(){
+  heading.innerText = text.slice(0,idLetter)
+  idLetter++ //idLetter = idLetter + 1
+  
+  // spustí funkci printText se zpožděním delay
+  setTimeout(printText, delay)
+
+  if (idLetter>text.length) {
+    idLetter = 1
+  }
+}
+
+printText()
+
 // Lightbox
 /*!
  * jQuery JavaScript Library v3.7.1
