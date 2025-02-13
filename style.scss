@@ -1,4 +1,4 @@
-
+@import "partials/variables";
 
 *{
     padding: 0;
@@ -707,7 +707,7 @@ input[type=submit]:hover {
 }
 
 footer {
-    display: flex;
+    display: flex-end;
     width: 100%;
     justify-content: space-between;
     align-items: center;
