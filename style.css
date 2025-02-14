@@ -207,7 +207,6 @@ main {
 h1 {
   text-align: center;
   color: #f2f2f2;
-  font-size: 400%;
   font-family: "Teko", "Arial", sans-serif;
   letter-spacing: 1px;
   font-size: 4.1rem;
@@ -554,7 +553,7 @@ input[type=submit] {
   width: 100%;
   padding: 10px;
   color: #f2f2f2;
-  font-size: 18px;
+  font-size: 1.2rem;
   border-radius: 5px;
   border: none;
   background-color: #ff5343;
@@ -571,7 +570,7 @@ input[type=submit]:hover {
   /*width:84%!important;*/
   padding: 10px !important;
   margin: 0 auto 20px !important;
-  font-size: 120% !important;
+  font-size: 1.2rem !important;
   text-align: center;
   font-weight: 700 !important;
   font-family: "Roboto", "Arial", sans-serif;
@@ -716,7 +715,7 @@ footer {
 
 .copyright {
   color: #F2F2F2;
-  font-size: 18px;
+  font-size: 1.2rem;
   text-align: right;
   flex-grow: 1;
   font-family: Lato, sans-serif;
@@ -734,7 +733,7 @@ footer {
   align-items: center;
   color: #F2F2F2;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 1.2rem;
   padding: 15px 0;
   font-family: Lato, sans-serif;
 }
@@ -772,7 +771,7 @@ footer {
   border: none;
   border-radius: 5px;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 1rem;
   transition: background-color 0.7s;
 }
 
@@ -784,7 +783,7 @@ footer {
   border: none;
   border-radius: 5px;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 1rem;
 }
 
 .row {
@@ -973,7 +972,7 @@ body.lb-disable-scrolling {
 }
 
 .lb-data .lb-caption {
-  font-size: 13px;
+  font-size: 0.9rem;
   font-weight: 700;
   line-height: 1em;
 }
@@ -1150,7 +1149,7 @@ body.lb-disable-scrolling {
     justify-content: center;
     align-items: center;
     color: #F2F2F2 !important;
-    font-size: 125% !important;
+    font: size 1.4rem;
     text-align: left;
     font-weight: 700;
     background: 0 0;

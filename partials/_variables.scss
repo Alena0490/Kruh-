@@ -5,3 +5,7 @@ $secondary-color-light: #ff5343;
 $secondary-color-darkest: #bf372a80;
 $secondary-color-background-gradient: #ed423240;
 $hr-color: #BF996Ba4;
+
+@function em ($pixels, $basic-value: 16px) {
+    @return ($pixels / $basic-value) * 1em;
+}
