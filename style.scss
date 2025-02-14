@@ -18,13 +18,13 @@ html {
 body {
     flex-direction: column;
     background: 
-        linear-gradient(180deg,#00000040, #ed423240) no-repeat, 
+        linear-gradient(180deg,#00000040, $secondary-color-background-gradient) no-repeat, 
         url(gym.webp) repeat;
     background-size: cover, cover;
     background-position: center, center;
     background-attachment: fixed;
     position: relative;
-    scrollbar-color: #bf372a;
+    scrollbar-color: $secondary-color;
     transform: translateZ(-40px) scale(1); /* Vzdálenější vrstva (pohybuje se pomaleji) */
     background-attachment: fixed; 
     
@@ -41,7 +41,8 @@ body {
     }
 
     body::-webkit-scrollbar-thumb{
-        background-color:#bf372a;border-radius:7px
+        background-color:$secondary-color;
+        border-radius:7px
     }
 
     body::-webkit-scrollbar-track{
@@ -61,7 +62,7 @@ body {
         top: 0;
         width: 100%;
         height: 82px;
-        background: #c99700;
+        background: $main-color-darker;
         z-index: 400;
         filter: drop-shadow(2px 3px 5px black);
     }
@@ -75,12 +76,12 @@ body {
         width: 100%;
         height: 80px;
         max-width: 1400px;
-        background: #bf372a;
+        background: $secondary-color;
         z-index: 500;
     }
 
     nav {
-        position: fixed;
+        position: absolute;
         top: -26%;
         margin-bottom: 0;
         height: 100px;
@@ -103,20 +104,20 @@ body {
     
     
     .first:hover {
-        background-color: #bf372a;
+        background-color: $secondary-color;
         color: #F2F2F2;
         border: none;
     }
     
     .first.active {
-        background-color: #bf372a;
+        background-color: $secondary-color;
         color: #F2F2F2;
         border: none;
     }
 
        .first {
         color: #fff;
-        background: #c99700;
+        background: $main-color-darker;
         font-weight: 400;
         display: flex;
         position: relative;
@@ -223,7 +224,7 @@ body {
 
     h2 {
         text-align: center;
-        color:  #F2B807;
+        color:  $main-color;
         margin-top: 30px;
         text-shadow: #000000 1px 1px 2px;
         font-family: "Teko", "Arial", sans-serif;
@@ -244,10 +245,10 @@ body {
     hr {
         border: none; /* Odstraní výchozí rámeček */
         height: 1.5px;  /* Nastaví tloušťku čáry */
-        background-color: #BF996Ba4;; /* Barva čáry */
+        background-color: $hr-color; /* Barva čáry */
         margin: 20px 0; /* Vodorovné mezery kolem čáry */
         filter: drop-shadow(2px 2px 2px black);
-        margin-top: 20px;
+        margin-top: 20px;git 
     }
 
     p {
@@ -278,7 +279,7 @@ body {
     }
 
     a:not(.fb-logo,.our-games, .first, .burger-menu) {
-        color: #ff5343;
+        color: $secondary-color-light;
         font-size: 1.6rem;
         text-decoration: none;
         transition: color 0.7s;
@@ -290,7 +291,7 @@ body {
     }
 
     a:not(.fb-logo,.our-games, .first, .burger-menu):hover {
-        color: #F2B807;
+        color: $main-color;
     }
 
     .rezervace {
@@ -343,7 +344,7 @@ body {
         margin-top: 40px;
         border-radius: 50%;
         width: 50%;
-        border: 3px solid #bf372a;
+        border: 3px solid $secondary-color;
         filter: drop-shadow(2px 3px 4px black);
     }
         
@@ -363,7 +364,7 @@ body {
         margin: 10px auto;
         margin-bottom: 100px;
         border-radius: 10px;
-        border: 3px solid #bf372a;
+        border: 3px solid $secondary-color;
         filter: drop-shadow(2px 3px 4px black);
         transition:
             transform 0.7s,
@@ -375,7 +376,7 @@ body {
     .slider-wrapper:hover{
         filter:brightness(1.05);
         box-shadow:#F2F2F2 2px 2px 4px;
-        border:3px solid #ff5343;
+        border:3px solid $secondary-color-light;
     }
 
     .slides {
@@ -500,7 +501,7 @@ ul:not(nav ul) {
 
 form {
     width: 100%;
-    border: 1px solid #bf372a;
+    border: 1px solid $secondary-color;
     padding: 20px;
     background-color: #a3989890;
     margin: 20px auto 70px;
@@ -527,7 +528,7 @@ form label {
 form input[type=email], form input[type=text], form textarea {
     width: 100%;
     padding: 10px;
-    border: 2px solid #ff5343;
+    border: 2px solid $secondary-color-light;
     border-radius: 7px;
     box-sizing: border-box;
     background: #ffffffC0;
@@ -571,13 +572,13 @@ input[type=submit] {
     font-size: 18px;
     border-radius: 5px;
     border: none;
-    background-color: #ff5343;
+    background-color: $secondary-color-light;
     transition: background 0.7s;
 }
 
 input[type=submit]:hover {
     color: #fff;
-    background-color: #F2B807;
+    background-color: $main-color;
 }
 
 .form-result{
@@ -601,8 +602,8 @@ input[type=submit]:hover {
 }
 
     .error{
-        border:1px solid #bf372a!important;
-        background:#bf372a80!important
+        border:1px solid $secondary-color !important;
+        background: $secondary-color-darkest !important
     }
 
     .gallery {
@@ -687,7 +688,7 @@ input[type=submit]:hover {
 
 .schedule {
     text-transform: uppercase;
-    color: #ff5343;
+    color: $secondary-color-light;
     font-weight: 600;
     display: inline-block;
     text-align: center;
@@ -702,7 +703,7 @@ input[type=submit]:hover {
 }
 
 .schedule:hover {
-    color: #F2B807;
+    color: $main-color;
     cursor: pointer;
 }
 
@@ -712,7 +713,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    background-color: #bf372a;
+    background-color: $secondary-color;
     padding-bottom: 20px;
 }
 
@@ -780,7 +781,7 @@ footer {
 #accept-cookies {
     margin-left: 10px;
     padding: 5px 10px;
-    background-color: #bf372a !important;
+    background-color: $secondary-color !important;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -792,7 +793,7 @@ footer {
 #accept-cookies:hover {
     margin-left: 10px;
     padding: 5px 10px;
-    background-color: #F2B807 !important;
+    background-color: $main-color !important;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -872,7 +873,7 @@ body.lb-disable-scrolling{
     max-width:inherit;
     max-height:none;
     border-radius:5px;
-    border:2px solid #bf372a
+    border:2px solid $secondary-color
 }
 
 .lightbox a img{
@@ -998,7 +999,7 @@ body.lb-disable-scrolling{
 }
 
 .lb-data .lb-caption a{
-    color:#F2B807
+    color: $main-color
 }
 
 .lb-data .lb-number{
@@ -1040,6 +1041,10 @@ body.lb-disable-scrolling{
     #logo img {
         position: relative;
         margin: 10px;
+    }
+
+    .row2 {
+        width: 100%;
     }
 
     .introduction {
@@ -1122,6 +1127,10 @@ body.lb-disable-scrolling{
                 margin-left: 40px;
             }
 
+            #logo {
+                margin-bottom: 0px;
+            }
+
         .menu-background {
             width: 100%;
             max-width: 1000px;
@@ -1148,8 +1157,18 @@ body.lb-disable-scrolling{
                 display:none
             }
 
+            .welcome {
+                height: 100vh;
+            }
+
             .introduction {
                 margin: 0%;
+                margin-top: -2%;
+            }
+
+            h1{
+                margin-top: -20px;
+                font-size: 2.7em;
             }
 
             img:not(.fb-logo img, .slide img, .reference img, .burger-menu) {
@@ -1164,7 +1183,7 @@ body.lb-disable-scrolling{
                 align-items:center
             }
                 
-            .menu-background{
+            .menu-background {
                 position:fixed;
                 width:100%;
                 max-width:1000px;
@@ -1172,16 +1191,16 @@ body.lb-disable-scrolling{
                 left:50%;
                 transform:translateX(-50%);
                 padding:0;
-                background:#734022D0;
+                background:$secondary-color;
                 z-index:1000
             }
 
             .mobile-nav-back {
-                height:400px;
-                position:fixed;
-                top:100px;
+                height:450px;
+                position:absolute;
+                top:83.5px;
                 width:72%;
-                background-color:#734022A0;
+                background-color: $secondary-color-darkest;
                 z-index:-1;
                 display:none
             }
@@ -1192,13 +1211,7 @@ body.lb-disable-scrolling{
                 flex-wrap: wrap;
                 align-items: center;
                 justify-content: center;
-         }
-
-        .row2 {
-             width: 80%;
-             }
-            
-            
+         } 
 
         .photo-segment li {
             width: 50% !important;
@@ -1324,6 +1337,11 @@ body.lb-disable-scrolling{
 }
 
 @media (max-width: 480px) {
+
+    .first:not(.album, .our-games) {
+        font-size: 95% !important;
+    }
+
     a:not(.fb-logo,.our-games .first,.burger-menu) {
         font-size: 95%;
         text-decoration: none;
