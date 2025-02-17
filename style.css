@@ -1110,12 +1110,6 @@ body.lb-disable-scrolling {
     border: none !important;
     box-shadow: none;
     z-index: 799;
-  }
-  nav {
-    margin-bottom: 0;
-    height: 100px;
-    width: 100%;
-    position: fixed;
     top: 0;
   }
   nav ul {

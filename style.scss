@@ -1078,7 +1078,6 @@ body.lb-disable-scrolling{
 
 }
 
-@media only screen and (max-width: 768px) {
     @media only screen and (max-width: 768px) {
 
         body {
@@ -1088,10 +1087,10 @@ body.lb-disable-scrolling{
         .burger-menu {
             display: inline-block;
             position: absolute;
-            top: 10px;
+            top: 2%;
             left: 10px;
             right: 83%;
-            width: 15%;
+            width: clamp(70px, 11%, 90px);
             height: auto;
             max-width: 40%;
             border: none !important;
@@ -1243,7 +1242,6 @@ body.lb-disable-scrolling{
             font-size: 95%;
             text-decoration: none;
         }
-    }
 
     #lightbox-mobile {
         position:fixed;
@@ -1295,14 +1293,13 @@ body.lb-disable-scrolling{
         display: flex;
         gap: 5%;
     }
-
-    }
+}
 
     @media only screen and (min-width: 700px) and (max-width: 770px) {
     .burger-menu {
         top: -3px;
         right: 83%;
-        width: 15% !important;
+        width: clamp(70px, 11%, 90px);
         max-width: 40%;
     }
 
@@ -1313,30 +1310,22 @@ body.lb-disable-scrolling{
     }
 
     .burger-menu .jq--nav-icon {
-        width: 15%;
+        width: 12%;
     }  
 }
 
-@media only screen and (min-width: 700px) and (max-width: 770px) {
+@media (max-width: 480px) {
+
     .burger-menu {
-        top: -3px;
-        right: 83%;
-        width: 15% !important;
-        max-width: 40%;
-    }
-
-    #logo2 img {
-        top: 0px;
-        right: 2.5%;
-        width: 30%;
-    }
-
-    .burger-menu .jq--nav-icon {
-        width: 13%;
-    }
+        top: 5%;
+        right: 73%;
+        width: clamp(75px, 11%, 100px);
 }
 
-@media (max-width: 480px) {
+.close {
+    top: 7%;
+    width: clamp(50px, 25%, 70px);
+}
 
     .first:not(.album, .our-games) {
         font-size: 95% !important;
@@ -1406,13 +1395,14 @@ body.lb-disable-scrolling{
     }
 
     .burger-menu {
-            top: 10px;
+            top: 5%;
             right: 73%;
-            width: 20% !important;
+            width: clamp(70px, 22%, 80px)
     }
 
     .close {
-         width: 20%;
+        top: 7%;
+        width: clamp(50px, 25%, 70px);
     }
 
     nav {
