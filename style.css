@@ -257,7 +257,14 @@ main:not(.photo) {
   padding: 6px;
   filter: opacity(0.8);
   transform: translate3d(-5%, -2%, -0.2px) scale(1.05);
+  transition: all 0.6 ease-in;
+  filter: brightness(1.05);
   /* filter: drop-shadow(1px 1px 2px var(--text)); */
+}
+
+#logo img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
 }
 
 .burger-menu {
@@ -1651,9 +1658,20 @@ body.lb-disable-scrolling {
 }
 
 /***Dark/light mode**/
+
+.toggle-wrapper {
+  /* border: 1px solid red; */
+  position: relative;
+  width: 100%;
+  min-height: 30px;
+  left: 0px;
+  top: 120px;
+  z-index: 9999;
+}
+
 .theme-toggle {
   position: absolute;
-  top: 108px;
+  bottom: 0;
   left: 24px;
   width: 60px;
   height: 34px;
@@ -1663,6 +1681,7 @@ body.lb-disable-scrolling {
 }
 
 .theme-toggle input {
+  position: absolute;
   opacity: 0;
   width: 0;
   height: 0;
@@ -1670,11 +1689,33 @@ body.lb-disable-scrolling {
 
 .slider {
   position: absolute;
+  left: 48px !important;
   cursor: pointer;
   inset: 0;
   background-color: var(--text);
   border-radius: 34px;
   transition: background-color 0.4s;
+}
+
+
+header i {
+  position: absolute;
+  font-size: 30px;
+  color: var(--heading-color);
+  margin-right: 6px;
+  bottom: 0;
+}
+
+header i.sun {
+  position: absolute;
+  left: 116px;
+  font-size: 29px;
+}
+
+header i.moon {
+  position: absolute;
+  left: 14px;
+  bottom: 0px;
 }
 
 .slider::before {
