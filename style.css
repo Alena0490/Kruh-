@@ -283,7 +283,7 @@ main:not(.photo) {
   width: 100%;
   height: 60vh;
   padding: 24px;
-  margin-top: 84px;
+  margin-top: 48px;
   margin-bottom: 48px;
   filter: drop-shadow(2px 4px 6px black);
 }
@@ -897,7 +897,16 @@ footer {
   align-items: center;
   margin: 0 auto;
   background-color: var(--secondary-color);
-  padding-bottom: 24px;
+  padding-bottom: 12px;
+}
+
+.foot {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-bottom: 0;
+
 }
 
 .ff {
@@ -906,9 +915,10 @@ footer {
   width: 100%;
   justify-content: space-between;
   align-items: end;
-  padding: 0px 48px;
+  padding: 0px 24px;
   margin: 0 auto;
-  padding-bottom: 12px;
+  padding-bottom: 24px;
+  margin-bottom: 0;
 }
 
 .copyright {
@@ -922,6 +932,7 @@ footer {
 .fb-logo {
   display: inline-block;
   margin: 12px;
+  margin-bottom: 0;
   width: auto;
   height: 48px;
   flex-shrink: 0;
@@ -932,7 +943,7 @@ footer {
   color: var(--text);
   text-decoration: none;
   font-size: 1.2rem;
-  padding: 12px 0;
+  /* padding: 12px 0; */
   font-family: Lato, sans-serif;
 }
 
@@ -1247,14 +1258,7 @@ body.lb-disable-scrolling {
   width: 32.26%;
 }
 
-@media only screen and (max-width: 480px) {
-  .col {
-    margin: 0;
-  }
-  .span-1-of-2, .span-1-of-3, .span-2-of-2, .span-2-of-3, .span-3-of-3 {
-    width: 100%;
-  }
-}
+
 /*Queries*/
 @media only screen and (max-width: 995px) {
   .welcome {
@@ -1345,7 +1349,7 @@ body.lb-disable-scrolling {
     flex-direction: column;
     align-items: center;
     padding: 0;
-    margin: 100px 0 0;
+    margin: 142px 0 0;
   }
   nav ul li {
     text-align: left;
@@ -1422,7 +1426,7 @@ body.lb-disable-scrolling {
     position: fixed;
     width: 100%;
     max-width: 1000px;
-    top: 0;
+    top: -20px;
     left: 50%;
     transform: translateX(-50%);
     padding: 0;
@@ -1537,6 +1541,7 @@ body.lb-disable-scrolling {
     width: 12%;
   }
 }
+
 @media (max-width: 480px) {
   .burger-menu {
     top: 5%;
@@ -1580,6 +1585,17 @@ body.lb-disable-scrolling {
   }
   .training-time {
     font-size: 1.5rem !important;
+  }
+
+  .col {
+    margin: 0;
+  }
+  .span-1-of-2, .span-1-of-3, .span-2-of-2, .span-2-of-3, .span-3-of-3 {
+    width: 100%;
+  }
+
+.fb-logo {
+  margin-bottom: 24px;
   }
 }
 @media (max-width: 435px) {
