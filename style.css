@@ -289,7 +289,7 @@ main:not(.photo) {
 }
 
 section {
-  padding: 12px;
+  padding: 24px;
   border-radius: 6px;
   background-color: var(--background-muted);
   margin-top: 0px;
@@ -470,10 +470,13 @@ img:not(.fb-logo img, .slide img, .reference img, .burger-menu, .photo-segment l
   gap: 5%;
 }
 
-.vip {
+article.vip {
   display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
-  flex-direction: unset;
+  padding-top: 24px;
 }
 
 .reference {
@@ -611,7 +614,7 @@ input[name=r] {
   margin: 6px;
   cursor: pointer;
   background: none;
-  transition: background 0.7s;
+  transition: all 0.7s ease-in;
 }
 
 .bar:hover {
@@ -658,21 +661,6 @@ ul:not(nav ul) {
 .visit {
   display: flex;
   flex-direction: column;
-}
-
-.map-container {
-  flex: 1;
-  min-width: 300px;
-  max-width: 50%;
-  height: auto;
-  margin-right: 48px;
-  /* filter: drop-shadow var(--background) 2px 1px 3px; */
-  margin-bottom: 100px;
-}
-
-.map {
-  margin: 60px !important;
-  height: auto;
 }
 
 form {
@@ -864,9 +852,30 @@ input[type=submit]:hover {
 }
 
 .col {
-  display: block;
+  display: flex;
+  justify-content: space-around;
   float: left;
-  margin: 1% 0 1% 1.6%;
+  margin: 12px 0 12px 24px;
+}
+
+.col ul {
+  margin: 24px auto 0 auto;
+}
+
+.col.map-container {
+  display: flex;
+  justify-content: center;
+  float: none;
+  margin: 24px 12px 24px 12px;
+}
+
+.col.map-container a{
+  display: flex;
+  justify-content: center;
+}
+
+.col.map-container img {
+  margin-top: 0;
 }
 
 .schedule {
@@ -964,8 +973,8 @@ footer {
   position: fixed;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.6901960784) !important;
-  color: #fff !important;
+  background-color: var(--background) !important;
+  color: var(--text);
   padding: 15px 24px;
   z-index: 1000;
   font-size: 16px;
@@ -975,7 +984,7 @@ footer {
   margin-left: 12px;
   padding: 6px 12px;
   background-color: var(--secondary-color) !important;
-  color: #fff;
+  color: var(--text);
   border: none;
   border-radius: 6px;
   font-weight: 700;
@@ -988,7 +997,7 @@ footer {
   margin-left: 12px;
   padding: 5px 12px;
   background-color: var(--main-color) !important;
-  color: #fff;
+  color: var(--text);
   border: none;
   border-radius: 6px;
   font-weight: 700;
@@ -1295,10 +1304,12 @@ body.lb-disable-scrolling {
     margin: 0%;
   }
   .vip {
+    margin: 0px auto;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
   }
+
   ul:not(nav ul, .photo-segment) {
     display: block;
     font-size: 1.7rem;
