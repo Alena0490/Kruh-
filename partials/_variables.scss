@@ -1,10 +1,36 @@
+// Světlý režim
 $main-color: #F2B807;
 $main-color-darker: #c99700;
+
 $secondary-color: #bf372a;
 $secondary-color-light: #ff5343;
 $secondary-color-darkest: #bf372a80;
 $secondary-color-background-gradient: #ed423240;
+
 $hr-color: #BF996Ba4;
+
+$background-light: #fffbea;
+$text-light: #2e2e2e;
+$border-light: #e0e0e0;
+$link-color-light: #bf372a;
+$link-hover-light: #ff5343;
+
+// Tmavý režim
+$main-color-darkmode: #d9a406;
+$main-color-darker-darkmode: #a87f00;
+
+$secondary-color-darkmode: #ff7264;
+$secondary-color-light-darkmode: #ff8a7f;
+$secondary-color-darkest-darkmode: #ff726480;
+$secondary-gradient-darkmode: #ff726440;
+
+$background-dark: #1a1a1a;
+$text-dark: #eaeaea;
+$border-dark: #333;
+$link-color-dark: #ff7264;
+$link-hover-dark: #ff8a7f;
+$hr-color-dark: #bf996b55;
+
 
 @function em ($pixels, $basic-value: 16px) {
     @return ($pixels / $basic-value) * 1em;

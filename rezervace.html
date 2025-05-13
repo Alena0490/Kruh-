@@ -1,90 +1,100 @@
 <!DOCTYPE html>
 <html lang="cs">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/favicon.ico" type="image/png" sizes="16x16">
-    <link rel="icon" href="img/favicon-32x32.png" type="image/png" sizes="32x32">
-    <link rel="icon" href="img/android-chrome-192x192.png" type="image/png" sizes="192x192">
-    <link rel="icon" href="img/android-chrome-512x512.png" type="image/png" sizes="512x512">
-    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-    <link rel="manifest" href="img/site.webmanifest">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Kruháč - Rezervace</title>
-</head>
 
-<body>
-    <header>
-        <div class="menu-background-under">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="img/favicon.ico" type="image/png" sizes="16x16">
+        <link rel="icon" href="img/favicon-32x32.png" type="image/png" sizes="32x32">
+        <link rel="icon" href="img/android-chrome-192x192.png" type="image/png" sizes="192x192">
+        <link rel="icon" href="img/android-chrome-512x512.png" type="image/png" sizes="512x512">
+        <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+        <link rel="manifest" href="img/site.webmanifest">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">  
+        <link rel="stylesheet" href="style.css">
+        <title>Kruháč - Rezervace</title>
+    </head>
 
-        </div>
+    <body class="dark">
+        <header>
+            <label class="theme-toggle" aria-label="Přepínání světlého a tmavého režimu">
+                <input type="checkbox" id="modeToggle">
+                <span class="slider"></span>
+            </label>
+
+            <div class="menu-background-under">
+
+            </div>
+            
+            <div class="menu-background">
+                <nav>
+                    <ul>
+                        <li><a class="first" href="index.html">Hlavní stránka</a></li>
+                        <li><a class="first" href="o-nas.html">O nás</a></li>
+                        <li><a class="first" href="fotogalerie.html">Fotogalerie</a></li>
+                        <li><a class="first active" href="rezervace.html">Rezervace</a></li>
+                        <li><a class="first" href="kontakty.html">Kontakty</a></li>
+                    </ul>
         
-        <div class="menu-background">
-            <nav>
-                <ul>
-                    <li><a class="first" href="index.html">Hlavní stránka</a></li>
-                    <li><a class="first" href="o-nas.html">O nás</a></li>
-                    <li><a class="first" href="fotogalerie.html">Fotogalerie</a></li>
-                    <li><a class="first active" href="rezervace.html">Rezervace</a></li>
-                    <li><a class="first" href="kontakty.html">Kontakty</a></li>
-                </ul>
-    
-                <div class="clearfix"></div>
-                <div class="mobile-nav-back"></div>
-                <a class="mobile-nav-icon" aria-label="menu" href="#"><img class="burger-menu jq--nav-icon" src="img/burger-barw.png" alt="Hamburger menu"></a>
+                    <div class="clearfix"></div>
+                    <div class="mobile-nav-back"></div>
+                    <a class="mobile-nav-icon" aria-label="menu" href="#"><img class="burger-menu jq--nav-icon" src="img/burger-barw.png" alt="Hamburger menu"></a>
 
-            </nav>
+                </nav>
+            </div>
+        </header> 
+
+        <div class="welcome">
+            <a id="logo" aria-label="Rezervace" href="index.html">
+                <img src="img/Logo_kruhac.png" alt="Logo"> 
+
+            </a>
+            <h1>Rezervace</h1>
         </div>
-    </header> 
 
-    <div class="welcome">
-        <a id="logo" aria-label="Rezervace" href="index.html">
-            <img src="img/Logo_kruhac.png" alt="Logo"> 
+        <div class="container">
+            
+            <main>
 
-        </a>
-        <h1>Rezervace</h1>
-        <br>
-    </div>
+                <h2 class=" before col2">Kalendář</h2>
+                <p>
+                    Na každé cvičení je nutné se předem zaregistrovat, a&nbsp;to <strong>nejpozději 2&nbsp;hodiny před začátkem lekce</strong>. 
+                    Po&nbsp;kliknutí na&nbsp;odkaz níže si v&nbsp;kalendáři vyberte termín a&nbsp;místo – cvičení probíhá v&nbsp;<strong>Lázních Bělohrad</strong> a&nbsp;<strong>v&nbsp;Jičíně</strong>.
+                </p>
+                <a class="rezervace" href="https://alena-pumprova.reservio.com">Přihlásit se</a>
+                <hr>
 
-    <div class="container">
-        
-        <main>
-
-            <br>
-            <h2 class=" before col2">Kalendář</h2>
-            <p>
-                Na každé cvičení je nutné se předem zaregistrovat, a to <strong>nejpozději 2 hodiny před začátkem lekce</strong>. 
-                Po kliknutí na odkaz níže si v kalendáři vyberte termín a místo – cvičení probíhá v <strong>Lázních Bělohrad</strong> a <strong>v Jičíně</strong>.
-            </p>
-            <br>
-            <a class="rezervace" href="https://alena-pumprova.reservio.com">Přihlásit se</a>
-            <hr>
-
-            </div>
-
-            <div id="cookie-banner">
-                Tento web používá cookies, bla bla bla... 
-                <button id="accept-cookies">Souhlasím</button>
-            </div>
-        </main>
-    </div>
-
-    <footer>
-        <div class="ff">
-            <div class="foot">
-                <a class="fb-logo" href="https://www.facebook.com/LBkruhovecviceni" target="_blank"><img src="img/fbw.webp" alt=" Facebook Logo" width="40" height="40" loading="lazy">Lázně Bělohrad</a>
-                <br>
-                <a class="fb-logo" href="https://www.facebook.com/jicinkondicnicviceni" target="_blank"><img src="img/fbw.webp" alt=" Facebook Logo" width="40" height="40" loading="lazy">Jičín</a>
-            </div>
-                <div class="copyright">
-                    Copyright © Alena Pumprová 2024
-            </div>
+            </main>
         </div>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="script.js" defer></script>
-</body>
+
+        <footer>
+            <div class="ff">
+                <div class="foot">
+                    <a class="fb-logo" href="https://www.facebook.com/LBkruhovecviceni" target="_blank">
+                        <i class="fa-brands fa-square-facebook"></i>
+                        Lázně Bělohrad
+                    </a>
+                    <br>
+                    <a class="fb-logo" href="https://www.facebook.com/jicinkondicnicviceni" target="_blank">
+                        <i class="fa-brands fa-square-facebook"></i>
+                        Jičín
+                    </a>
+                </div>
+                
+                    <div class="copyright">
+                        Copyright © Alena Pumprová 2024
+                </div>
+            </div>
+        </footer>
+
+        <div id="cookie-banner">
+            Tento web používá cookies, bla bla bla... 
+            <button id="accept-cookies">Souhlasím</button>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="script.js" defer></script>
+    </body>
 </html>

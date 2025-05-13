@@ -1,173 +1,179 @@
 <!DOCTYPE html>
 <html lang="cs">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/favicon.ico" type="image/png" sizes="16x16">
-    <link rel="icon" href="img/favicon-32x32.png" type="image/png" sizes="32x32">
-    <link rel="icon" href="img/android-chrome-192x192.png" type="image/png" sizes="192x192">
-    <link rel="icon" href="img/android-chrome-512x512.png" type="image/png" sizes="512x512">
-    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-    <link rel="manifest" href="img/site.webmanifest">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="img/favicon.ico" type="image/png" sizes="16x16">
+        <link rel="icon" href="img/favicon-32x32.png" type="image/png" sizes="32x32">
+        <link rel="icon" href="img/android-chrome-192x192.png" type="image/png" sizes="192x192">
+        <link rel="icon" href="img/android-chrome-512x512.png" type="image/png" sizes="512x512">
+        <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+        <link rel="manifest" href="img/site.webmanifest">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> 
     <link rel="stylesheet" href="style.css">
-    <title>Kruháč - Kontakty</title>
-</head>
+        <title>Kruháč - Kontakty</title>
+    </head>
 
-<body>
-    <header>
-        <div class="menu-background-under">
+    <body class="dark">
+        <header>
+            <label class="theme-toggle" aria-label="Přepínání světlého a tmavého režimu">
+                <input type="checkbox" id="modeToggle">
+                <span class="slider"></span>
+            </label>
+            <div class="menu-background-under">
 
-        </div>
-        <div class="menu-background">
-            <nav>
-                <ul>
-                    <li><a class="first" href="index.html">Hlavní stránka</a></li>
-                    <li><a class="first" href="o-nas.html">O nás</a></li>
-                    <li><a class="first" href="fotogalerie.html">Fotogalerie</a></li>
-                    <li><a class="first" href="rezervace.html">Rezervace</a></li>
-                    <li><a class="first active" href="kontakty.html">Kontakty</a></li>
-                </ul>
-    
-                <div class="clearfix"></div>
-                <div class="mobile-nav-back"></div>
-                <a class="mobile-nav-icon" aria-label="menu" href="#"><img class="burger-menu jq--nav-icon" src="img/burger-barw.png" alt="Hamburger menu"></a>
-
-            </nav>
-        </div>
-    </header> 
-
-    <div class="welcome">
-                <a id="logo" aria-label="Kontakty" href="index.html">
-                    <img src="img/Logo_kruhac.png" alt="Logo">
-                </a>
-                <h1>Kontakty</h1>
-    </div>
-
-    <div class="container">
-
-        <main>
+            </div>
+            <div class="menu-background">
+                <nav>
+                    <ul>
+                        <li><a class="first" href="index.html">Hlavní stránka</a></li>
+                        <li><a class="first" href="o-nas.html">O nás</a></li>
+                        <li><a class="first" href="fotogalerie.html">Fotogalerie</a></li>
+                        <li><a class="first" href="rezervace.html">Rezervace</a></li>
+                        <li><a class="first active" href="kontakty.html">Kontakty</a></li>
+                    </ul>
         
-                <br>
-                <h2 class="vip">Kontaktní údaje</h2>
-                <p> Máš otázky nebo nebo nové nápady? Neváhej nás kontaktovat přes&nbsp;<strong>e-mail</strong>, <strong>telefon</strong> nebo pomocí <a href="#" class="jq--scroll-form">formuláře</a> níže. Rádi ti vše zodpovíme!</p>
-                <br>
-            
-            <ul>
-                <li><strong>E-mail: </strong><a class="contact email" href="mailto:najman.donap@seznam.cz">najman.<wbr>donap@seznam.cz</a></li>
-                <li><strong>Telefon:</strong> <a class="contact telefon" href="tel:+420702099502">+420 702 099 502</a></li>
-                <li><strong>Můžeš využít také <a href="#" class="jq--scroll-form" class="cform">kontaktní formulář</a>.</strong></li>
-            </ul> 
-              
-            <br>
-            <hr>
-            <br>
-            <section class="visit">
-                <section class="vip">
-                    <h2 id="lb">Lázně Bělohrad</h2>
-                    <p>Tréninky probíhají celoročne v sokolovně Lázně Bělohrad. V létě máme také přístup na venkovní hřiště za sokolovnou.</p>
-                    <br>
-                        <div class="col address-content">
-                            <br>
-                            <ul>
-                                <li>Lázeňská 295</li>
-                                <li>507 81</li>
-                                <li>Lázně Bělohrad</li>
-                            </ul>
-                        </div>
+                    <div class="clearfix"></div>
+                    <div class="mobile-nav-back"></div>
+                    <a class="mobile-nav-icon" aria-label="menu" href="#"><img class="burger-menu jq--nav-icon" src="img/burger-barw.png" alt="Hamburger menu"></a>
 
-                        <div class="col map-container">
-                            <a href="https://www.google.com/maps/place/Sokolovna+L%C3%A1zn%C4%9B+B%C4%9Blohrad/@50.4292988,15.584839,17z/data=!4m6!3m5!1s0x470e9984eca1dbcf:0xd5d4f17f88d01fff!8m2!3d50.4292988!4d15.5874139!16s%2Fg%2F11dym5rbqq?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
-                                <img class="map" src="img/map-lb.webp" alt="Mapa - Lázně Bělohrad" class="map-image" width="492" height="370">
-                            </a>
-                        </div>
-                </section> 
-                <br>
+                </nav>
+            </div>
+        </header> 
+
+        <div class="welcome">
+                    <a id="logo" aria-label="Kontakty" href="index.html">
+                        <img src="img/Logo_kruhac.png" alt="Logo">
+                    </a>
+                    <h1>Kontakty</h1>
+        </div>
+
+        <div class="container">
+
+            <main>
+                    <h2 class="vip">Kontaktní údaje</h2>
+                    <p> Máš otázky nebo nebo nové nápady? Neváhej nás kontaktovat přes&nbsp;<strong>e-mail</strong>, <strong>telefon</strong> nebo pomocí <a href="#" class="jq--scroll-form">formuláře</a> níže. Rádi ti vše zodpovíme!</p>
+                    <br>
+                
+                <ul class="contacts">
+                    <li><i class="fa-solid fa-envelope"></i> <strong>E-mail: </strong><a class="contact email" href="mailto:najman.donap@seznam.cz">najman.<wbr>donap@seznam.cz</a></li>
+                    <li><i class="fa-solid fa-phone-flip"></i> <strong>Telefon:</strong> <a class="contact telefon" href="tel:+420702099502">+420 702 099 502</a></li>
+                    <li><i class="fa-solid fa-lightbulb"></i> <strong>Můžeš využít také <a href="#" class="jq--scroll-form cform">kontaktní formulář</a>.</strong></li>
+                </ul> 
                 <hr>
                 <section class="visit">
                     <section class="vip">
-                        <h2 id="jc">Jičín</h2>
-                        <p>V zimním období probíhají kruhové tréninky v <strong>hale Základní školy Poděbradova.</strong>
-                            V létě se tréninky přesouvají na <strong>hřiště před školou.</strong></p>
-                        <br>
+                        <h2 id="lb">Lázně Bělohrad</h2>
+                        <p>Tréninky probíhají celoročne v&nbsp;sokolovně Lázně Bělohrad. V&nbsp;létě máme také přístup na&nbsp;venkovní hřiště za&nbsp;sokolovnou.</p>
                             <div class="col address-content">
-                                <br>
+
                                 <ul>
-                                    <li>Poděbradova 18</li>
-                                    <li>506 01</li>
-                                    <li>Jičín 1</li>
+                                    <li>Lázeňská 295</li>
+                                    <li>507 81</li>
+                                    <li>Lázně Bělohrad</li>
                                 </ul>
                             </div>
 
                             <div class="col map-container">
-                                <a href="https://www.google.com/maps/place/Z%C3%A1kladn%C3%AD+%C5%A1kola,+Pod%C4%9Bbradova/@50.4298503,15.3457451,17.25z/data=!4m6!3m5!1s0x470ea40c4aa71ab7:0xd05800013369f1de!8m2!3d50.4299134!4d15.3475724!16s%2Fg%2F1tkbwyyq?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
-                                    <img class="map" src="img/map-jicin.webp" alt="Mapa - Jičín" class="map-image" width="492" height="370">
+                                <a href="https://www.google.com/maps/place/Sokolovna+L%C3%A1zn%C4%9B+B%C4%9Blohrad/@50.4292988,15.584839,17z/data=!4m6!3m5!1s0x470e9984eca1dbcf:0xd5d4f17f88d01fff!8m2!3d50.4292988!4d15.5874139!16s%2Fg%2F11dym5rbqq?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
+                                    <img class="map map-image" src="img/map-lb.webp" alt="Mapa - Lázně Bělohrad" width="492" height="370">
                                 </a>
                             </div>
-                    </section>
-            </section>
-                <br>
-                <hr>
+                    </section> 
+                </section> 
+                    <hr>
+                    <section class="visit">
+                        <section class="vip">
+                            <h2 id="jc">Jičín</h2>
+                            <p>V&nbsp;zimním období probíhají kruhové tréninky v&nbsp;<strong>hale Základní školy Poděbradova.</strong>
+                                V&nbsp;létě se tréninky přesouvají na&nbsp;<strong>hřiště před školou.</strong></p>
+                                <div class="col address-content">
+
+                                    <ul>
+                                        <li>Poděbradova 18</li>
+                                        <li>506 01</li>
+                                        <li>Jičín 1</li>
+                                    </ul>
+                                </div>
+
+                                <div class="col map-container">
+                                    <a href="https://www.google.com/maps/place/Z%C3%A1kladn%C3%AD+%C5%A1kola,+Pod%C4%9Bbradova/@50.4298503,15.3457451,17.25z/data=!4m6!3m5!1s0x470ea40c4aa71ab7:0xd05800013369f1de!8m2!3d50.4299134!4d15.3475724!16s%2Fg%2F1tkbwyyq?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
+                                        <img class="map map-image" src="img/map-jicin.webp" alt="Mapa - Jičín"  width="492" height="370">
+                                    </a>
+                                </div>
+                        </section>
+                </section>
+
+                    <hr>
+                    
+                    <h2 id="contact-form" class="contacts jq--form">Napiš nám</h2>
+                    <p> <p>Ať už máš dotaz, připomínku nebo jen chceš sdílet svůj názor, neváhej nám napsat. Rádi si přečteme tvou zprávu a&nbsp;co nejdříve se ti ozveme zpět.</p><br><p><strong>Budeme se těšit na&nbsp;tvoji zprávu! </strong></p>
+
                 
-                <h2 id="contact-form" class="contacts jq--form">Napiš nám</h2>
-                <p> <p>Ať už máš dotaz, připomínku nebo jen chceš sdílet svůj názor, neváhej nám napsat. Rádi si přečteme tvou zprávu a co nejdříve se ti ozveme zpět.</p><br><p><strong>Budeme se těšit na&nbsp;tvoji zprávu! </strong></p>
-                <br>
-            
-<div class="form-result success">Odeslání proběhlo úspěšně</div>;
-<div class="form-result error">Odeslání selhalo. Zkus to prosím znovu.</div>;
+    <div class="form-result success">Odeslání proběhlo úspěšně</div>;
+    <div class="form-result error">Odeslání selhalo. Zkus to prosím znovu.</div>;
 
-            <form  action="" method="post">
-                <div>
-                    <label for="name">Jméno</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
+                <form  action="" method="post">
+                    <div>
+                        <label for="name">Jméno</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
 
-                <div>
-                    <label for="surname">Příjmení</label>
-                    <input type="text" id="surname" name="surname" required>
-                </div>
+                    <div>
+                        <label for="surname">Příjmení</label>
+                        <input type="text" id="surname" name="surname" required>
+                    </div>
 
-                <div>
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
+                    <div>
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
 
-                <div>
-                    <label for="phone">Telefon (nepovinné)</label>
-                    <input type="text" id="phone" name="phone">
-                </div>
+                    <div>
+                        <label for="phone">Telefon (nepovinné)</label>
+                        <input type="text" id="phone" name="phone">
+                    </div>
 
-                <div>
-                    <label for="message">Tvůj vzkaz</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
+                    <div>
+                        <label for="message">Tvůj vzkaz</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    
+                    <input type="submit" value="Odeslat">
+                </form>
                 
-                <input type="submit" value="Odeslat">
-            </form>
-            <br>
-            
-            </div>
-            <div id="cookie-banner">
-                Tento web používá cookies, bla bla bla... 
-                <button id="accept-cookies">Souhlasím</button>
-            </div>
-        </main>
-    </div>
-    <footer>
-        <div class="ff">
-            <div class="foot">
-                <a class="fb-logo" href="https://www.facebook.com/LBkruhovecviceni" target="_blank"><img src="img/fbw.webp" alt=" Facebook Logo" width="40" height="40" loading="lazy">Lázně Bělohrad</a>
-                <br>
-                <a class="fb-logo" href="https://www.facebook.com/jicinkondicnicviceni" target="_blank"><img src="img/fbw.webp" alt=" Facebook Logo" width="40" height="40" loading="lazy">Jičín</a>
-            </div>
-                <div class="copyright">
-                    Copyright © Alena Pumprová 2024
-            </div>
+            </main>
         </div>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="script.js" defer></script> 
-</body>
+        <footer>
+            <div class="ff">
+                <div class="foot">
+                    <a class="fb-logo" href="https://www.facebook.com/LBkruhovecviceni" target="_blank">
+                        <i class="fa-brands fa-square-facebook"></i>
+                        Lázně Bělohrad
+                    </a>
+                    <br>
+                    <a class="fb-logo" href="https://www.facebook.com/jicinkondicnicviceni" target="_blank">
+                        <i class="fa-brands fa-square-facebook"></i>
+                        Jičín
+                    </a>
+                </div>
+
+                <div class="copyright">
+                        Copyright © Alena Pumprová 2024
+                </div>
+
+            </div>
+        </footer>
+
+        <div id="cookie-banner">
+            Tento web používá cookies, bla bla bla... 
+            <button id="accept-cookies">Souhlasím</button>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="script.js" defer></script>
+    </body>
 </html>

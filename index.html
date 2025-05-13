@@ -12,15 +12,22 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
         <link rel="stylesheet" href="style.css">
         <title>Kruháč - Hlavní stránka</title>
         <meta name="description" content="Kondiční cvičení v Lázních Bělohrad a Jičíně. Přidej se k nám a zlepši svou kondici!">
         <meta name="author" content="Alena Pumprová">
         <meta name="robots" content="index, follow">
-        <meta name="keywords"content="kondiční cvičení, Lázně Bělohrad, Jičín, tréninky, fitness">
+        <meta name="keywords" content="kondiční cvičení, Lázně Bělohrad, Jičín, tréninky, fitness">
+    </head>
 
-    <body>
+    <body class="dark">
             <header>
+                <label class="theme-toggle" aria-label="Přepínání světlého a tmavého režimu">
+                    <input type="checkbox" id="modeToggle">
+                    <span class="slider"></span>
+                  </label>
+
                 <div class="menu-background-under">
 
                 </div>
@@ -46,7 +53,6 @@
                         <img src="img/Logo_kruhac.png" alt="Logo">
                     </a>
                     <h1>Kondiční cvičení</h1>
-                    <br>
                     <p class="introduction parallax">
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem eius iure commodi molestias rerum perferendis saepe voluptates, officiis perspiciatis!
                     </p>
@@ -56,45 +62,38 @@
                 
             <main>
                 
-                <br>
                 <h2>Aktuality</h2>
                 <p>
                     Zde naleznete veškeré novinky, které by vás mohli zajímat. Změny v trénincích, společné akce, nové vybavení apod.
                     
                 </p>
-                <br>
                 <hr>
                 
                 <h2 class="before">Co tě čeká</h2>
 
-                <span class="row">
-                    <img class="uvod" lorem <img src="img/cf2.webp" alt="žena zvedající činku" width="400" height="400">
+                <div class="row">
+                    <img class="uvod" src="img/cf2.webp" alt="žena zvedající činku" width="400" height="400">
                     <p class="row2">
-                        <strong>Co je kondiční cvičení, co od něj čekat a proč to zkusit? 🤔 </strong>
+                        <strong>Co je kondiční cvičení, co od&nbsp;něj čekat a&nbsp;proč to zkusit? 🤔 </strong>
                         <ol>
-                            <li><p>Jedná se o moderní formu cvičení s prvky <strong>crossfitu</strong>, při kterém procvičíte celé tělo. Zahrnuje jak kardio, tak silové cvičení, proto se jedná o jeden z nejkomplexnějších druhů tréninků.</p></li>
-                            <br>
-                            <li><p>Žádný trénink není stejný, využíváme širokou škálu vybavení včetně veslařských trenažérů, <strong>Echo Bike</strong>, <strong>SkiErg</strong> a <strong>bikeErg</strong>.</p></li>
-                            <br>
-                            <li><p>Tréninky probíhají pod vedením certifikovaných trenérů, takže nebojte - víme co děláme!</p></li>
-                            <br>
-                            <li><p>Tréninky nejsou jen pro pokročilé cvičence a svalovce. Přijít může i úplný začátečník. Když něco nezvládneš - nevadí. Trenér Ti ukáže lehčí variantu cviku.</p></li>
-                            <br>
-                            <li><p>Cvičíme s osou, kettlebelly, činkami, závěsnými systémy, ale i s vlastní váhou a spoustou dalšího vybavení.</p></li>
+                            <li><p>Jedná se o&nbsp;moderní formu cvičení s&nbsp;prvky <strong>crossfitu</strong>, při kterém procvičíte celé tělo. Zahrnuje jak kardio, tak silové cvičení, proto se jedná o&nbsp;jeden z&nbsp;nejkomplexnějších druhů tréninků.</p></li>
+                            
+                            <li><p>Žádný trénink není stejný, využíváme širokou škálu vybavení včetně veslařských trenažérů, <strong>Echo Bike</strong>, <strong>SkiErg</strong> a&nbsp;<strong>bikeErg</strong>.</p></li>
+                            
+                            <li><p>Tréninky probíhají pod&nbsp;vedením certifikovaných trenérů, takže nebojte - víme co děláme!</p></li>
+                            
+                            <li><p>Tréninky nejsou jen pro&nbsp;pokročilé cvičence a&nbsp;svalovce. Přijít může i&nbsp;úplný začátečník. Když něco nezvládneš - nevadí. Trenér Ti ukáže lehčí variantu cviku.</p></li>
+                            
+                            <li><p>Cvičíme s&nbsp;osou, kettlebelly, činkami, závěsnými systémy, ale i&nbsp;s&nbsp;vlastní váhou a&nbsp;spoustou dalšího vybavení.</p></li>
                         </ol>
-                </span>
-                <br>
+                
                 <hr>
                 <h2>Jak to celé začalo</h2>
-                <br>
-                <p>Ahoj, Jmenuji se <strong>Tomáš Najman</strong>, je mi 35 let a žiji v Lázních Bělohrad. Sport a pohyb jsou mou velkou součástí a provázejí mě prakticky celý můj život. Jako dítě jsem začal aktivně hrát volejbal, a i když se mu již nevěnuji naplno, rád si ho stále rekreačně zahraji. Mám rád cyklistiku, turistiku, v zimě lyže, běžky a v neposlední řadě crossfit. </p><br>
-<p>Právě crossfit mě inspiruje při vymýšlení jednotlivých tréninků. Snažím se, aby žádný trénink nebyl stejný a aby vás vždy něco překvapilo. <strong>Kruhové tréninky</strong> jsem začal pořádat v roce 2018 čirou náhodou. Sám jsem si chodil cvičit na workoutové hřiště v LB jen se základním vybavením, pár známých se ke mně přidalo a <strong>„kruhové cvičení LB“</strong> bylo na světě. V roce 2020 jsem absolvoval <strong>akreditovaný kurz instruktora fitness</strong>, abych posunul dál nejen sebe, ale i vás. V roce 2023 přišla příležitost odkoupit a vést <strong>kondiční cvičení v Jičíně</strong>. Cvičení bylo v Jičíně velmi oblíbené, a proto byla velkou výzvou návštěvnost a oblíbenost zachovat. Což se, doufám, daří. </p><br>
-<p>Od roku 2018 uplynulo mnoho času, já nabral mnoho zkušeností a jsem rád, že můžu milovníkům pohybu a cvičení nabídnout nejen profesionální přístup a dvě profesionálně vybavené tělocvičny, ale i komunitu lidí, s nimiž budete sdílet stejné zájmy. </p><br>
-<p>Aby bylo vše sjednoceno a jasné, máme od roku 2025 jednotný název pro Jičín i Lázně Bělohrad, a to <strong>Kondiční cvičení</strong>.</p>
+                <p>Ahoj, Jmenuji se <strong>Tomáš Najman</strong>, je mi 35&nbsp;let a&nbsp;žiji v&nbsp;Lázních Bělohrad. Sport a&nbsp;pohyb jsou mou velkou součástí a&nbsp;provázejí mě prakticky celý můj život. Jako dítě jsem začal aktivně hrát volejbal, a&nbsp;i&nbsp;když se mu již nevěnuji naplno, rád si ho stále rekreačně zahraji. Mám rád cyklistiku, turistiku, v zimě lyže, běžky a&nbsp;v&nbsp;neposlední řadě crossfit.</p><br>
+<p>Právě crossfit mě inspiruje při vymýšlení jednotlivých tréninků. Snažím se, aby žádný trénink nebyl stejný a&nbsp;aby vás vždy něco překvapilo. <strong>Kruhové tréninky</strong> jsem začal pořádat v&nbsp;roce 2018 čirou náhodou. Sám jsem si chodil cvičit na&nbsp;workoutové hřiště v&nbsp;LB jen se základním vybavením, pár známých se ke&nbsp;mně přidalo a&nbsp;<strong>„kruhové cvičení&nbsp;LB“</strong> bylo na&nbsp;světě. V&nbsp;roce 2020 jsem absolvoval <strong>akreditovaný kurz instruktora fitness</strong>, abych posunul dál nejen sebe, ale i&nbsp;vás. V&nbsp;roce 2023 přišla příležitost odkoupit a&nbsp;vést <strong>kondiční cvičení v&nbsp;Jičíně</strong>. Cvičení bylo v&nbsp;Jičíně velmi oblíbené, a&nbsp;proto byla velkou výzvou návštěvnost a&nbsp;oblíbenost zachovat. Což se, doufám, daří. </p><br>
+<p>Od&nbsp;roku 2018 uplynulo mnoho času, já nabral mnoho zkušeností a&nbsp;jsem rád, že můžu milovníkům pohybu a&nbsp;cvičení nabídnout nejen profesionální přístup a&nbsp;dvě profesionálně vybavené tělocvičny, ale i&nbsp;komunitu lidí, s&nbsp;nimiž budete sdílet stejné zájmy. </p><br>
+<p>Aby bylo vše sjednoceno a&nbsp;jasné, máme od&nbsp;roku 2025 jednotný název pro Jičín i&nbsp;Lázně Bělohrad, a&nbsp;to <strong>Kondiční cvičení</strong>.</p>
 
-
-                </p>
-                <br>
                 <div class="slider-wrapper">
                 
                 <div class="slider middle">
@@ -141,23 +140,24 @@
                 </div>
                 
                 </div>
-                <br>
+
 </div>
-
-                <div id="cookie-banner">
-                    Tento web používá cookies, bla bla bla... 
-                    <button id="accept-cookies">Souhlasím</button>
-                </div>    
-
+   
             </main>
         </div>
 
             <footer>
                 <div class="ff">
                     <div class="foot">
-                            <a class="fb-logo" href="https://www.facebook.com/LBkruhovecviceni" target="_blank"><img src="img/fbw.webp" alt=" Facebook Logo" width="40" height="40" loading="lazy">Lázně Bělohrad</a>
+                            <a class="fb-logo" href="https://www.facebook.com/LBkruhovecviceni" target="_blank">
+                                <i class="fa-brands fa-square-facebook"></i>
+                                Lázně Bělohrad
+                            </a>
                             <br>
-                            <a class="fb-logo" href="https://www.facebook.com/jicinkondicnicviceni" target="_blank"><img src="img/fbw.webp" alt=" Facebook Logo" width="40" height="40" loading="lazy">Jičín</a>
+                            <a class="fb-logo" href="https://www.facebook.com/jicinkondicnicviceni" target="_blank">
+                                <i class="fa-brands fa-square-facebook"></i>
+                                Jičín
+                            </a>
                     </div>
                     
                     <div class="copyright">
@@ -165,6 +165,11 @@
                     </div>
                 </div>
             </footer>
+
+            <div id="cookie-banner">
+                Tento web používá cookies, bla bla bla... 
+                <button id="accept-cookies">Souhlasím</button>
+            </div> 
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
         <script src="script.js" defer></script>
     </body>

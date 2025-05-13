@@ -42,7 +42,7 @@ body {
 
     body::-webkit-scrollbar-thumb{
         background-color:$secondary-color;
-        border-radius:7px
+        border-radius:6px
     }
 
     body::-webkit-scrollbar-track{
@@ -138,7 +138,7 @@ body {
     .burger-menu {
         display: none;
         position: absolute;
-        top: 10px;
+        top: 12px;
         right: 83%;
         width: 15%;
         height: auto;
@@ -173,7 +173,7 @@ body {
 
     #logo img {
         position: absolute;
-        top: -65px;
+        top: -60px;
         right: 1%;
         width: 170px;
         background-color: #00000000;
@@ -181,9 +181,9 @@ body {
         max-width: 100%;
         border: none;
         z-index: 1009;
-        margin-bottom: 5px;
+        margin-bottom: 6px;
         box-shadow: none;
-        padding: 5px;
+        padding: 6px;
         filter: opacity(0.8);
         transform: translate3d(-5%, -2%, -0.2px) scale(1.05);
         filter: drop-shadow(1px 1px 2px rgb(255, 255, 255));
@@ -204,9 +204,9 @@ body {
         background-repeat: no-repeat;
         width: 100%;
         height: 60vh;
-        padding: 20px;
-        margin-top: 80px;
-        margin-bottom: 50px;
+        padding: 24px;
+        margin-top: 84px;
+        margin-bottom: 48px;
         filter: drop-shadow(2px 4px 6px black);
     }
 
@@ -225,7 +225,7 @@ body {
     h2 {
         text-align: center;
         color:  $main-color;
-        margin-top: 30px;
+        margin-top: 24px;
         text-shadow: #000000 1px 1px 2px;
         font-family: "Teko", "Arial", sans-serif;
         letter-spacing: 1px;
@@ -238,9 +238,9 @@ body {
 
     .before {
         position: relative;
-        margin-bottom: 20px;
+        margin-bottom: 24px;
         text-align: center;
-        margin-top: 40px;
+        margin-top: 48px;
         width: 100%;
     }
     
@@ -250,9 +250,9 @@ body {
         border: none; /* Odstraní výchozí rámeček */
         height: 1.5px;  /* Nastaví tloušťku čáry */
         background-color: $hr-color; /* Barva čáry */
-        margin: 20px 0; /* Vodorovné mezery kolem čáry */
+        margin: 24px 0; /* Vodorovné mezery kolem čáry */
         filter: drop-shadow(2px 2px 2px black);
-        margin-top: 20px;
+        margin-top: 24px;
     }
 
     p {
@@ -296,15 +296,24 @@ body {
         border-radius: 50%;
         font-size: 1.5rem;
     }
+
+    .contacts li {
+        list-style: none;
+    }
+    .contacts li i {
+      color:  #d5c9c9;
+      margin-right: 6px;
+      font-size: 1.7rem;
+    }
     
 
     .introduction {
         font-weight: 600;
         font-size: 1.8rem;
         text-align: center;
-        margin: 50px;
+        margin: 48px;
         line-height: 150%;
-        padding-top: 5px;
+        padding-top: 6px;
         text-shadow: #000000 4px 4px 5px;
         color:  #F2F2F2;
         font-family: "Roboto", "Arial" sans-serif;
@@ -321,7 +330,7 @@ body {
         font-family: "Roboto", "Arial", sans-serif;
         word-wrap: break-word;
         font-weight: 500;
-        margin: 20px 0; /* Vodorovné mezery kolem čáry */
+        margin: 24px 0; /* Vodorovné mezery kolem čáry */
         text-shadow: #000000 2px 1px 3px;
     }
 
@@ -333,17 +342,17 @@ body {
         display: inline-block;
         text-align: center;
         font-size: 1.7rem !important;
-        margin: 15px auto; 
+        margin: 12px auto; 
         width: 100%;
         letter-spacing: 1px;
-        margin-bottom: 40px;
+        margin-bottom: 48px;
         font-family: "Roboto", "Arial", sans-serif;
         text-transform: uppercase;
     }
 
     img:not(.fb-logo img, .slide img, .reference img, .burger-menu, .photo-segment li img) {
         margin: 100px;
-        border-radius: 10px;
+        border-radius: 6px;
         filter: drop-shadow(2px 2px 4px black);
         transition:
         transform 0.7s,
@@ -380,8 +389,8 @@ body {
     }
 
     .reference img {
-        margin-bottom: 50px;
-        margin-top: 40px;
+        margin-bottom: 48px;
+        margin-top: 48px;
         border-radius: 50%;
         width: 50%;
         border: 3px solid $secondary-color;
@@ -396,16 +405,16 @@ body {
 
     .slider-wrapper {
         position:relative;
-        top: -5px;
+        top: -6px;
         overflow: hidden;
         width: 100%;
         height: auto;
-        max-width: 950px;
-        margin: 10px auto;
+        max-width: 960px;
+        margin: 12px auto;
         margin-bottom: 100px;
-        border-radius: 10px;
-        border: 3px solid $secondary-color;
-        filter: drop-shadow(2px 3px 4px black);
+        border-radius: 6px;
+        // border: 3px solid $secondary-color;
+        // filter: drop-shadow(2px 3px 4px black);
         transition:
             transform 0.7s,
             filter 0.7s,
@@ -415,8 +424,8 @@ body {
 
     .slider-wrapper:hover{
         filter:brightness(1.05);
-        box-shadow:#F2F2F2 2px 2px 4px;
-        border:3px solid $secondary-color-light;
+        // box-shadow:#F2F2F2 2px 2px 4px;
+        // border:3px solid $secondary-color-light;
     }
 
     .slides {
@@ -436,7 +445,7 @@ body {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: 10px;
+        border-radius: 6px;
         border: none;
     }
 
@@ -445,7 +454,7 @@ body {
         justify-content: center;
         align-items: center;
         position: absolute;
-        bottom: 20px;
+        bottom: 24px;
         width: 100%;
     }
 
@@ -478,7 +487,7 @@ body {
         width: 110px;
         height: 17px;
         border: 2px solid #F2F2F2;
-        margin: 7px;
+        margin: 6px;
         cursor: pointer;
         background: none;
         transition: background 0.7s;
@@ -507,10 +516,10 @@ body {
 ul:not(nav ul) {
     font-size: 1.7rem;
     line-height: 130%;
-    padding-top: 10px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 30px;
+    padding-top: 12px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 24px;
     z-index: 999;
     color: #d5c9c9;
     font-family: Lato, sans-serif;
@@ -535,7 +544,7 @@ ul:not(nav ul) {
     min-width:300px;
     max-width:50%;
     height: auto;
-    margin-right: 50px;
+    margin-right: 48px;
     filter: drop-shadow #000000 2px 1px 3px;
     margin-bottom: 100px;
 }
@@ -548,34 +557,34 @@ ul:not(nav ul) {
 form {
     width: 100%;
     border: 1px solid $secondary-color;
-    padding: 20px;
+    padding: 24px;
     background-color: #a3989890;
-    margin: 20px auto 70px;
+    margin: 24px auto 60px;
     margin-bottom: 100px;
-    border-radius: 10px;
+    border-radius: 6px;
     max-width: 1000px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 24px;
     filter: drop-shadow(2px 3px 4px black);
 }
 
 form label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
     margin-bottom: 2px;
     font-family: Roboto, sans-serif;
     color: white;
     font-weight: 700;
-    margin-left: 2px;
+    margin-left: 3px;
     font-size: 1.2rem;
 }
 
 form input[type=email], form input[type=text], form textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: 2px solid $secondary-color-light;
-    border-radius: 7px;
+    border-radius: 6px;
     box-sizing: border-box;
     background: #ffffffC0;
     color: #734022;
@@ -600,7 +609,7 @@ form textarea {
     height: 150px;
     margin-top: 0 !important;
     width: 204.5%;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
 form textarea:focus {
@@ -613,10 +622,10 @@ input[type=submit] {
     cursor: pointer;
     font-weight: 700;
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     color: #f2f2f2;
     font-size: 1.2rem;
-    border-radius: 5px;
+    border-radius: 6px;
     border: none;
     background-color: $secondary-color-light;
     transition: background 0.7s;
@@ -630,14 +639,14 @@ input[type=submit]:hover {
 .form-result{
     color: #F2F2F2;
     /*width:84%!important;*/
-    padding:10px!important;
-    margin:0 auto 20px!important;
+    padding:12px!important;
+    margin:0 auto 24px!important;
     font-size:1.2rem !important;
     text-align:center;
     font-weight:700!important;
     font-family: "Roboto", "Arial", sans-serif;
     line-height:1.4!important;
-    border-radius:10px!important;
+    border-radius:6px!important;
     letter-spacing: 1px;
     filter: drop-shadow(2px 3px 4px black);
 }
@@ -660,7 +669,7 @@ input[type=submit]:hover {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 20px auto;
+        margin: 24px auto;
         z-index: 1;
         position: relative;
     }
@@ -674,13 +683,13 @@ input[type=submit]:hover {
  }
 
 .photo-segment li {
-    margin-left: 2px;
+    margin-left: 3px;
     width: 21.5%;
     height: 35vh;
     min-height: 250px;
-    padding: 5px;
+    padding: 6px;
     overflow: hidden;
-    border-radius: 10px; /* Zaoblené rohy pro kontejner */
+    border-radius: 6px; /* Zaoblené rohy pro kontejner */
     position: relative; /* Zajistí správné umístění obrázku uvnitř kontejneru */
     margin: 1%;
     display: inline-block;
@@ -693,13 +702,13 @@ input[type=submit]:hover {
 }
 
 .photo-segment li:first-child {
-    margin-left:2px;
+    margin-left:3px;
 }
 
 .photo-segment li img{
     width:100%;
     height:100%;
-    border-radius: 10px;
+    border-radius: 6px;
     object-fit: cover;
     transition:transform 0.7s,filter 0.7s,box-shadow 0.7s,border 0.7s
 }
@@ -721,7 +730,7 @@ input[type=submit]:hover {
 .col2 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
-    gap: 15px;
+    gap: 12px;
     max-width: 1200px;
     max-width: 100%;
     margin: 0 auto;
@@ -761,7 +770,7 @@ footer {
     align-items: center;
     margin: 0 auto;
     background-color: $secondary-color;
-    padding-bottom: 20px;
+    padding-bottom: 24px;
 }
 
 .ff {
@@ -770,9 +779,9 @@ footer {
     width: 100%;
     justify-content: space-between;
     align-items: end;
-    padding: 0px 40px;
+    padding: 0px 48px;
     margin: 0 auto;
-    padding-bottom: 15px;
+    padding-bottom: 12px;
 }
 
 .copyright {
@@ -785,9 +794,9 @@ footer {
 
 .fb-logo {
     display: inline-block;
-    margin: 10px;
+    margin: 12px;
     width: auto;
-    height: 40px;
+    height: 48px;
     flex-shrink: 0;
     filter: none;
     mix-blend-mode: normal;
@@ -796,7 +805,7 @@ footer {
     color: #F2F2F2;
     text-decoration: none;
     font-size: 1.2rem;
-    padding: 15px 0;
+    padding: 12px 0;
     font-family: Lato, sans-serif;
 }
 
@@ -805,7 +814,7 @@ footer {
     margin: 0;
     box-shadow: none !important;
     color: #F2F2F2;
-    margin-right: 20px;
+    margin-right: 24px;
     position: relative;
     top: 25%;
 }
@@ -820,30 +829,30 @@ footer {
     left: 0;
     background-color: #000000B0 !important;
     color: #fff !important;
-    padding: 15px 20px;
+    padding: 15px 24px;
     z-index: 1000;
     font-size: 16px;
 }
 
 #accept-cookies {
-    margin-left: 10px;
-    padding: 5px 10px;
+    margin-left: 12px;
+    padding: 6px 12px;
     background-color: $secondary-color !important;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     font-weight: 700;
     font-size: 1rem;
     transition: background-color 0.7s;
 }
 
 #accept-cookies:hover {
-    margin-left: 10px;
-    padding: 5px 10px;
+    margin-left: 12px;
+    padding: 5px 12px;
     background-color: $main-color !important;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     font-weight: 700;
     font-size: 1rem;
 }
@@ -918,7 +927,7 @@ body.lb-disable-scrolling{
     height:auto;
     max-width:inherit;
     max-height:none;
-    border-radius:5px;
+    border-radius:6px;
     border:2px solid $secondary-color
 }
 
@@ -930,7 +939,7 @@ body.lb-disable-scrolling{
     position:relative;
     width:250px;height:250px;
     margin:0 auto;
-    border-radius:5px;
+    border-radius:6px;
     background-color:#f2f2f2
 }
 
@@ -1014,10 +1023,10 @@ body.lb-disable-scrolling{
 
 .lb-dataContainer{
     margin:0 auto;
-    padding-top:5px;
+    padding-top:6px;
     width:100%;
-    border-bottom-left-radius:4px;
-    border-bottom-right-radius:4px
+    border-bottom-left-radius:6px;
+    border-bottom-right-radius:6px
 }
 
 .lb-dataContainer:after{
@@ -1027,7 +1036,7 @@ body.lb-disable-scrolling{
 }
 
 .lb-data{
-    padding:0 4px;
+    padding:0 3px;
     color: #f2f2f2;
 }
 
@@ -1095,7 +1104,7 @@ body.lb-disable-scrolling{
 
     #logo img {
         position: relative;
-        margin: 10px;
+        margin: 12px;
     }
 
     .introduction {
@@ -1107,14 +1116,14 @@ body.lb-disable-scrolling{
   }
 
   .uvod {
-      margin: 0px auto 40px auto !important;
+      margin: 0px auto 48px auto !important;
   }
 }
 
 @media only screen and (max-width: 900px) {
     #logo img {
         position: relative;
-        margin: 10px;
+        margin: 12px;
     }
 
     .row2 {
@@ -1134,7 +1143,7 @@ body.lb-disable-scrolling{
         display: block;
         font-size: 1.7rem;
         line-height: 130%;
-        padding-top: 10px;
+        padding-top: 12px;
         margin-left: 20%;
     }
 
@@ -1155,7 +1164,7 @@ body.lb-disable-scrolling{
     }
 
     .uvod {
-        margin: 0px auto 40px auto !important;
+        margin: 0px auto 48px auto !important;
     }
 
 }
@@ -1170,7 +1179,7 @@ body.lb-disable-scrolling{
             display: inline-block;
             position: absolute;
             top: 2%;
-            left: 10px;
+            left: 12px;
             right: 83%;
             width: clamp(70px, 11%, 90px);
             height: auto;
@@ -1202,10 +1211,10 @@ body.lb-disable-scrolling{
                 display: block;
                 line-height: 130%;
                 width: 100%;
-                margin: 15px;
-                padding: 5px 0;
+                margin: 12px;
+                padding: 6px 0;
                 color: #F2F2F2;
-                margin-left: 40px;
+                margin-left: 48px;
             }
 
             #logo {
@@ -1216,11 +1225,11 @@ body.lb-disable-scrolling{
         
             #logo img {
                 position: relative;
-                margin: 10px;
+                margin: 12px;
             }
         
             .introduction {
-                margin: 50px;
+                margin: 48px;
             }
         
 
@@ -1241,9 +1250,9 @@ body.lb-disable-scrolling{
                 background:0 0;
                 cursor:pointer;
                 border:none!important;
-                padding-left:20px;
+                padding-left:24px;
                 margin-top:12px;
-                height:25px;
+                height:24px;
                 width:260px;
                 text-transform:uppercase;
                 z-index:1002;
@@ -1311,12 +1320,12 @@ body.lb-disable-scrolling{
          } 
 
          .uvod {
-            margin: 0px auto 40px auto !important;
+            margin: 0px auto 48px auto !important;
         }
 
         .photo-segment li {
             width: 50% !important;
-            padding-left: 10px;
+            padding-left: 12px;
             box-sizing: border-box;
             margin: 0 auto !important;
             display: inline-block;
@@ -1334,7 +1343,7 @@ body.lb-disable-scrolling{
 
         .col3 {
             flex-direction: column;
-            gap: 20px;
+            gap: 24px;
             align-items: center;
             justify-content: center;
             margin-bottom: 100px;
@@ -1374,8 +1383,8 @@ body.lb-disable-scrolling{
 
     .close { 
         position:absolute;
-        top:20px;
-        left: 10px;
+        top:24px;
+        left: 12px;
         font-size:30px;
         color:#fff!important;
         text-decoration:none;
@@ -1511,7 +1520,7 @@ body.lb-disable-scrolling{
         margin-bottom: 0;
         height: 100px;
         width: 100%;
-        padding: 0 20px;
+        padding: 0 24px;
         display: flex;
         justify-content: center;
     }
@@ -1531,15 +1540,16 @@ footer {
 }
 
 form {
-    padding:10px;
+    padding:12px;
     margin:0 auto;
     grid-template-columns:repeat(2,1fr);
-    gap:10px;max-width:600px;display:block;
-    margin-bottom: 40px;
+    gap:12px;max-width:600px;display:block;
+    margin-bottom: 48px;
     }
 
 form textarea {
-    height:150px;margin-top:5px!important;
+    height:150px;
+    margin-top:6px!important;
     width:100%
 }
 
@@ -1556,7 +1566,7 @@ a:not(.fb-logo,.our-games .first,.burger-menu){
         
 .b404 {
         height:65px!important;
-        padding:2px
+        padding:3px
     }
 
 }

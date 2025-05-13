@@ -1,174 +1,197 @@
 <!DOCTYPE html>
 <html lang="cs">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/favicon.ico" type="image/png" sizes="16x16">
-    <link rel="icon" href="img/favicon-32x32.png" type="image/png" sizes="32x32">
-    <link rel="icon" href="img/android-chrome-192x192.png" type="image/png" sizes="192x192">
-    <link rel="icon" href="img/android-chrome-512x512.png" type="image/png" sizes="512x512">
-    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-    <link rel="manifest" href="img/site.webmanifest">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Kruháč - O nás</title>
-</head>
 
-<body>
-    <header>
-        <div class="menu-background-under">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="img/favicon.ico" type="image/png" sizes="16x16">
+        <link rel="icon" href="img/favicon-32x32.png" type="image/png" sizes="32x32">
+        <link rel="icon" href="img/android-chrome-192x192.png" type="image/png" sizes="192x192">
+        <link rel="icon" href="img/android-chrome-512x512.png" type="image/png" sizes="512x512">
+        <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+        <link rel="manifest" href="img/site.webmanifest">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">  
+        <link rel="stylesheet" href="style.css">
+        <title>Kruháč - O nás</title>
+    </head>
 
-        </div>
+    <body class="dark">
+        <header>
+            <label class="theme-toggle" aria-label="Přepínání světlého a tmavého režimu">
+                <input type="checkbox" id="modeToggle">
+                <span class="slider"></span>
+            </label>
+            <div class="menu-background-under">
+
+            </div>
+            
+            <div class="menu-background">
+                <nav>
+                    <ul>
+                        <li><a class="first" href="index.html">Hlavní stránka</a></li>
+                        <li><a class="first active" href="o-nas.html">O nás</a></li>
+                        <li><a class="first" href="fotogalerie.html">Fotogalerie</a></li>
+                        <li><a class="first" href="rezervace.html">Rezervace</a></li>
+                        <li><a class="first" href="kontakty.html">Kontakty</a></li>
+                    </ul>
         
-        <div class="menu-background">
-            <nav>
-                <ul>
-                    <li><a class="first" href="index.html">Hlavní stránka</a></li>
-                    <li><a class="first active" href="o-nas.html">O nás</a></li>
-                    <li><a class="first" href="fotogalerie.html">Fotogalerie</a></li>
-                    <li><a class="first" href="rezervace.html">Rezervace</a></li>
-                    <li><a class="first" href="kontakty.html">Kontakty</a></li>
-                </ul>
-    
-                <div class="clearfix"></div>
-                <div class="mobile-nav-back"></div>
-                <a class="mobile-nav-icon" aria-label="menu" href="#"><img class="burger-menu jq--nav-icon" src="img/burger-barw.png" alt="Hamburger menu"></a>
+                    <div class="clearfix"></div>
+                    <div class="mobile-nav-back"></div>
+                    <a class="mobile-nav-icon" aria-label="menu" href="#"><img class="burger-menu jq--nav-icon" src="img/burger-barw.png" alt="Hamburger menu"></a>
 
-            </nav>
+                </nav>
+            </div>
+        </header> 
+
+        <div class="welcome">
+            <a id="logo" aria-label="Logo" href="index.html">
+                <img src="img/Logo_kruhac.png" alt="Logo">
+            </a>
+            <h1>O nás</h1>
         </div>
-    </header> 
 
-    <div class="welcome">
-        <a id="logo" aria-label="Logo" href="index.html">
-            <img src="img/Logo_kruhac.png" alt="Logo">
-        </a>
-        <h1>O nás</h1>
-        <br>
-    </div>
+        <div class="container">
+            <main>
 
-    <div class="container">
-        <main>
+                <h2 class=" before col2">Kdy a&nbsp;kde</h2>
+                <p>
+                    Pokud budete mít chuť to s&nbsp;námi vyzkoušet, máte možnost <strong>4x týdně</strong>. První lekci máte zdarma. Dále je možné si zakoupit permanentku <strong>10&nbsp;vstupů +&nbsp;1 vstup zdarma</strong>. 
+                </p>
+                <hr>
+        
+                <div class="col2">
+                    <section class="terminy">
+                        <div class="reference">
+                            <p class="schedule">
+                                <a href="kontakty.html#jc" class="jq--scroll">Jičín</a>
+                            </p>
             
-            <br>
-            <h2 class=" before col2">Kdy a kde</h2>
-            <p>
-                Pokud budete mít chuť to s námi vyzkoušet, máte možnost <strong>4x týdně</strong>. První lekci máte zdarma. Dále je možné si zakoupit permanentku <strong>10 vstupů + 1 vstup zdarma</strong>. 
-       
-            <br>
-            <hr>
-            </p>
-            <div class="col2">
+                            <ul class="center">
+                            
+                                <li>
+                                    <h4>Zimní období:</h4>
+                                    (Tělocvična ZŠ&nbsp;Poděbradova Jičín)
+                                    <ul>
+                                        <li class="training-time"><span class="red">Úterý:</span> 19:00-20:00</li>
+                                        <li class="training-time"><span class="red">Pátek:</span> 18:00-19:00</li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <h4>Letní období:</h4>
+                                    (Venkovní hřiště ZŠ Poděbradova Jičín)
+                                    <ul>
+                                        <li class="training-time"><span class="red">Úterý:</span> 19:00-20:00</li>
+                                        <li class="training-time"><span class="red">Čtvrtek:</span> 19:00-20:00</li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <h4>Cena:</h4>
+                                    <ul>
+                                        <li><span class="red">Permanentka 1 200 Kč</span></li>
+                                        <li>Jedna lekce 120 Kč</li>
+
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section class="terminy">
+                        <div class="reference">
+                            <p class="schedule">
+                                <a href="kontakty.html#lb" class="jq--scroll">
+                                    Lázně Bělohrad
+                                </a>
+                            </p>
+                            <ul class="center">
                 
-                <div class="reference">
-                    <ul class="center">
-                        <p class="schedule"><a href="kontakty.html#jc" class="jq--scroll">Jičín</a></p>
-                        <br>
-                        <li><h4>Zimní období:</h4>
-                            (Tělocvična ZŠ Poděbradova Jičín)
-                            <ul>
-                                <li class="training-time">Úterý: 19:00-20:00</li>
-                                <li class="training-time">Pátek: 18:00-19:00</li>
+                                <li>
+                                    <h4>Celoročně:</h4>
+                                    (Sokolovna Lázně Bělohrad)
+                                    <ul>
+                                        <li class="training-time"><span class="red">Středa:</span> 18:45-19:45</li>
+                                        <li class="training-time"><span class="red">Neděle:</span> 18:15-19:15</li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <h4>Cena:</h4>
+                                    <ul>
+                                        <li><span class="red">Permanentka 1 000 Kč</span></li>
+                                        <li>Jedna lekce 100 Kč</li>
+
+                                    </ul>
+                                </li>
+                                
+                                
                             </ul>
-                        </li>
+                        </div>
+                    </div>
+                </section>
+                <hr>
 
-                        <li><h4>Letní období:</h4>
-                            (Venkovní hřiště ZŠ Poděbradova Jičín)
-                            <ul>
-                                <li class="training-time">Úterý: 19:00-20:00</li>
-                                <li class="training-time">Čtvrtek: 19:00-20:00</li>
-                            </ul>
-                        </li>
+                <section class= "photo-gallery row">        
 
-                        <li>
-                            <ul><h4>Cena:</h4>
-                                <li>Permanentka 1 200 Kč</li>
-                                <li>Jedna lekce 120 Kč</li>
+                    <h2>Reference</h2>
+                    <div class="col3">
+                        <div class="reference-b">
+                            <img class="parallax" src="https://picsum.photos/id/460/150" alt="prfile image">
 
-                            </ul>
-                        </li>
+                            <p>
+                                <strong>Tomáš Najman</strong><br>(Jičín, Lázně Bělohrad)<br>dolor sit amet consectetur adipisicing elit. Reprehenderit eum ab asperiores ipsa alias laboriosam omnis quae rem accusantium provident cum nesciunt exercitationem temporibus delectus, est quo veritatis inventore. Cupiditate.
+                            </p>
+                        </div>
 
-                    </ul>
-                </div>
+                        <div class="reference-b">
+                            <img class="parallax" src="https://picsum.photos/id/460/150" alt="prfile image">
+                            <p>
+                                <strong>Pavla Kozová</strong><br>(Lázně Bělohrad)<br>dolor sit amet consectetur adipisicing elit. Reprehenderit eum ab asperiores ipsa alias laboriosam omnis quae rem accusantium provident cum nesciunt exercitationem temporibus delectus, est quo veritatis inventore. Cupiditate.
+                            </p>
+                        </div>
 
-                <div class="reference">
-                    <ul class="center"><p class="schedule"><a href="kontakty.html#lb"class="jq--scroll">Lázně Bělohrad</a></p>
-                        <br>
-                        <li><ul><h4>Celoročně:</h4>
-                            (Sokolovna Lázně Bělohrad)
-                            <li class="training-time">Středa: 18:45-19:45</li>
-                            <li class="training-time">Neděle: 18:15-19:15</li>
-                            </ul>
-                        </li>
+                        <div class="reference-b">
+                            <img class="parallax" src="https://picsum.photos/id/460/150" alt="prfile image">
+                            <p>
+                                <strong>Jan Šafránek</strong><br>(Jičín)<br>dolor sit amet consectetur adipisicing elit. Reprehenderit eum ab asperiores ipsa alias laboriosam omnis quae rem accusantium provident cum nesciunt exercitationem temporibus delectus, est quo veritatis inventore. Cupiditate.
+                            </p>
+                        </div>
+                    </div>
+                </section>
 
-                        <li>
-                            <ul><h4>Cena:</h4>
-                                <li>Permanentka 1 000 Kč</li>
-                                <li>Jedna lekce 100 Kč</li>
-
-                            </ul>
-                        </li>
-                        
-                        
-                    </ul>
-                </div>
-            </div>
-            <hr>
-            <section class= "photo-gallery row">
-            
-            <br>
-            <hr>
-            <h2>Reference</h2>
-            <div class="col3">
-                <div class="reference">
-                    <img class="parallax" Lorem <img src="https://picsum.photos/id/460/150" alt="">
-
-                    <p>
-                        <strong>Tomáš Najman</strong><br>(Jičín, Lázně Bělohrad)<br>dolor sit amet consectetur adipisicing elit. Reprehenderit eum ab asperiores ipsa alias laboriosam omnis quae rem accusantium provident cum nesciunt exercitationem temporibus delectus, est quo veritatis inventore. Cupiditate.
-                    </p>
-                </div>
-
-                <div class="reference">
-                    <img class="parallax" Lorem <img src="https://picsum.photos/id/460/150" alt="">
-                    <p>
-                        <strong>Pavla Kozová</strong><br>(Lázně Bělohrad)<br>dolor sit amet consectetur adipisicing elit. Reprehenderit eum ab asperiores ipsa alias laboriosam omnis quae rem accusantium provident cum nesciunt exercitationem temporibus delectus, est quo veritatis inventore. Cupiditate.
-                    </p>
-                </div>
-
-                <div class="reference">
-                    <img class="parallax" Lorem <img src="https://picsum.photos/id/460/150" alt="">
-                    <p>
-                        <strong>Jan Šafránek</strong><br>(Jičín)<br>dolor sit amet consectetur adipisicing elit. Reprehenderit eum ab asperiores ipsa alias laboriosam omnis quae rem accusantium provident cum nesciunt exercitationem temporibus delectus, est quo veritatis inventore. Cupiditate.
-                    </p>
-                </div>
-            </div>
-            <br>
-            <br>
-            <br>
-
-</div>
-
-            <div id="cookie-banner">
-                Tento web používá cookies, bla bla bla... 
-                <button id="accept-cookies">Souhlasím</button>
-            </div>
-        </main>
-    </div>
-
-    <footer>
-        <div class="ff">
-            <div class="foot">
-                <a class="fb-logo" href="https://www.facebook.com/LBkruhovecviceni" target="_blank"><img src="img/fbw.webp" alt=" Facebook Logo" width="40" height="40" loading="lazy">Lázně Bělohrad</a>
-                <br>
-                <a class="fb-logo" href="https://www.facebook.com/jicinkondicnicviceni" target="_blank"><img src="img/fbw.webp" alt=" Facebook Logo" width="40" height="40" loading="lazy">Jičín</a>
-            </div>
-                <div class="copyright">
-                    Copyright © Alena Pumprová 2024
-            </div>
+            </main>
         </div>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="script.js" defer></script>  
-</body>
+
+        <footer>
+            <div class="ff">
+                <div class="foot">
+                    <a class="fb-logo" href="https://www.facebook.com/LBkruhovecviceni" target="_blank">
+                        <i class="fa-brands fa-square-facebook"></i>
+                        Lázně Bělohrad
+                    </a>
+                    <br>
+                    <a class="fb-logo" href="https://www.facebook.com/jicinkondicnicviceni" target="_blank">
+                        <i class="fa-brands fa-square-facebook"></i>
+                        Jičín
+                    </a>
+                </div>
+
+                    <div class="copyright">
+                        Copyright © Alena Pumprová 2024
+                </div>
+            </div>
+        </footer>
+
+        <div id="cookie-banner">
+            Tento web používá cookies, bla bla bla... 
+            <button id="accept-cookies">Souhlasím</button>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="script.js" defer></script>  
+    </body>
 </html>

@@ -98,6 +98,12 @@ window.addEventListener("scroll", function() {
     });
 });
 
+const toggle = document.getElementById('modeToggle');
+toggle.addEventListener('change', () => {
+  document.body.classList.toggle('dark');
+});
+
+
 
 // // Automatický text
 // const heading = document.querySelector(".introduction")

@@ -1,3 +1,23 @@
+
+console.log('✅ Skript se spustil!');
+
+
+  /***Přepnutí na Light/Dark mode */
+  // script.js
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("modeToggle");
+  
+    if (!toggle) {
+      console.warn("⚠️ modeToggle nenalezen");
+      return;
+    }
+  
+    toggle.addEventListener("change", () => {
+      document.body.classList.toggle("dark");
+    });
+  });
+  
+  
 /*Scrolování k formuláři*/
 $(document).ready(function () {
     $('.jq--scroll-form').click(function (e) {
@@ -118,6 +138,10 @@ function printText(){
 }
 
 printText()
+
+  
+  
+  
 
 // Lightbox
 /*!
