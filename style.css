@@ -3,7 +3,7 @@
   --main-color:  rgb(224, 224, 224);
   --main-color-darker: rgb(224, 224, 224);
 
-  --secondary-color: #bf372a;
+  --secondary-color: #e64232;
   --secondary-color-light: #ff5343;
   --secondary-color-link: #bf372a;
   --secondary-color-darkest: #bf372a80;
@@ -39,7 +39,7 @@ body.dark {
   --main-color: rgb(0, 0, 0);
   --main-color-darker: rgb(37, 37, 37);
 
-  --secondary-color: #d94a3a;
+  --secondary-color: #f35341;
   --secondary-color-light: #ff6a5a;
   --secondary-color-link: #ff6a5a;
   --secondary-color-darkest: #d94a3a80;
@@ -843,7 +843,7 @@ input[type=submit]:hover {
 
 .col2 {
   display: grid;
-  justify-items: start;
+  justify-items: center;
   align-items: start;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 48px;
