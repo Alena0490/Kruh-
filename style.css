@@ -107,8 +107,8 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: var(--secondary-color);
-  border-radius: 6px;
+  background-color: var(--text-muted);
+  border-radius: 0px;
 }
 
 body::-webkit-scrollbar-track {
@@ -143,7 +143,7 @@ header {
   top: 0;
   width: 100%;
   height: 82px;
-  background: var(--main-color-darker-transparent);
+  background: var(--main-color-darker);
   z-index: 400;
   filter: drop-shadow(2px 3px 5px rgba(0, 0, 0, 0.7));
 }
@@ -202,25 +202,21 @@ nav ul li {
   letter-spacing: 1px;
   z-index: 900;
   text-transform: uppercase;
-  transition: background-color 0.7s, color 0.7s;
+  transition: all 0.6s ease-in;
   text-decoration: none;
   border-bottom: 12px solid transparent;
 }
 
-.first:hover {
-  /* background-color: var(--secondary-color); */
-  color: var(--text);
-  /* border: none; */
-  border-bottom: var(--secondary-color) 12px solid;
-  border-radius: 2px;
-}
-
-.first.active {
-  /* background-color: var(--secondary-color); */
-  color: var(--text);
-  /* border: none; */
-  border-bottom: var(--secondary-color) 12px solid;
-  border-radius: 2px;
+.first:hover::after,
+.first.active::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 0%;
+  width: 100%;
+  height: 12px;
+  background-color: var(--secondary-color);
+  border-radius: 6px;
 }
 
 .burger-menu {
@@ -456,7 +452,7 @@ a:not(.fb-logo, .our-games, .first, .burger-menu) {
   color: var(--secondary-color-link);
   font-size: 1.6rem;
   text-decoration: none;
-  transition: color 0.7s;
+  transition: color 0.7s ease-in;
   font-family: "Roboto", "Arial", sans-serif;
   word-wrap: break-word;
   font-weight: 500;
@@ -484,7 +480,7 @@ img:not(.fb-logo img, .slide img, .reference img, .burger-menu, .photo-segment l
   margin: 100px;
   border-radius: 6px;
   /* filter: drop-shadow(2px 2px 4px black); */
-  transition: transform 0.7s, filter 0.7s, box-shadow 0.7s, border 0.7s;
+  transition: all  0.6s ease-in;
 }
 
 img:not(.fb-logo img, .slide img, .reference img, .burger-menu, .photo-segment li img, .map):hover {
@@ -576,7 +572,7 @@ article.vip {
   margin: 12px auto;
   margin-bottom: 100px;
   border-radius: 6px;
-  transition: transform 0.7s, filter 0.7s, box-shadow 0.7s, border 0.7s;
+  transition: all 0.6s ease-in;
 }
 
 .slider-wrapper:hover {
@@ -771,10 +767,11 @@ input[type=submit] {
   border-radius: 6px;
   border: none;
   background-color: var(--secondary-color);
-  transition: background 0.7s;
+  transition: all 0.7s ease-in;
 }
 
 input[type=submit]:hover {
+  transform: scale(1.02);
   color: var(--text);
   background-color: var(--secondary-color-light);
 }
@@ -838,6 +835,7 @@ input[type=submit]:hover {
   margin: 1%;
   display: inline-block;
   box-sizing: border-box;
+  transition: all 0.6s ease-in;
 }
 
 .photo-segment li:hover {
@@ -855,7 +853,7 @@ input[type=submit]:hover {
   border-radius: 6px;
   -o-object-fit: cover;
      object-fit: cover;
-  transition: transform 0.7s, filter 0.7s, box-shadow 0.7s, border 0.7s;
+  transition: all 0.7s ease-in;
 }
 
 .photo-segment li img:hover {
@@ -923,6 +921,7 @@ input[type=submit]:hover {
   letter-spacing: 1px;
   font-family: "Roboto", "Arial", sans-serif;
   text-transform: uppercase;
+  transition: all 0.6s ease-in;
 }
 
 .schedule:hover {
@@ -1020,19 +1019,14 @@ footer {
   border-radius: 6px;
   font-weight: 700;
   font-size: 1rem;
-  transition: background-color 0.7s;
+  transition: all 0.6s ease-in;
   cursor: pointer;
 }
 
 #accept-cookies:hover {
-  margin-left: 12px;
-  padding: 5px 12px;
-  background-color: var(--main-color) !important;
+  transform: scale(1.04);
+  background-color: var(--secondary-color-light) !important;
   color: var(--text);
-  border: none;
-  border-radius: 6px;
-  font-weight: 700;
-  font-size: 1rem;
 }
 
 .row {
@@ -1172,7 +1166,7 @@ body.lb-disable-scrolling {
   float: left;
   background: url(img/prev.png) left 48% no-repeat;
   opacity: 0;
-  transition: opacity 0.6s;
+  transition: opacity 0.6s ease-in;
 }
 
 .lb-nav a.lb-prev:hover {
@@ -1185,7 +1179,7 @@ body.lb-disable-scrolling {
   float: right;
   background: url(img/next.png) right 48% no-repeat;
   opacity: 0;
-  transition: opacity 0.6s;
+  transition: opacity 0.6s ease-in;
 }
 
 .lb-nav a.lb-next:hover {
@@ -1245,7 +1239,7 @@ body.lb-disable-scrolling {
   text-align: right;
   outline: 0;
   opacity: 0.7;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s ease-in;
 }
 
 .lb-data .lb-close:hover {
@@ -1604,6 +1598,11 @@ body.lb-disable-scrolling {
 
   .introduction {
     min-width: 250px;
+  }
+
+  main {
+    padding-left: 24px;
+    padding-right: 24px;
   }
 
   img:not(.fb-logo img, .slide img, .reference img, .burger-menu) {
