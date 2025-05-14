@@ -2,8 +2,10 @@
   --heading-color: #f9f9f9 ;
   --main-color:  rgb(224, 224, 224);
   --main-color-darker: rgb(224, 224, 224);
+  --main-color-darker-transparent: rgb(224, 224, 224,0.5);
 
   --secondary-color: #e64232;
+  --secondary-color-transparent: #e64232b0;
   --secondary-color-light: #ff5343;
   --secondary-color-link: #bf372a;
   --secondary-color-darkest: #bf372a80;
@@ -38,8 +40,10 @@ body.dark {
   --heading-color: #f9f9f9 ;
   --main-color: rgb(0, 0, 0);
   --main-color-darker: rgb(37, 37, 37);
+  --main-color-darker-transparent: rgb(37, 37, 37, 0.5);
 
   --secondary-color: #f35341;
+  --secondary-color-transparent: #f35341b0;
   --secondary-color-light: #ff6a5a;
   --secondary-color-link: #ff6a5a;
   --secondary-color-darkest: #d94a3a80;
@@ -117,6 +121,20 @@ header {
   justify-content: center;
 }
 
+.welcome a i.arrow-down {
+  position: absolute;
+  bottom: 12px;
+  color: var(--heading-color);
+  font-size: 60px;
+  transition: all 0.6s ease-in;
+  cursor: pointer;
+}
+
+.welcome a i.arrow-down:hover {
+  transform: scale(1.15);
+  color: white;
+}
+
 .menu-background-under {
   position: fixed;
   left: 50%;
@@ -125,9 +143,9 @@ header {
   top: 0;
   width: 100%;
   height: 82px;
-  background: var(--main-color-darker);
+  background: var(--main-color-darker-transparent);
   z-index: 400;
-  filter: drop-shadow(2px 3px 5px black);
+  filter: drop-shadow(2px 3px 5px rgba(0, 0, 0, 0.7));
 }
 
 .menu-background {
@@ -139,7 +157,8 @@ header {
   width: 100%;
   height: 80px;
   max-width: 1400px;
-  background: var(--secondary-color);
+  /* background: var(--secondary-color-transparent); */
+  background: transparent;
   z-index: 500;
 }
 
@@ -166,26 +185,15 @@ nav ul li {
   list-style-type: none;
 }
 
-.first:hover {
-  background-color: var(--secondary-color);
-  color: var(--text);
-  border: none;
-}
-
-.first.active {
-  background-color: var(--secondary-color);
-  color: var(--text);
-  border: none;
-}
-
 .first {
   color: var(--text);
-  background: var(--main-color-darker);
+  background: var(--main-color-darker-transparent);
   font-weight: 400;
   display: flex;
   position: relative;
   justify-content: center;
   align-items: center;
+  padding-top: 6px;
   font-size: 115% !important;
   height: 83px;
   top: 20px;
@@ -196,6 +204,23 @@ nav ul li {
   text-transform: uppercase;
   transition: background-color 0.7s, color 0.7s;
   text-decoration: none;
+  border-bottom: 12px solid transparent;
+}
+
+.first:hover {
+  /* background-color: var(--secondary-color); */
+  color: var(--text);
+  /* border: none; */
+  border-bottom: var(--secondary-color) 12px solid;
+  border-radius: 2px;
+}
+
+.first.active {
+  /* background-color: var(--secondary-color); */
+  color: var(--text);
+  /* border: none; */
+  border-bottom: var(--secondary-color) 12px solid;
+  border-radius: 2px;
 }
 
 .burger-menu {
@@ -281,7 +306,7 @@ main:not(.photo) {
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  height: 60vh;
+  height: 75vh;
   padding: 24px;
   margin-top: 48px;
   margin-bottom: 48px;
@@ -295,6 +320,10 @@ section {
   margin-top: 0px;
   margin-bottom: 12px;
 
+}
+
+section.top {
+  padding-top: 0;
 }
 
 .terminy {
@@ -1437,7 +1466,7 @@ body.lb-disable-scrolling {
     position: fixed;
     width: 100%;
     max-width: 1000px;
-    top: -20px;
+    /* top: -20px; */
     left: 50%;
     transform: translateX(-50%);
     padding: 0;

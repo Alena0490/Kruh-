@@ -1,6 +1,33 @@
 
 console.log('✅ Skript se spustil!');
 
+/***Scrolování na stránce - z headeru */
+document.addEventListener('DOMContentLoaded', function () {
+    const startButton = document.querySelector('.scroll-start');
+    const endTarget = document.querySelector('.scroll-end');
+
+    if (startButton && endTarget) {
+        startButton.addEventListener('click', function (e) {
+            e.preventDefault();
+            endTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            history.replaceState(null, null, ' '); // odstraní #hash z URL
+        });
+    } else {
+        console.warn('Tlačítko nebo cíl scrollování nebyl nalezen.');
+    }
+});
+
+// Při opětovném načtení stránky skoč nahoru
+window.addEventListener("beforeunload", function () {
+    window.scrollTo(0, 0);
+});
+
+// Pojistka – pro případy, kdy to nefunguje hned
+window.addEventListener("load", function () {
+    setTimeout(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    }, 0);
+});
 
   /***Přepnutí na Light/Dark mode */
   // script.js
