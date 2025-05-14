@@ -4,8 +4,8 @@
   --main-color-darker: rgb(224, 224, 224);
   --main-color-darker-transparent: rgb(224, 224, 224,0.5);
 
-  --secondary-color: #e64232;
-  --secondary-color-transparent: #e64232b0;
+  --secondary-color: #f34635;
+  --secondary-color-transparent: #f34635b0;
   --secondary-color-light: #ff5343;
   --secondary-color-link: #bf372a;
   --secondary-color-darkest: #bf372a80;
@@ -438,6 +438,8 @@ ol li::before {
 .introduction {
   font-weight: 600;
   font-size: 1.8rem;
+  min-width: 450px;
+  max-width: 745px;
   text-align: center;
   margin: 48px;
   line-height: 150%;
@@ -1599,6 +1601,11 @@ body.lb-disable-scrolling {
     font-size: 95%;
     text-decoration: none;
   }
+
+  .introduction {
+    min-width: 250px;
+  }
+
   img:not(.fb-logo img, .slide img, .reference img, .burger-menu) {
     margin: 0px auto;
     width: 25vh;
