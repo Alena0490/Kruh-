@@ -892,6 +892,8 @@ input[type=submit]:hover {
 }
 
 .col.map-container {
+  position: relative;
+  max-width: 800px;
   display: flex;
   justify-content: center;
   float: none;
@@ -905,6 +907,9 @@ input[type=submit]:hover {
 
 .col.map-container img {
   margin-top: 0;
+  max-width: 400px;
+  height: auto;
+  cursor: pointer;
 }
 
 .schedule {
@@ -1499,6 +1504,7 @@ body.lb-disable-scrolling {
     width: 100%;
     max-width: 1000px;
   }
+
   footer {
     width: 100%;
     max-width: 1000px;
