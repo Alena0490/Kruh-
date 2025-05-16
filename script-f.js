@@ -72,46 +72,6 @@ $(document).ready(function () {
     });
 });
 
-/*Zobrazení galerie*/
-  $(function() {
-    $(".slider-wrapper").hide().fadeIn(3000);
-});
-
-  $(function() {
-    $(".album").hide().fadeIn(4000);
-});
-  $(function() {
-    $("iframe").hide().fadeIn(4000);
-});
-
-//Galerie swipe
-document.addEventListener('DOMContentLoaded', function () {
-    let touchStartX = 0;
-    let touchEndX = 0;
-  
-    function handleGesture() {
-      if (touchEndX < touchStartX - 40) {
-        document.querySelector('.lb-next')?.click(); // swipe vlevo
-      }
-      if (touchEndX > touchStartX + 40) {
-        document.querySelector('.lb-prev')?.click(); // swipe vpravo
-      }
-    }
-  
-    const lightbox = document.querySelector('.lightbox');
-  
-    if (lightbox) {
-      lightbox.addEventListener('touchstart', (e) => {
-        touchStartX = e.changedTouches[0].screenX;
-      });
-  
-      lightbox.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].screenX;
-        handleGesture();
-      });
-    }
-  });
-
 //Cookies
 document.addEventListener("DOMContentLoaded", function() {
     // Zkontrolujeme, zda uživatel už cookies přijal
@@ -159,7 +119,43 @@ toggle.addEventListener('change', () => {
   document.body.classList.toggle('dark');
 });
 
+/*Zobrazení galerie*/
+$(function() {
+    $(".slider-wrapper").hide().fadeIn(3000);
+});
 
+  $(function() {
+    $(".album").hide().fadeIn(4000);
+});
+  $(function() {
+    $("iframe").hide().fadeIn(4000);
+});
+
+//Galerie swipe
+document.addEventListener("DOMContentLoaded", function () {
+    let touchstartX = 0;
+    let touchendX = 0;
+  
+    document.body.addEventListener('touchstart', function (e) {
+      if (!document.querySelector('.lightbox')) return;
+      touchstartX = e.changedTouches[0].screenX;
+    });
+  
+    document.body.addEventListener('touchend', function (e) {
+      if (!document.querySelector('.lightbox')) return;
+      touchendX = e.changedTouches[0].screenX;
+      handleSwipeGesture();
+    });
+  
+    function handleSwipeGesture() {
+      if (touchendX < touchstartX - 40) {
+        document.querySelector('.lb-next')?.click();
+      }
+      if (touchendX > touchstartX + 40) {
+        document.querySelector('.lb-prev')?.click();
+      }
+    }
+  });
 
 // // Automatický text
 // const heading = document.querySelector(".introduction")
