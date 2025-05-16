@@ -116,6 +116,7 @@ body::-webkit-scrollbar-track {
 }
 
 header {
+  overflow-x: hidden;
   font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
   position: relative;
   display: flex;
@@ -321,6 +322,7 @@ main {
 }
 
 main:not(.photo) {
+  overflow-x: hidden;
   max-width: 1156px;
 }
 
@@ -970,6 +972,7 @@ img.one {
 }
 
 footer {
+  overflow-x: hidden;
   display: flex-end;
   width: 100%;
   justify-content: space-between;
@@ -1388,7 +1391,7 @@ body.lb-disable-scrolling {
     display: block;
     line-height: 130%;
     padding-top: 12px;
-    margin-left: 20%;
+    margin-left: 10%;
   }
 
   .welcome {
@@ -1458,7 +1461,7 @@ body.lb-disable-scrolling {
     margin-bottom: 2rem;
   }
 
-  git #logo img {
+   #logo img {
     position: relative;
     margin: 12px;
   }

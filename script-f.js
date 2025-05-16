@@ -84,6 +84,34 @@ $(document).ready(function () {
     $("iframe").hide().fadeIn(4000);
 });
 
+//Galerie swipe
+document.addEventListener('DOMContentLoaded', function () {
+    let touchStartX = 0;
+    let touchEndX = 0;
+  
+    function handleGesture() {
+      if (touchEndX < touchStartX - 40) {
+        document.querySelector('.lb-next')?.click(); // swipe vlevo
+      }
+      if (touchEndX > touchStartX + 40) {
+        document.querySelector('.lb-prev')?.click(); // swipe vpravo
+      }
+    }
+  
+    const lightbox = document.querySelector('.lightbox');
+  
+    if (lightbox) {
+      lightbox.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      });
+  
+      lightbox.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleGesture();
+      });
+    }
+  });
+
 //Cookies
 document.addEventListener("DOMContentLoaded", function() {
     // Zkontrolujeme, zda uživatel už cookies přijal
