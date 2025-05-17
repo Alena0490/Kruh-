@@ -276,6 +276,7 @@ nav ul li:last-child {
 }
 
 .welcome {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
