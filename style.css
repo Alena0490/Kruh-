@@ -171,7 +171,7 @@ nav {
   margin-bottom: 0;
   height: 100px;
   width: 100%;
-  z-index: 700;
+  z-index: 9999;
 }
 
 nav ul {
@@ -1505,6 +1505,10 @@ body.lb-disable-scrolling {
     margin-top: -2% 0 0 0;
   }
 
+  .arrow-down {
+    display: none;
+  }
+
   h1 {
     margin-top: -20px;
   }
@@ -1842,7 +1846,7 @@ body.lb-disable-scrolling {
   min-height: 30px;
   left: 0px;
   top: 120px;
-  z-index: 99999;
+  z-index: 900;
 }
 
 .theme-toggle {
@@ -1852,7 +1856,7 @@ body.lb-disable-scrolling {
   width: 60px;
   height: 34px;
   display: inline-block;
-  z-index: 109999;
+  z-index: 999;
   cursor: pointer;
 }
 
