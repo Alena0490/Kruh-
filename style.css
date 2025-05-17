@@ -95,7 +95,7 @@ body {
   background-attachment: fixed;
   position: relative;
   scrollbar-color: var(--secondary-color);
-  transform: translateZ(-40px) scale(1); /* Vzdálenější vrstva (pohybuje se pomaleji) */
+  /*transform: translateZ(-40px) scale(1); /* Vzdálenější vrstva (pohybuje se pomaleji) */
   background-attachment: fixed;
   perspective-origin: calc(50% - var(--scroll-bar-width) / 2) center;
   overflow-x: hidden;
@@ -172,6 +172,7 @@ nav {
   width: 100%;
   max-width: 1400px;
   z-index: 9999;
+  /* top: 0%; */
   top: -26%;
   margin-bottom: 0;
   height: 100px;
