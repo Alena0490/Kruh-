@@ -163,7 +163,6 @@ header {
   height: 82px;
   background: var(--main-color-darker);
   z-index: 400;
-  filter: drop-shadow(2px 3px 5px rgba(0, 0, 0, 0.7));
 }
 
 nav {
@@ -289,7 +288,6 @@ nav ul li:last-child {
   padding: 24px;
   margin-top: 48px;
   margin-bottom: 48px;
-  filter: drop-shadow(2px 4px 6px black);
 }
 
 .welcome a i.arrow-down:hover {
@@ -1145,7 +1143,7 @@ body.lb-disable-scrolling {
   max-width: inherit;
   max-height: none;
   border-radius: 6px;
-  border: 2px solid var(--secondary-color);
+  /* border: 2px solid var(--secondary-color); */
 }
 
 .lightbox a img {
