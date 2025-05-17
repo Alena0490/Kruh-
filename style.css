@@ -120,7 +120,7 @@ body::-webkit-scrollbar-track {
 header {
   overflow-x: hidden;
   font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
-  position: relative;
+  /* position: relative; */
   display: flex;
   justify-content: center;
 }
@@ -1837,12 +1837,12 @@ body.lb-disable-scrolling {
 /***Dark/light mode**/
 
 .toggle-wrapper {
-  position: relative;
+  position: absolute;
   width: 100%;
   min-height: 30px;
   left: 0px;
   top: 120px;
-  z-index: 9999;
+  z-index: 99999;
 }
 
 .theme-toggle {
@@ -1852,7 +1852,7 @@ body.lb-disable-scrolling {
   width: 60px;
   height: 34px;
   display: inline-block;
-  z-index: 9999;
+  z-index: 109999;
   cursor: pointer;
 }
 
