@@ -1415,6 +1415,7 @@ body.lb-disable-scrolling {
 @media only screen and (max-width: 768px) {
   body {
     background-size: contain, contain;
+    transform: none;
   }
 
   .burger-menu {
@@ -1614,6 +1615,11 @@ body.lb-disable-scrolling {
     max-height: 100%;
     border: 5px solid #044040;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  .lb-next,
+  .lb-prev {
+    display: none;
   }
 
   .close {
