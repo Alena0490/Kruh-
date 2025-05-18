@@ -549,7 +549,7 @@ a.rezervace:hover {
   gap: 5%;
 }
 
-article.vip {
+article.contact-box {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -577,11 +577,6 @@ article.vip {
   margin-left: 0;
 }
 
-.red {
-  color: var(--secondary-color-light);
-  font-weight: 700;
-}
-
 .reference-b {
   display: flex;
   flex-direction: column;
@@ -589,9 +584,19 @@ article.vip {
   padding: 12px;
 }
 
+.red {
+  color: var(--secondary-color-light);
+  font-weight: 700;
+}
+
 .center {
   color: var(--text-muted);
   font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  display: flex;
+  justify-content: center;
 }
 
 .center ul li {
@@ -716,13 +721,6 @@ input[name=r] {
 .col {
   display: block;
   margin: 1% 0 1% 15%;
-}
-
-.center {
-  flex-direction: column;
-  align-items: flex-start;
-  display: flex;
-  justify-content: center;
 }
 
 .visit {
@@ -931,6 +929,12 @@ img.one {
   margin: 0 auto;
 }
 
+.col {
+  display: flex;
+  justify-content: space-around;
+  margin: 12px 0 12px 24px;
+}
+
 .col2 {
   display: grid;
   justify-items: center;
@@ -939,12 +943,6 @@ img.one {
   gap: 48px;
   max-width: 100%;
   margin: 0 auto;
-}
-
-.col {
-  display: flex;
-  justify-content: space-around;
-  margin: 12px 0 12px 24px;
 }
 
 .col ul {
@@ -1015,7 +1013,6 @@ footer {
   justify-content: flex-end;
   align-items: flex-start;
   margin-bottom: 0;
-
 }
 
 .ff {
@@ -1170,7 +1167,6 @@ body.lb-disable-scrolling {
   max-width: inherit;
   max-height: none;
   border-radius: 6px;
-  /* border: 2px solid var(--secondary-color); */
 }
 
 .lightbox a img {
@@ -1319,9 +1315,6 @@ body.lb-disable-scrolling {
 }
 
 /*Grid*/
-/* .row:after, .section {
-  clear: both;
-} */
 
 .section {
   padding: 0;
@@ -1331,11 +1324,6 @@ body.lb-disable-scrolling {
 .row {
   zoom: 1;
 }
-
-/* .row:after, .row:before {
-  content: "";
-  display: table;
-} */
 
 .col {
   display: block;
@@ -1361,7 +1349,6 @@ body.lb-disable-scrolling {
 .span-1-of-3 {
   width: 32.26%;
 }
-
 
 /*Queries*/
 @media only screen and (max-width: 995px) {
@@ -1397,17 +1384,21 @@ body.lb-disable-scrolling {
   #logo img {
     position: relative;
     margin: 12px;
-  }
-
-  .row2 {
-    width: 100%;
+  }  
+  
+  .welcome {
+    height: 75vh;
   }
 
   .introduction {
     margin: 0%;
   }
 
-  .vip {
+  .row2 {
+    width: 100%;
+  }
+
+  .contact-box {
     margin: 0px auto;
     display: flex;
     flex-wrap: wrap;
@@ -1421,21 +1412,9 @@ body.lb-disable-scrolling {
     margin-left: 10%;
   }
 
-  .welcome {
-    height: 75vh;
-  }
-
   .reference {
     margin-left: 1%;
     max-width: 100%;
-  }
-
-  .row2 {
-    width: 100%;
-  }
-
-  .uvod {
-    margin: 0px auto 48px auto !important;
   }
 }
 
@@ -1443,6 +1422,28 @@ body.lb-disable-scrolling {
   body {
     background-size: contain, contain;
     transform: none;
+  }
+
+  .menu-background {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 1000px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0;
+    background: var(--secondary-color);
+    z-index: 900;
+  }
+
+  .mobile-nav-back {
+    height: 450px;
+    position: absolute;
+    top: 83.5px;
+    width: 72%;
+    background-color: var(--background-soft);
+    z-index: -1;
+    display: none;
   }
 
   .burger-menu {
@@ -1483,28 +1484,6 @@ body.lb-disable-scrolling {
     margin-left: 48px;
   }
 
-  #logo {
-    height: 8rem;
-    margin-top: 4rem;
-    margin-bottom: 2rem;
-  }
-
-   #logo img {
-    position: relative;
-    margin: 12px;
-  }
-
-  .introduction {
-    margin: 48px;
-  }
-
-  .menu-background {
-    width: 100%;
-    max-width: 1000px;
-    position: fixed;
-    top: 0;
-  }
-
   .first:not(.album, .our-games) {
     justify-content: center;
     align-items: center;
@@ -1523,25 +1502,49 @@ body.lb-disable-scrolling {
     background-color: transparent !important;
   }
 
-  .welcome {
-    height: 100vh;
+  #logo {
+    height: 8rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+  }
+
+   #logo img {
+    position: relative;
+    margin: 12px;
   }
 
   .introduction {
-    margin-top: -2% 0 0 0;
+    margin: 48px;
+  }
+
+  .welcome {
+    height: 100vh;
   }
 
   .arrow-down {
     display: none;
   }
 
+  .container {
+    width: 100%;
+    max-width: 1000px;
+  }
+
   h1 {
     margin-top: -20px;
+  }
+
+  .uvod {
+    margin: 0px auto 48px auto;
   }
 
   img:not(.fb-logo img, .slide img, .reference img, .burger-menu) {
     width: 100%;
     margin: 0 auto;
+  }
+
+  a:not(.fb-logo, .our-games .first, .burger-menu) {
+    text-decoration: none;
   }
 
   .col2 {
@@ -1555,36 +1558,11 @@ body.lb-disable-scrolling {
     align-items: center;
   }
 
-  .menu-background {
-    position: fixed;
-    width: 100%;
-    max-width: 1000px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 0;
-    background: var(--secondary-color);
-    z-index: 900;
-  }
-
-  .mobile-nav-back {
-    height: 450px;
-    position: absolute;
-    top: 83.5px;
-    width: 72%;
-    background-color: var(--background-soft);
-    z-index: -1;
-    display: none;
-  }
-
   .row {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-  }
-
-  .uvod {
-    margin: 0px auto 48px auto;
   }
 
   .photo-segment li {
@@ -1598,16 +1576,6 @@ body.lb-disable-scrolling {
     transform: translateY(0);
   }
 
-  .container {
-    width: 100%;
-    max-width: 1000px;
-  }
-
-  footer {
-    width: 100%;
-    max-width: 1000px;
-  }
-
   .col3 {
     flex-direction: column;
     gap: 24px;
@@ -1616,8 +1584,17 @@ body.lb-disable-scrolling {
     margin-bottom: 100px;
   }
 
-  a:not(.fb-logo, .our-games .first, .burger-menu) {
-    text-decoration: none;
+  .reference {
+    margin-left: 1%;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    gap: 5%;
+  }
+
+  footer {
+    width: 100%;
+    max-width: 1000px;
   }
 
   #lightbox-mobile {
@@ -1663,14 +1640,6 @@ body.lb-disable-scrolling {
     z-index: 1001;
     cursor: pointer;
   }
-
-  .reference {
-    margin-left: 1%;
-    width: 100%;
-    justify-content: center;
-    display: flex;
-    gap: 5%;
-  }
 }
 
 @media only screen and (min-width: 700px) and (max-width: 770px) {
@@ -1698,10 +1667,6 @@ body.lb-disable-scrolling {
     width: clamp(50px, 25%, 70px);
   }
 
-  a:not(.fb-logo, .our-games .first, .burger-menu) {
-    text-decoration: none;
-  }
-
   #logo img {
     max-width: 100%;
     transform: scale(1);
@@ -1711,13 +1676,18 @@ body.lb-disable-scrolling {
     min-width: 250px;
   }
 
+  #logo img {
+    width: 150px;
+    margin: auto;
+  }
+
   main {
     padding-left: 24px;
     padding-right: 24px;
   }
 
-  section.photo-gallery {
-    padding: 24px 0;
+  a:not(.fb-logo, .our-games .first, .burger-menu) {
+    text-decoration: none;
   }
 
   ul.photo-segment {
@@ -1731,6 +1701,10 @@ body.lb-disable-scrolling {
     padding-right: 0;
   }
 
+  section.photo-gallery {
+    padding: 24px 0;
+  }
+
   .photo-segment li {
     padding: 12px 0px;
     margin: 0;
@@ -1739,16 +1713,14 @@ body.lb-disable-scrolling {
   img:not(.fb-logo img, .slide img, .reference img, .burger-menu) {
     margin: 0px auto;
     max-width: 50vh;
-    /* height: auto; */
   }
 
   img:not(.fb-logo img, .slide img, .reference img, .burger-menu, .photo-segment li img) {
     margin: 0 auto;
   }
 
-  #logo img {
-    width: 150px;
-    margin: auto;
+  .col {
+    margin: 0;
   }
 
   .col2 {
@@ -1763,10 +1735,6 @@ body.lb-disable-scrolling {
     justify-content: center;
     display: flex;
     gap: 2%;
-  }
-
-  .col {
-    margin: 0;
   }
 
   .span-1-of-2, .span-1-of-3, .span-2-of-2, .span-2-of-3, .span-3-of-3 {
@@ -1850,16 +1818,12 @@ body.lb-disable-scrolling {
     box-sizing: border-box;
   }
 
-  .benefit, .benefit2 {
-    width: 100%;
-  }
-
   .address iframe {
     width: 80%;
   }
 
   .b404 {
-    height: 65px !important;
+    height: 65px;
     padding: 3px;
   }
 }
