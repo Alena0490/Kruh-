@@ -189,6 +189,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  //Galerie resize při otočení telefonu
+  window.addEventListener("resize", function () {
+    if (window.lightbox && typeof window.lightbox.sizeImage === "function") {
+      window.lightbox.sizeImage();
+    }
+  });
+  
+
 // // Automatický text
 // const heading = document.querySelector(".introduction")
 // const text ="Získej energii, sebevědomí a sílu! Přijď si vyzkoušet kondiční cvičení na vlastní kůži!     "
