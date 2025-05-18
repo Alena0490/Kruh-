@@ -6,11 +6,17 @@ document.addEventListener('DOMContentLoaded', function () {
     if (startButton && endTarget) {
         startButton.addEventListener('click', function (e) {
             e.preventDefault();
-            endTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            history.replaceState(null, null, ' '); // odstraní #hash z URL
+
+            const offset = 100; // o kolik pixelů níž než začátek cílového elementu
+            const top = endTarget.getBoundingClientRect().top + window.scrollY - offset;
+
+            window.scrollTo({
+                top: top,
+                behavior: 'smooth'
+            });
+
+            history.replaceState(null, null, ' ');
         });
-    } else {
-        console.warn('Tlačítko nebo cíl scrollování nebyl nalezen.');
     }
 });
 
@@ -26,22 +32,37 @@ window.addEventListener("load", function () {
 });
 
 /* Change Hamburger to Cross vice versa */
-$(document).ready(function () {
-    $('.jq--nav-icon').click(function (event) {
-        // Zabraň výchozímu chování odkazu
+document.addEventListener("DOMContentLoaded", function () {
+    const burgerIcon = document.querySelector('.jq--nav-icon');
+    const navItems = document.querySelectorAll('.first');
+    const navBackground = document.querySelector('.mobile-nav-back');
+  
+    if (burgerIcon) {
+      burgerIcon.addEventListener('click', function (event) {
         event.preventDefault();
-
-        // Zkontroluj aktuální hodnotu src atributu obrázku
-        if ($('.jq--nav-icon').attr('src') === 'img/burger-barw.png') {
-    $('.jq--nav-icon').attr('src', 'img/closew.png'); // Absolutní cesta
-} else {
-    $('.jq--nav-icon').attr('src', 'img/burger-barw.png'); // Absolutní cesta
-}
-        // Zobrazí/skryje mobilní pozadí a navigaci
-        $('.mobile-nav-back').fadeToggle(500);
-        $('.first').fadeToggle(500);
-    });
-});
+  
+        // Přepni obrázek
+        const currentSrc = burgerIcon.getAttribute('src');
+        const isBurger = currentSrc.includes('burger-barw.png');
+  
+        burgerIcon.setAttribute('src', isBurger ? 'img/closew.png' : 'img/burger-barw.png');
+  
+        // Přepnutí viditelnosti mobilního menu (fade efekt)
+        navItems.forEach(el => {
+          el.style.transition = 'opacity 0.5s';
+          el.style.opacity = el.style.opacity === '1' ? '0' : '1';
+          el.style.display = el.style.opacity === '0' ? 'none' : 'block';
+        });
+  
+        if (navBackground) {
+          navBackground.style.transition = 'opacity 0.5s';
+          const isVisible = navBackground.style.display === 'block';
+          navBackground.style.opacity = isVisible ? '0' : '1';
+          navBackground.style.display = isVisible ? 'none' : 'block';
+        }
+      });
+    }
+  });
 
 /*Zobrazení galerie*/
   $(function() {

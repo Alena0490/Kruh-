@@ -9,13 +9,20 @@ document.addEventListener('DOMContentLoaded', function () {
     if (startButton && endTarget) {
         startButton.addEventListener('click', function (e) {
             e.preventDefault();
-            endTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            history.replaceState(null, null, ' '); // odstraní #hash z URL
+
+            const offset = 100; // o kolik pixelů níž než začátek cílového elementu
+            const top = endTarget.getBoundingClientRect().top + window.scrollY - offset;
+
+            window.scrollTo({
+                top: top,
+                behavior: 'smooth'
+            });
+
+            history.replaceState(null, null, ' ');
         });
-    } else {
-        console.warn('Tlačítko nebo cíl scrollování nebyl nalezen.');
     }
 });
+
 
 // Při opětovném načtení stránky skoč nahoru
 window.addEventListener("beforeunload", function () {
@@ -45,48 +52,77 @@ window.addEventListener("load", function () {
   
   
 /*Scrolování k formuláři*/
-$(document).ready(function () {
-    $('.jq--scroll-form').click(function (e) {
-        e.preventDefault(); // Zabrání výchozímu chování odkazu
-
-        $('html, body').animate({
-            scrollTop: $('#contact-form').offset().top - 90 // Upraveno pro pevné menu
-        }, 1000); // Plynulý přechod za 1 sekundu
-    });
-});
-
-
-/*Scrolování k adrese*/
-$(document).ready(function () {
-    // Detekuj kotvu z URL při načtení stránky
-    const hash = window.location.hash;
-    if (hash) {
-        const target = $(hash);
-        if (target.length) {
-            $('html, body').animate({
-                scrollTop: target.offset().top - 90 // Posun s ohledem na pevné menu
-            }, 1000); // Plynulý přechod za 1 sekundu
-        }
+document.addEventListener('DOMContentLoaded', function () {
+    const scrollLinks = document.querySelectorAll('.jq--scroll-form');
+    const target = document.getElementById('contact-form');
+  
+    if (scrollLinks.length && target) {
+      scrollLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+  
+          const yOffset = -90; // pro fixní menu
+          const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+  
+          window.scrollTo({
+            top: y,
+            behavior: 'smooth'
+          });
+        });
+      });
     }
-});
+  });
+  
+  /*Scrolování k adrese*/
+  document.addEventListener("DOMContentLoaded", function () {
+      const hash = window.location.hash;
+      if (hash) {
+        const target = document.querySelector(hash);
+        if (target) {
+          const offset = -90; // Posun kvůli fixnímu menu
+          const y = target.getBoundingClientRect().top + window.pageYOffset + offset;
+    
+          window.scrollTo({
+            top: y,
+            behavior: "smooth"
+          });
+        }
+      }
+    });
 
 /* Change Hamburger to Cross vice versa */
-$(document).ready(function () {
-    $('.jq--nav-icon').click(function (event) {
-        // Zabraň výchozímu chování odkazu
+document.addEventListener("DOMContentLoaded", function () {
+    const burgerIcon = document.querySelector('.jq--nav-icon');
+    const navItems = document.querySelectorAll('.first');
+    const navBackground = document.querySelector('.mobile-nav-back');
+  
+    if (burgerIcon) {
+      burgerIcon.addEventListener('click', function (event) {
         event.preventDefault();
-
-        // Zkontroluj aktuální hodnotu src atributu obrázku
-        if ($('.jq--nav-icon').attr('src') === 'img/burger-barw.png') {
-    $('.jq--nav-icon').attr('src', 'img/closew.png'); // Absolutní cesta
-} else {
-    $('.jq--nav-icon').attr('src', 'img/burger-barw.png'); // Absolutní cesta
-}
-        // Zobrazí/skryje mobilní pozadí a navigaci
-        $('.mobile-nav-back').fadeToggle(500);
-        $('.first').fadeToggle(500);
-    });
-});
+  
+        // Přepni obrázek
+        const currentSrc = burgerIcon.getAttribute('src');
+        const isBurger = currentSrc.includes('burger-barw.png');
+  
+        burgerIcon.setAttribute('src', isBurger ? 'img/closew.png' : 'img/burger-barw.png');
+  
+        // Přepnutí viditelnosti mobilního menu (fade efekt)
+        navItems.forEach(el => {
+          el.style.transition = 'opacity 0.5s';
+          el.style.opacity = el.style.opacity === '1' ? '0' : '1';
+          el.style.display = el.style.opacity === '0' ? 'none' : 'block';
+        });
+  
+        if (navBackground) {
+          navBackground.style.transition = 'opacity 0.5s';
+          const isVisible = navBackground.style.display === 'block';
+          navBackground.style.opacity = isVisible ? '0' : '1';
+          navBackground.style.display = isVisible ? 'none' : 'block';
+        }
+      });
+    }
+  });
+  
 
 /*Zobrazení galerie*/
   $(function() {
