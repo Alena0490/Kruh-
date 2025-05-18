@@ -379,6 +379,10 @@ h1 {
   text-transform: uppercase;
 }
 
+h1.home {
+  margin-top: 10%;
+}
+
 h2 {
   text-transform: uppercase;
   text-align: center;
@@ -530,6 +534,12 @@ ul:not(nav ul) {
   margin-bottom: 48px;
   font-family: "Roboto", "Arial", sans-serif;
   text-transform: uppercase;
+  line-height: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
+}
+
+.rezervace i {
+  font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
+  line-height: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
 }
 
 a.rezervace:hover {
