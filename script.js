@@ -22,7 +22,6 @@ window.addEventListener("beforeunload", function () {
     window.scrollTo(0, 0);
 });
 
-// Pojistka – pro případy, kdy to nefunguje hned
 window.addEventListener("load", function () {
     setTimeout(() => {
         window.scrollTo({ top: 0, left: 0, behavior: "instant" });
@@ -70,8 +69,6 @@ $(document).ready(function () {
         }
     }
 });
-
-
 
 /* Change Hamburger to Cross vice versa */
 $(document).ready(function () {

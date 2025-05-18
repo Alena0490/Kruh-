@@ -23,9 +23,9 @@
   --text-secondary: #777;
 
   --overlay: rgba(0, 0, 0, 0.25);
-  --overlay-soft: rgba(0, 0, 0, 0.08);
+  --overlay-soft: rgba(0, 0, 0, 0.1);
 
-  --btn-background: #A3AFFF;
+  --btn-background: #a3afff80;
   --btn-background-hover:#7083FF;
   --btn-border: #4C64D0;
 
@@ -34,6 +34,11 @@
   --clr-error: #ef4444;
   --clr-error-hover: #ff0000;
   --shadows: rgba(36, 36, 36, 0.737);
+
+  --form-bg: #cbd4f960;
+  --form-border: rgba(255, 255, 255, 0.175);
+  --input-bg: rgba(255, 255, 255, 0.25);
+  --input-border: rgba(255, 255, 255, 0.15);
 }
 
 body.dark {
@@ -63,7 +68,7 @@ body.dark {
   --overlay: rgba(255, 255, 255, 0.63);
   --overlay-soft: rgba(255, 255, 255, 0.08);
 
-  --btn-background: #020D3B;
+  --btn-background: #020d3b80;
   --btn-background-hover: #00155B;
   --btn-border: #001FAD;
 
@@ -71,7 +76,12 @@ body.dark {
   --clr-success-hover: #00fd5d;
   --clr-error: #f87171;
   --clr-error-hover: #f80000;
-  --shadows: rgba(36, 36, 36, 0.737);
+  --shadows: rgba(255, 255, 255, 0.27);
+
+  --form-bg: rgb(72 72 72 / 73%);
+  --form-border: rgba(255, 255, 255, 0.05);
+  --input-bg: rgba(255, 255, 255, 0.05);
+  --input-border: rgba(255, 255, 255, 0.15);
 }
 
 * {
@@ -95,7 +105,6 @@ body {
   background-attachment: fixed;
   position: relative;
   scrollbar-color: var(--secondary-color);
-  /*transform: translateZ(-40px) scale(1); /* Vzdálenější vrstva (pohybuje se pomaleji) */
   background-attachment: fixed;
   perspective-origin: calc(50% - var(--scroll-bar-width) / 2) center;
   overflow-x: hidden;
@@ -150,7 +159,7 @@ header {
   height: 80px;
   max-width: 1400px;
   background: transparent;
-  z-index: 500;
+  z-index: 1000;
 }
 
 .menu-background-under {
@@ -162,7 +171,7 @@ header {
   width: 100%;
   height: 82px;
   background: var(--main-color-darker);
-  z-index: 400;
+  z-index: 900;
 }
 
 nav {
@@ -172,7 +181,6 @@ nav {
   width: 100%;
   max-width: 1400px;
   z-index: 9999;
-  /* top: 0%; */
   top: -26%;
   margin-bottom: 0;
   height: 100px;
@@ -346,9 +354,13 @@ main:not(.photo) {
 section {
   padding: 24px;
   border-radius: 6px;
-  background-color: var(--background-muted);
+  background-color: var(--form-bg);
+  border: 1.5px solid var(--form-border);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   margin-top: 0px;
   margin-bottom: 12px;
+  z-index: -1;
 
 }
 
@@ -723,19 +735,24 @@ form {
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   width: 100%;
-  border: 2px solid var(--secondary-color);
   padding: 24px;
-  background-color: var(--background-soft);
+  background-color: var(--form-bg);
+  border: 1.5px solid var(--form-border);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   margin: 24px auto 60px;
   margin-bottom: 100px;
   border-radius: 6px;
   max-width: 1000px;
 }
 
+form > div:nth-of-type(5) {
+  grid-column: 1 / -1;
+}
+
 form label {
   display: block;
   margin-bottom: 6px;
-  margin-bottom: 2px;
   font-family: Roboto, sans-serif;
   color: var(--text);
   font-weight: 700;
@@ -743,44 +760,43 @@ form label {
   font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
 }
 
+form label i {
+  margin-right: 6px;
+  color: var(--text);
+  font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
+  vertical-align: middle;
+}
+
 form input[type=email], form input[type=text], form textarea {
   width: 100%;
   padding: 12px;
-  border: 2px solid var(--secondary-color);
+  border: 1.5px solid var(--secondary-color-transparent);
   border-radius: 6px;
   box-sizing: border-box;
-  background: var(--background-muted);
+  background: var(--input-bg);
   color: #3B2F02;
   font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
   outline: 0;
-  box-shadow: inset 1px 1px 3px rgba(137, 136, 136, 0.885);
-}
-
-form input[type=text]:focus {
-  border: 2px solid var(--text);
-  background: rgba(255, 255, 255, 0.60);
-  box-shadow: inset 2px 2px 4px rgba(176, 176, 176, 0.885);
-}
-
-form input[type=email]:focus {
-  border: 2px solid var(--text);
-  background: rgba(255, 255, 255, 0.60);;
-  box-shadow: inset 2px 2px 4px rgba(176, 176, 176, 0.885);
 }
 
 form textarea {
-  grid-column: span 2;
+  grid-column: 1 / -1;
+  width: 100%;
   height: 150px;
   margin-top: 0;
-  width: 204.5%;
   color: #3B2F02;
+  border: 1.5px solid var(--secondary-color-transparent);
+  background: var(--input-bg);
   font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
   margin-bottom: 24px;
 }
 
+form input[type="text"]:focus,
+form input[type="email"]:focus,
 form textarea:focus {
-  border: 2px solid var(--text);
-  background: rgba(255, 255, 255, 0.8784313725);
+  border-color: var(--secondary-color-light);
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 0 2px var(--secondary-color-darkest);
 }
 
 input[type=submit] {
@@ -808,6 +824,8 @@ input[type=submit]:hover {
   padding: 12px !important;
   margin: 24px auto 0px;
   font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   text-align: center;
   font-weight: 700;
   font-family: "Roboto", "Arial", sans-serif;
@@ -819,14 +837,14 @@ input[type=submit]:hover {
 
 .success {
   /* display: none; */
-  border: 1px solid #56a73b !important;
-  background: rgba(86, 167, 59, 0.5019607843) !important;
+  border: 1px solid #56a73bC0 !important;
+  background: rgba(86, 167, 59, 0.35) !important;
 }
 
 .error {
   display: none;
-  border: 1px solid #bf372a !important;
-  background: rgba(191, 55, 42, 0.5019607843) !important;
+  border: 1px solid #bf372aC0 !important;
+  background: rgba(191, 55, 42, 0.35) !important;
 }
 
 .gallery {
@@ -1854,7 +1872,7 @@ body.lb-disable-scrolling {
   min-height: 30px;
   left: 0px;
   top: 120px;
-  z-index: 900;
+  z-index: 800;
 }
 
 .theme-toggle {
@@ -1864,7 +1882,7 @@ body.lb-disable-scrolling {
   width: 60px;
   height: 34px;
   display: inline-block;
-  z-index: 999;
+  z-index: 980;
   cursor: pointer;
 }
 
