@@ -17,6 +17,7 @@
   --background-soft: #D6DDFFB0;
   --background-soft-transparent: #d6ddff88;
   --background-muted: #D2DAF3 ;
+  --background-muted-tr: #d2daf3e0;
 
   --text: #2e2e2e;
   --text-muted: #4e4e4e;
@@ -60,6 +61,7 @@ body.dark {
   --background-soft: #252525B0;
   --background-soft-full: #252525;
   --background-muted: #2D2D2D;
+  --background-muted-tr: #2D2D2De0;
 
   --text: #eaeaea;
   --text-muted: #b0b0b0;
@@ -1501,11 +1503,12 @@ body.lb-disable-scrolling {
   }
 
   .mobile-nav-back {
-    height: 450px;
+    height: 300px;
     position: absolute;
+    left: 0;
     top: 83.5px;
     width: 72%;
-    background-color: var(--background-soft);
+    background-color: var(--background-muted-tr);
     z-index: -1;
     display: none;
   }
@@ -1535,7 +1538,7 @@ body.lb-disable-scrolling {
     flex-direction: column;
     align-items: center;
     padding: 0;
-    margin: 142px 0 0;
+    margin: 60px 0 0;
   }
 
   nav ul li {
@@ -1543,7 +1546,7 @@ body.lb-disable-scrolling {
     display: block;
     line-height: 130%;
     width: 100%;
-    margin: 12px;
+    margin: 0 12px;
     padding: 6px 0;
     margin-left: 48px;
   }
@@ -1555,7 +1558,7 @@ body.lb-disable-scrolling {
     font-weight: 700;
     background: 0 0;
     border: none !important;
-    padding-left: 24px;
+    /* padding-left: 24px; */
     margin-top: 12px;
     height: 24px;
     width: 260px;
