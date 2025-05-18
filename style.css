@@ -450,13 +450,15 @@ ul li a:not(.first):hover {
   font-weight: 700;
 }
 
-img:not(.fb-logo img, .slide img, .reference img, .burger-menu, .photo-segment li img) {
+img.uvod {
+  max-width: 400px;
+  height: auto;
   margin: 100px;
   border-radius: 6px;
   transition: all  0.6s ease-in;
 }
 
-img:not(.fb-logo img, .slide img, .reference img, .burger-menu, .photo-segment li img, .map):hover {
+img.uvod:hover {
   box-shadow: var(--text) 2px 2px 4px;
   border: 1px solid var(--text);
 }
@@ -582,6 +584,8 @@ article.contact-box {
   padding: 12px;
 }
 
+
+
 .red {
   color: var(--secondary-color-light);
   font-weight: 700;
@@ -610,6 +614,10 @@ article.contact-box {
   width: 60%;
   border: 3px solid var(--secondary-color);
   filter: drop-shadow(2px 3px 4px var(--background));
+}
+
+.col3 .reference-b img:hover {
+  border: 3px solid transparent;
 }
 
 .slider {
@@ -918,15 +926,6 @@ img.one {
   min-width: 180px;
 }
 
-/* .our-games {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15%;
-  max-width: 1200px;
-  margin: 0 auto;
-} */
-
 .col {
   display: flex;
   justify-content: space-around;
@@ -1129,11 +1128,11 @@ footer {
 }
 
 .lb-loader {
-  padding-left: 45%;
+  /* padding-left: 45%; */
 }
 
 .lb-image {
-  margin: 0px !important;
+  margin: 0px;
 }
 
 body.lb-disable-scrolling {
@@ -1536,7 +1535,7 @@ body.lb-disable-scrolling {
     margin: 0px auto 48px auto;
   }
 
-  img:not(.fb-logo img, .slide img, .reference img, .burger-menu) {
+  img.image {
     width: 100%;
     margin: 0 auto;
   }
@@ -1708,12 +1707,12 @@ body.lb-disable-scrolling {
     margin: 0;
   }
 
-  img:not(.fb-logo img, .slide img, .reference img, .burger-menu) {
+  img.image {
     margin: 0px auto;
     max-width: 50vh;
   }
 
-  img:not(.fb-logo img, .slide img, .reference img, .burger-menu, .photo-segment li img) {
+  img.uvod {
     margin: 0 auto;
   }
 
@@ -1807,7 +1806,7 @@ body.lb-disable-scrolling {
     justify-content: center;
   }
 
-  img:not(.fb-logo img, .slide img, .reference img, .burger-menu) {
+  img.image {
     margin: 0px auto;
   }
 
