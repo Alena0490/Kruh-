@@ -1122,18 +1122,65 @@ footer {
 }
 
 /****Lightbox****/
-body.lb-disable-scrolling {
+/* UNIVERZÁLNÍ CSS PRO ZABLOKOVÁNÍ SCROLLOVÁNÍ BĚHEM LIGHTBOXU */
+body:has(.lightboxOverlay[style*="opacity"]:not([style*="opacity: 0"])) {
+  overflow: hidden;
   position: fixed;
   width: 100%;
-  height: 100%;
-  overflow: hidden;
-  inset: 0;
+  height: 100vh;
   top: 0;
   left: 0;
-  overscroll-behavior: none;
-  /* touch-action: none; /* */
-  touch-action: pan-y pinch-zoom;
 }
+
+/* Specificky pro opacity 0.8 (podle vašeho lightboxu) */
+body:has(.lightboxOverlay[style*="0.8"]) {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+/* Pro různé hodnoty opacity */
+body:has(.lightboxOverlay[style*="0.9"]),
+body:has(.lightboxOverlay[style*="opacity: 1"]) {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+/* Mobilní zařízení */
+body:has(.lightboxOverlay[style*="opacity"]:not([style*="opacity: 0"])) {
+  touch-action: none;
+  overscroll-behavior: none;
+}
+
+/* CSS-only řešení pro nejstarší prohlížeče */
+/* Detekuje přítomnost lightbox elementů */
+.lightboxOverlay ~ body,
+.lightbox ~ body {
+  /* Nefunguje ve všech případech, ale pokusí se */
+}
+
+/* Pokud váš lightbox má specifický styl, můžeme ho detekovat */
+.lightboxOverlay[style="position: absolute; z-index: 9999; left: 0px; top: 0px; width: 100%; height: 100%; background-color: black; opacity: 0.8;"] {
+  /* Když má přesně tento styl, zablokuj scrollování */
+}
+
+body:has(.lightboxOverlay[style*="z-index: 9999"][style*="opacity: 0.8"]) {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+/* 
+Other */
 
 .lb-loader, .lightbox {
   text-align: center;
@@ -1145,7 +1192,7 @@ body.lb-disable-scrolling {
 }
 
 body.lb-disable-scrolling {
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .lightboxOverlay {

@@ -152,15 +152,49 @@ toggle.addEventListener('change', () => {
 });
 
 /*Zobrazení galerie*/
-$(function() {
-    $(".slider-wrapper").hide().fadeIn(3000);
-});
+$(function () {
+  // Ujistíme se, že třída není přidaná na začátku
+  $('body').removeClass('lb-disable-scrolling');
+  console.log('🚀 Script spuštěn, třída odebrána na začátku');
+  
+  // Animace při načtení stránky
+  $(".slider-wrapper").hide().fadeIn(3000);
+  $(".album").hide().fadeIn(4000);
+  $("iframe").hide().fadeIn(4000);
 
-  $(function() {
-    $(".album").hide().fadeIn(4000);
-});
-  $(function() {
-    $("iframe").hide().fadeIn(4000);
+  console.log('📊 Lightbox elementy nalezeny:', $('[data-lightbox]').length);
+
+  // SLEDOVÁNÍ PŘIDÁNÍ LIGHTBOXU DO DOM - POUZE PŘIDÁNÍ TŘÍDY
+  var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      if (mutation.type === 'childList') {
+        mutation.addedNodes.forEach(function(node) {
+          if (node.nodeType === 1) {
+            var $node = $(node);
+            if ($node.hasClass('lightboxOverlay') || $node.hasClass('lightbox')) {
+              console.log('🔍 Lightbox přidán do DOM');
+              
+              // Přidáme třídu po krátké prodlevě
+              setTimeout(function() {
+                if ($('.lightboxOverlay').length && $('.lightbox').length) {
+                  $('body').addClass('lb-disable-scrolling');
+                  console.log('✅ LIGHTBOX OTEVŘEN - scrollování zablokováno');
+                }
+              }, 100);
+            }
+          }
+        });
+      }
+    });
+  });
+
+  // Spustíme observer
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
+
+  console.log('✅ Gallery script načten úspěšně');
 });
 
 //Galerie swipe
