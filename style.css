@@ -963,6 +963,7 @@ img.one {
 
 .col ul {
   margin: 24px auto 0 auto;
+  font-style: normal;
 }
 
 .col.map-container {
