@@ -15,7 +15,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">   
         <link rel="stylesheet" href="style.css">
-        <title>Kruháč - Fotogalerie</title>
+        <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap">
+        <link rel="prefetch" href="/img/no-pain.webp">
+        <title>Kondiční cvičení - Fotogalerie</title>
         <meta name="description" content="Kondiční cvičení v Lázních Bělohrad a Jičíně. Přidej se k nám a zlepši svou kondici!">
         <meta name="author" content="Alena Pumprová">
         <meta name="robots" content="index, follow">
@@ -58,7 +60,7 @@
                 <img src="img/Logo_kruhac.webp" alt="Logo" width="179" height="179" decoding="async">
             </a>
             <h1>Fotogalerie</h1>
-            <a a href="#" class="move-down scroll-start" aria-label="scroll down to header">
+            <a href="#" class="move-down scroll-start" aria-label="scroll down to header">
                 <i class="fa-solid fa-angles-down arrow-down"></i>
             </a>
         </div>
@@ -74,21 +76,77 @@
                     </div>
                     <div class= "photos row">
                         <ul class= "photo-segment parallax">
-                            <li class="col span-1-of4"><a aria-label="lightbox"  href="img/lb1.webp" data-lightbox="roadtrip" data-title="cvičení Lázně Bělohrad"><img class="one image" src="img/lb1a.webp" width="700" height="521"  alt=" společné foto v bělohradské sokolovně"></a></li>
-                            <li class="col span-1-of4"><a aria-label="lightbox"  href="img/lb2.webp" data-lightbox="roadtrip" data-title="cvičení Lázně Bělohrad"><img class="one image" src="img/lb2a.webp" width="2048" height="1360" alt="fotografie po cvičení na wokrkoutovém hřišti"></a></li>
-                            <li class="col span-1-of4"><a aria-label="lightbox"  href="img/lb3.webp" data-lightbox="roadtrip" data-title="cvičení Lázně Bělohrad"><img class="one image" src="img/lb3a.webp" width="2000" height="1333" alt="Battle of Bělohrad"></a></li>
-                            <li class="col span-1-of4"><a aria-label="lightbox"  href="img/lb4.webp" data-lightbox="roadtrip" data-title="cvičení Lázně Bělohrad"><img class="one image" src="img/lb4a.webp"  width="2000" height="1583" alt="Battle of Bělohrad - Echobike"></a></li>
-                
-                            <li class="col span-1-of4"><a aria-label="lightbox"  href="img/lb5.webp" data-lightbox="roadtrip" data-title="cvičení Lázně Bělohrad"><img class="one image" src="img/lb5a.webp" width="960" height="720" alt="Gladiator Race aréna Hradec Králové"></a></li>
-                            <li class="col span-1-of4"><a aria-label="lightbox"  href="img/lb6.webp" data-lightbox="roadtrip" data-title="cvičení Lázně Bělohrad"><img class="one image" src="img/lb6a.webp"  width="748" height="748" alt="Pája na Gladiator Race Josefov"></a></li>
-                            <li class="col span-1-of4"><a aria-label="lightbox"  href="img/lb7.webp" data-lightbox="roadtrip" data-title="cvičení Lázně Bělohrad"><img class="one image" src="img/lb7a.webp" width="2500" height="1667" alt="Planking - kruháč Lázně Bělohrad"></a></li>
-                            <li class="col span-1-of4"><a aria-label="lightbox"  href="img/lb8.webp" data-lightbox="roadtrip" data-title="cvičení Lázně Bělohrad"><img class="one image" src="img/lb8a.webp" width="3000" height="2000" alt="Deadlift- kruháč Lázně Bělohrad"></a></li>
+                            <li class="col span-1-of4">
+                                <a aria-label="lightbox"  href="img/lb1.webp" data-lightbox="roadtrip" data-title="cvičení Lázně Bělohrad">
+                                    <img class="one image" src="img/lb1a.webp" width="700" height="521"  alt=" společné foto v bělohradské sokolovně">
+                                </a>
+                            </li>
 
-                            <li class="col span-1-of4"><a aria-label="lightbox"  href="img/lb9.webp" data-lightbox="roadtrip" data-title="cvičení Lázně Bělohrad"><img class="one image" src="img/lb9a.webp" width="1280" height="1280" alt="společné foto po tréninku"></a></li>
-                            <li class="col span-1-of4"><a aria-label="lightbox"  href="img/lb10.webp"  data-lightbox="roadtrip" data-title="cvičení Lázně Bělohrad"><img class="one image" src="img/lb10a.webp" width="1986" height="1450" alt="spoleečné posezení - restaurace Na Mostě"></a></li>
-                            <li class="col span-1-of4"><a aria-label="lightbox"  href="img/lb11.webp" data-lightbox="roadtrip" data-title="cvičení Lázně Bělohrad"><img class="one image" src="img/lb11a.webp" width="800" height="533" alt="parta z kruháče po závodě Spartan Race"></a></li>
-                            <li class="col span-1-of4"><a aria-label="lightbox"  href="img/lb12.webp" data-lightbox="roadtrip" data-title="cvičení Lázně Bělohrad"><img class="one image" src="img/lb12a.webp" width="1500" height="1125" alt="Spartan Race - Finish"></a></li>
+                            <li class="col span-1-of4">
+                                <a aria-label="lightbox"  href="img/lb2.webp" data-lightbox="roadtrip" data-title="cvičení Lázně Bělohrad">
+                                    <img class="one image" src="img/lb2a.webp" width="2048" height="1360" alt="fotografie po cvičení na wokrkoutovém hřišti">
+                                </a>
+                            </li>
+
+                            <li class="col span-1-of4">
+                                <a aria-label="lightbox"  href="img/lb3.webp" data-lightbox="roadtrip" data-title="cvičení Lázně Bělohrad">
+                                    <img class="one image" src="img/lb3a.webp" width="2000" height="1333" alt="Battle of Bělohrad">
+                                </a>
+                            </li>
+
+                            <li class="col span-1-of4">
+                                <a aria-label="lightbox"  href="img/lb4.webp" data-lightbox="roadtrip" data-title="cvičení Lázně Bělohrad">
+                                    <img class="one image" src="img/lb4a.webp"  width="2000" height="1583" alt="Battle of Bělohrad - Echobike">
+                                </a>
+                            </li>
                 
+                            <li class="col span-1-of4">
+                                <a aria-label="lightbox"  href="img/lb5.webp" data-lightbox="roadtrip" data-title="cvičení Lázně Bělohrad">
+                                    <img class="one image" src="img/lb5a.webp" width="960" height="720" alt="Gladiator Race aréna Hradec Králové">
+                                </a>
+                            </li>
+
+                            <li class="col span-1-of4">
+                                <a aria-label="lightbox"  href="img/lb6.webp" data-lightbox="roadtrip" data-title="cvičení Lázně Bělohrad">
+                                    <img class="one image" src="img/lb6a.webp"  width="748" height="748" alt="Pája na Gladiator Race Josefov">
+                                </a>
+                            </li>
+
+                            <li class="col span-1-of4">
+                                <a aria-label="lightbox"  href="img/lb7.webp" data-lightbox="roadtrip" data-title="cvičení Lázně Bělohrad">
+                                    <img class="one image" src="img/lb7a.webp" width="2500" height="1667" alt="Planking - kruháč Lázně Bělohrad">
+                                </a>
+                            </li>
+
+                            <li class="col span-1-of4">
+                                <a aria-label="lightbox"  href="img/lb8.webp" data-lightbox="roadtrip" data-title="cvičení Lázně Bělohrad">
+                                    <img class="one image" src="img/lb8a.webp" width="3000" height="2000" alt="Deadlift- kruháč Lázně Bělohrad">
+                                </a>
+                            </li>
+
+                            <li class="col span-1-of4">
+                                <a aria-label="lightbox"  href="img/lb9.webp" data-lightbox="roadtrip" data-title="cvičení Lázně Bělohrad">
+                                    <img class="one image" src="img/lb9a.webp" width="1280" height="1280" alt="společné foto po tréninku">
+                                </a>
+                            </li>
+
+                            <li class="col span-1-of4">
+                                <a aria-label="lightbox"  href="img/lb10.webp"  data-lightbox="roadtrip" data-title="cvičení Lázně Bělohrad">
+                                    <img class="one image" src="img/lb10a.webp" width="1986" height="1450" alt="společné posezení - restaurace Na Mostě">
+                                </a>
+                            </li>
+
+                            <li class="col span-1-of4">
+                                <a aria-label="lightbox"  href="img/lb11.webp" data-lightbox="roadtrip" data-title="cvičení Lázně Bělohrad">
+                                    <img class="one image" src="img/lb11a.webp" width="800" height="533" alt="parta z kruháče po závodě Spartan Race">
+                                </a>
+                            </li>
+
+                            <li class="col span-1-of4">
+                                <a aria-label="lightbox"  href="img/lb12.webp" data-lightbox="roadtrip" data-title="cvičení Lázně Bělohrad">
+                                    <img class="one image" src="img/lb12a.webp" width="1500" height="1125" alt="Spartan Race - Finish">
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </section>
@@ -103,25 +161,80 @@
                 
                     <div class= "photos row">
                         <ul class= "photo-segment parallax">
-                            <li class="col span-1-of4"><a aria-label="lightbox"  href="img/jc1.webp" data-lightbox="roadtrip" data-title="cvičení Jičín"><img class="one image" src="img/jc1a.webp"  width="1440" height="1178"   alt=" společné foto po cvičení v Jičíně"></a></li>
-                            <li class="col span-1-of4"><a aria-label="lightbox"  href="img/jc2.webp" data-lightbox="roadtrip" data-title="cvičení Jičín"><img class="one image" src="img/jc2a.webp" width="1440" height="1440" alt="výstup na pneumatiku se zátěží"></a></li>
-                            <li class="col span-1-of4"><a aria-label="lightbox"  href="img/jc3.webp" data-lightbox="roadtrip" data-title="cvičení Jičín"><img class="one image" src="img/jc3a.webp" width="1114" height="1132"  alt="planking na venkovním hřišti"></a></li>
-                            <li class="col span-1-of4"><a aria-label="lightbox"  href="img/jc4.webp" data-lightbox="roadtrip" data-title="cvičení Jičín"><img class="one image" src="img/jc4a.webp" width="1500" height="2000"  alt="výstupy na bedýnku"></a></li>
+                            <li class="col span-1-of4">
+                                <a aria-label="lightbox"  href="img/jc1.webp" data-lightbox="roadtrip" data-title="cvičení Jičín">
+                                    <img class="one image" src="img/jc1a.webp"  width="1440" height="1178"   alt=" společné foto po cvičení v Jičíně" loading="lazy">
+                                </a>
+                            </li>
+
+                            <li class="col span-1-of4">
+                                <a aria-label="lightbox"  href="img/jc2.webp" data-lightbox="roadtrip" data-title="cvičení Jičín">
+                                    <img class="one image" src="img/jc2a.webp" width="1440" height="1440" alt="výstup na pneumatiku se zátěží" loading="lazy">
+                                </a>
+                            </li>
+
+                            <li class="col span-1-of4">
+                                <a aria-label="lightbox"  href="img/jc3.webp" data-lightbox="roadtrip" data-title="cvičení Jičín">
+                                    <img class="one image" src="img/jc3a.webp" width="1114" height="1132"  alt="planking na venkovním hřišti" loading="lazy">
+                                </a>
+                            </li>
+
+                            <li class="col span-1-of4">
+                                <a aria-label="lightbox"  href="img/jc4.webp" data-lightbox="roadtrip" data-title="cvičení Jičín">
+                                    <img class="one image" src="img/jc4a.webp" width="1500" height="2000"  alt="výstupy na bedýnku" loading="lazy">
+                                </a>
+                            </li>
                 
-                            <li class="col span-1-of4"><a aria-label="lightbox"  href="img/jc5.webp" data-lightbox="roadtrip" data-title="cvičení Jičín"><img class="one image" src="img/jc5a.webp"  width="1024" height="1024" alt="cvičení na veslařském trenažéru"></a></li>
-                            <li class="col span-1-of4"><a aria-label="lightbox"  href="img/jc6.webp" data-lightbox="roadtrip" data-title="cvičení Jičín"><img class="one image" src="img/jc6a.webp" width="1440" height="1440" alt="ukázka jednoho z  kondičních tréninků"></a></li>
-                            <li class="col span-1-of4"><a aria-label="lightbox"  href="img/jc7.webp" data-lightbox="roadtrip" data-title="cvičení Jičín"><img class="one image" src="img/jc7a.webp" width="1440" height="1440" alt="venkovní veslování"></a></li>
-                            <li class="col span-1-of4"><a aria-label="lightbox"  href="img/jc8.webp" data-lightbox="roadtrip" data-title="cvičení Jičín"><img class="one image" src="img/jc8a.webp" width="1500" height="2000"  alt="společné foto v hale ZŠ Poděbradova"></a></li>
+                            <li class="col span-1-of4">
+                                <a aria-label="lightbox"  href="img/jc5.webp" data-lightbox="roadtrip" data-title="cvičení Jičín">
+                                    <img class="one image" src="img/jc5a.webp"  width="1024" height="1024" alt="cvičení na veslařském trenažéru" loading="lazy">
+                                </a>
+                            </li>
+
+                            <li class="col span-1-of4">
+                                <a aria-label="lightbox"  href="img/jc6.webp" data-lightbox="roadtrip" data-title="cvičení Jičín">
+                                    <img class="one image" src="img/jc6a.webp" width="1440" height="1440" alt="ukázka jednoho z kondičních tréninků" loading="lazy">
+                                </a>
+                            </li>
+
+                            <li class="col span-1-of4">
+                                <a aria-label="lightbox"  href="img/jc7.webp" data-lightbox="roadtrip" data-title="cvičení Jičín">
+                                    <img class="one image" src="img/jc7a.webp" width="1440" height="1440" alt="venkovní veslování" loading="lazy">
+                                </a>
+                            </li>
+
+                            <li class="col span-1-of4">
+                                <a aria-label="lightbox"  href="img/jc8.webp" data-lightbox="roadtrip" data-title="cvičení Jičín">
+                                    <img class="one image" src="img/jc8a.webp" width="1500" height="2000"  alt="společné foto v hale ZŠ Poděbradova" loading="lazy">
+                                </a>
+                            </li>
                 
-                            <li class="col span-1-of4"><a aria-label="lightbox"  href="img/jc9.webp" data-lightbox="roadtrip" data-title="cvičení Jičín"><img class="one image" src="img/jc9a.webp" width="1440" height="1800"  alt="nové cvičební vybavebí - Bulgarian bag"></a></li>
-                            <li class="col span-1-of4"><a aria-label="lightbox"  href="img/jc10.webp" data-lightbox="roadtrip" data-title="cvičení Jičín"><img class="one image" src="img/jc10a.webp" width="1500" height="2000" alt="venkovní cvičení - výstupy na bednu"></a></li>
-                            <li class="col span-1-of4"><a aria-label="lightbox"  href="img/jc11.webp" data-lightbox="roadtrip" data-title="cvičení Jičín"><img class="one image" src="img/jc11a.webp" width="1327" height="1327"  alt="pernamentky na lekce kondičního cvičení"></a></li>
-                            <li class="col span-1-of4"><a aria-label="lightbox"  href="img/jc12.webp" data-lightbox="roadtrip" data-title="cvičení-jičín"><img class="one image" src="img/jc12a.webp" width="1400" height="1400"  alt="spolčné předvánoční pozezení kondičního tréninku"></a></li>
-                
+                            <li class="col span-1-of4">
+                                <a aria-label="lightbox"  href="img/jc9.webp" data-lightbox="roadtrip" data-title="cvičení Jičín">
+                                    <img class="one image" src="img/jc9a.webp" width="1440" height="1800"  alt="nové cvičební vybavebí - Bulgarian bag" loading="lazy">
+                                </a>
+                            </li>
+
+                            <li class="col span-1-of4">
+                                <a aria-label="lightbox"  href="img/jc10.webp" data-lightbox="roadtrip" data-title="cvičení Jičín">
+                                    <img class="one image" src="img/jc10a.webp" width="1500" height="2000" alt="venkovní cvičení - výstupy na bednu" loading="lazy">
+                                </a>
+                            </li>
+
+                            <li class="col span-1-of4">
+                                <a aria-label="lightbox"  href="img/jc11.webp" data-lightbox="roadtrip" data-title="cvičení Jičín">
+                                    <img class="one image" src="img/jc11a.webp" width="1327" height="1327"  alt="pernamentky na lekce kondičního cvičení" loading="lazy">
+                                </a>
+                            </li>
+
+                            <li class="col span-1-of4">
+                                <a aria-label="lightbox"  href="img/jc12.webp" data-lightbox="roadtrip" data-title="cvičení-jičín">
+                                    <img class="one image" src="img/jc12a.webp" width="1400" height="1400"  alt="společné předvánoční posezení kondičního tréninku" loading="lazy">
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </section>                   
-
             </main>
         </div>
 

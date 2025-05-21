@@ -316,16 +316,18 @@ nav ul li:last-child {
   font-size: clamp(0.8rem, 1.2rem + 0.1vw, 1.35rem);
   min-width: 450px;
   max-width: 745px;
+  min-height: 5em;
   text-align: center;
   margin: 48px;
-  line-height: 150%;
+  line-height: 1.5;
   padding-top: 6px;
   text-shadow: var(--shadows) 4px 4px 5px;
   color: var(--heading-color);
   font-family: "Roboto", "Arial" sans-serif;
   position: relative;
+  overflow: hidden; 
   transform: translateY(0);
-  transition: transform 0.7s linear;
+  transition: all 0.7s ease-out;
 }
 
 main {
