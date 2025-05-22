@@ -106,7 +106,7 @@ body {
   background-position: center, center;
   background-attachment: fixed;
   position: relative;
-  scrollbar-color: var(--secondary-color);
+  /* scrollbar-color: var(--secondary-color); */
   background-attachment: fixed;
   perspective-origin: calc(50% - var(--scroll-bar-width) / 2) center;
   overflow-x: hidden;
@@ -148,6 +148,18 @@ header {
   font-size: clamp(2.2rem, 2.72rem + 0.1vw, 3rem);
   transition: all 0.6s ease-in;
   cursor: pointer;
+}
+
+div.welcome.error-404 {
+  background-image: url(img/a4.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center
+}
+
+div.welcome.error-404 h1 {
+  /* text-indent: -9000px; */
+  font-size: clamp(2.2rem, 3.5rem + 0.1vw, 4rem);
 }
 
 .menu-background {
@@ -323,7 +335,7 @@ nav ul li:last-child {
   padding-top: 6px;
   text-shadow: var(--shadows) 4px 4px 5px;
   color: var(--heading-color);
-  font-family: "Roboto", "Arial" sans-serif;
+  font-family: "Roboto", sans-serif;
   position: relative;
   overflow: hidden; 
   transform: translateY(0);
@@ -381,7 +393,6 @@ h1 {
   letter-spacing: 1px;
   font-size: clamp(2.2rem, 3rem + 0.1vw, 3.4rem);
   font-weight: 700;
-  text-shadow: var(--shadows);
   text-transform: uppercase;
 }
 
@@ -628,7 +639,7 @@ article.contact-box {
 .col3 .reference-b img {
   margin-bottom: 48px;
   margin-top: 48px;
-  margin-left: calc(auto - 29%);
+  /* margin: calc(auto - 29%); */
   border-radius: 50%;
   width: 60%;
   border: 3px solid var(--secondary-color);
@@ -1027,7 +1038,7 @@ img.one {
 
 footer {
   overflow-x: hidden;
-  display: flex-end;
+  display: flex; 
   width: 100%;
   justify-content: space-between;
   align-items: center;
@@ -1143,13 +1154,13 @@ footer {
   position: relative;
   z-index: 0;
   height: inherit;
-  transform: translateY(0.1) scale(1.05);
+  transform: translateY(0.1%) scale(98%);
   transition: transform 1.5s ease-in;
 }
 
 .parallax2 {
   transform-style: preserve-3d;
-  transform: translateY(0.1) scale(1.05);
+  transform: translateY(0.1%) scale(98%);
   transition: transform 2s ease-in;
 }
 
@@ -1699,7 +1710,7 @@ Other */
     align-items: center;
     visibility: hidden !important;
     opacity: 0;
-    transition: opacity 0.3s ease-in-in;
+    transition: opacity 0.3s ease-in;
     z-index: 1000;
   }
 
