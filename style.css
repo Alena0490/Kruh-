@@ -792,7 +792,10 @@ form label i {
   vertical-align: middle;
 }
 
-form input[type=email], form input[type=text], form textarea {
+form input[type=email], 
+form input[type=text],
+form input[type="tel"], 
+form textarea {
   width: 100%;
   padding: 12px;
   border: 1.5px solid var(--secondary-color-transparent);
@@ -802,6 +805,10 @@ form input[type=email], form input[type=text], form textarea {
   color: #3B2F02;
   font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
   outline: 0;
+}
+
+form input[type=email]:invalid {
+  color: red
 }
 
 form textarea {
@@ -818,6 +825,7 @@ form textarea {
 
 form input[type="text"]:focus,
 form input[type="email"]:focus,
+form input[type="tel"]:focus,
 form textarea:focus {
   border-color: var(--secondary-color-light);
   background: rgba(255, 255, 255, 0.4);
