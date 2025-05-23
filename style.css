@@ -366,6 +366,11 @@ main:not(.photo) {
   transform: translateZ(-1px) scale(1);
 }
 
+article.homepage {
+  margin: 0%;
+  padding: 0%;
+}
+
 section {
   padding: 24px;
   border-radius: 6px;
@@ -423,6 +428,12 @@ h4 {
 
 h4 ul {
   margin-top: 0;
+}
+
+.lesson-introduction {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .before {
@@ -652,10 +663,10 @@ article.contact-box {
   transform: scale(1.04) translateY(-15%) !important;
 }
 
-.slider {
+.slider-home {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .slider-wrapper {
@@ -663,7 +674,7 @@ article.contact-box {
   top: -6px;
   overflow: hidden;
   width: 100%;
-  height: auto;
+  /* height: 75vh; */
   max-width: 960px;
   margin: 12px auto;
   margin-bottom: 100px;
@@ -677,8 +688,7 @@ article.contact-box {
 
 .slides {
   display: flex;
-  width: 500%;
-  height: 100%;
+  width: 500%;;
   transition: margin-left 0.7s ease-in;
 }
 
@@ -691,18 +701,18 @@ article.contact-box {
 .slide img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
+  display: block;
   border-radius: 6px;
   border: none;
 }
 
-.navigation {
+.navigation.r {
   position: fixed;
   top: 0%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   position: absolute;
   bottom: 24px;
   width: 100%;
@@ -1147,6 +1157,22 @@ footer {
 
 .row2 {
   width: 45%;
+}
+
+.row2.p {
+  display: inline;
+  max-width: 960px;
+  margin: 0% auto;
+  color: var(--text);
+  font-family: "Roboto", "Arial", sans-serif;
+  text-align: justify;
+  font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
+  line-height: 1.6;
+  word-wrap: break-word;
+  text-wrap: pretty;
+  hyphens: auto;
+  letter-spacing: 1px;
+  font-weight: 400;
 }
 
 .parallax {
