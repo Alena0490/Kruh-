@@ -1992,6 +1992,7 @@ Other */
 .slider {
   position: absolute;
   left: 48px !important;
+  width: 60px;
   cursor: pointer;
   inset: 0;
   background-color: var(--text);
