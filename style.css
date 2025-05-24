@@ -95,6 +95,7 @@ body.dark {
 html {
   font-size: 22px;
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
 }
 
 body {
