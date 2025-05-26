@@ -140,33 +140,6 @@ header {
   justify-content: center;
 }
 
-.move-down {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.welcome a i.arrow-down {
-  position: absolute;
-  bottom: 12px;
-  color: var(--heading-color);
-  font-size: clamp(2.2rem, 2.72rem + 0.1vw, 3rem);
-  transition: all 0.6s ease-in;
-  cursor: pointer;
-}
-
-div.welcome.error-404 {
-  background-image: url(img/a4.jpeg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center
-}
-
-div.welcome.error-404 h1 {
-  /* text-indent: -9000px; */
-  font-size: clamp(2.2rem, 3.5rem + 0.1vw, 4rem);
-}
-
 .menu-background {
   position: fixed;
   left: 50%;
@@ -206,7 +179,24 @@ nav {
   z-index: 9999;
 }
 
+h1.nav-heading {
+  cursor: default;
+  text-align: left;
+  color:  var(--text-muted);
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
+  font-weight: 400;
+}
+
+h1.nav-heading:hover::after,
+h1.nav-heading.active::after {
+  background: transparent;
+}
+
 nav ul {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
   padding: 0;
   margin: 0;
 }
@@ -221,8 +211,51 @@ nav uli li.active {
   list-style-type: none;
 }
 
+nav ul li.heading-link {
+  color: var(--secondary-color);
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+nav ul li.heading-link a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap; 
+  margin: 0px;
+  line-height: 1.1;
+  gap: 6px;
+  color: var(--text);
+  text-decoration: none;
+  transition: all 0.6s ease-in;
+}
+
+.heading-link a:hover {
+  transform: scale(1.02) !important;
+  font-weight: 400 !important;
+}
+
+nav ul li.heading-link i {
+  position: relative;
+  display: inline-block;
+  font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
+  line-height: 1;
+  margin: 0;
+  vertical-align: middle;
+  color: var(--secondary-color-light);
+}
+
 nav ul li:last-child {
   position: relative;
+}
+
+li.heading-link:hover::after,
+li.heading-link.active::after {
+  background: none;
 }
 
 .first,
@@ -347,6 +380,33 @@ nav ul li:last-child {
   transition: all 0.7s ease-out;
 }
 
+.move-down {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.welcome a i.arrow-down {
+  position: absolute;
+  bottom: 12px;
+  color: var(--heading-color);
+  font-size: clamp(2.2rem, 2.72rem + 0.1vw, 3rem);
+  transition: all 0.6s ease-in;
+  cursor: pointer;
+}
+
+div.welcome.error-404 {
+  background-image: url(img/a4.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center
+}
+
+div.welcome.error-404 h1 {
+  /* text-indent: -9000px; */
+  font-size: clamp(2.2rem, 3.5rem + 0.1vw, 4rem);
+}
+
 main {
   margin: 0 auto;
   display: flex;
@@ -393,7 +453,12 @@ section.top {
 }
 
 section.visit {
+  padding-top: 0;
   z-index: 200;
+}
+
+hr.reservation {
+  margin-top: 24px;
 }
 
 section.reservation {
@@ -407,8 +472,14 @@ section.reservation a {
   margin-bottom: 0;
 }
 
+h2.top0 {
+  margin-top: 0;
+}
+
 section.our-reference {
-  margin-top: 48px;
+  margin-top: 0px;
+  padding-top: 0;
+  margin-bottom: 48px;
 }
 
 h1 {
@@ -429,10 +500,14 @@ h2 {
   text-transform: uppercase;
   text-align: center;
   color: var(--secondary-color);
-  margin-top: 48px !important;
+  margin-top: 48px;
   font-family: "Teko", "Arial", sans-serif;
   letter-spacing: 1px;
   font-size: clamp(1.6rem, 2rem + 0.1vw, 2.3rem);
+}
+
+h2.top48 {
+  margin-top: 48px;
 }
 
 h3 {
@@ -456,11 +531,11 @@ h4 ul {
   align-items: center;
 }
 
-.before {
+h2.before {
   position: relative;
   margin-bottom: 24px !important;
   text-align: center;
-  margin-top: 48px !important;
+  margin-top: 48px;
   width: 100%;
 }
 
@@ -469,6 +544,12 @@ hr {
   height: 1.5px; 
   background-color: var(--hr-color);
   margin: 24px 0 48px 0;
+}
+
+hr.hidden {
+  visibility: hidden;
+  margin: 0;
+  margin-top: 36px;
 }
 
 p {
@@ -811,7 +892,7 @@ form {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   margin: 24px auto 60px;
-  margin-bottom: 100px;
+  margin-bottom: 48px;
   border-radius: 6px;
   max-width: 1000px;
 }
@@ -933,6 +1014,7 @@ input[type=submit]:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 12px;
+  padding-top: 0;
   justify-content: center;
   align-items: center;
   margin: 24px auto;
@@ -1009,7 +1091,7 @@ img.one {
 .col2 {
   display: grid;
   justify-items: center;
-  align-items: start;
+  align-items: stretch;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 48px;
   max-width: 100%;
