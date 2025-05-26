@@ -396,6 +396,21 @@ section.visit {
   z-index: 200;
 }
 
+section.reservation {
+  border: none;
+  background: none;
+  backdrop-filter: none;
+  padding: 0;
+}
+
+section.reservation a {
+  margin-bottom: 0;
+}
+
+section.our-reference {
+  margin-top: 48px;
+}
+
 h1 {
   text-align: center;
   color: var(--heading-color);
@@ -469,6 +484,10 @@ p {
   hyphens: auto;
   letter-spacing: 1px;
   font-weight: 400;
+}
+
+p.terms {
+  margin-bottom: 48px;
 }
 
 a.basic {
