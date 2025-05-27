@@ -701,6 +701,10 @@ ul:not(nav ul) {
   z-index: 100;
 }
 
+li.none {
+  list-style: none;
+}
+
 .contacts li {
   list-style: none;
   margin-bottom: 12px;
