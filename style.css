@@ -473,7 +473,7 @@ section {
   -webkit-backdrop-filter: blur(5px);
   margin-top: 0px;
   margin-bottom: 12px;
-  z-index: -1;
+  z-index: -0;
 }
 
 section.top {
@@ -727,6 +727,8 @@ li.none {
   font-family: "Roboto", "Arial", sans-serif;
   text-transform: uppercase;
   line-height: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
+  cursor: pointer;
+  z-index: 500;
 }
 
 .rezervace i {
@@ -1046,7 +1048,7 @@ input[type=submit]:hover {
 }
 
 .success {
-  /* display: none; */
+  display: none;
   border: 1px solid #56a73bC0 !important;
   background: rgba(86, 167, 59, 0.35) !important;
 }
