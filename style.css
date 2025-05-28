@@ -418,7 +418,7 @@ li.heading-link.active::after {
   position: absolute;
   bottom: 12px;
   color: var(--heading-color);
-  font-size: clamp(2.2rem, 2.72rem + 0.1vw, 3rem);
+  font-size: clamp(2rem, 2.5rem + 0.1vw, 2.8rem);
   transition: all 0.6s ease-in;
   cursor: pointer;
   z-index: 5;
