@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll animace</title>
+  <style>
+  
+    body {
+        width: 100%;
+        border: 5px solid red;
+        box-sizing: border-box;
+        height: 200vh;
+        margin: 0;
+        padding: 0;
+        background: #111;
+    }
+
+    img.one {
+        /* display: none; */
+      margin-top: 200vh;
+      margin: 200vh auto 50px;
+      min-width: 200px;
+      max-width: 1400px;
+      opacity: 0;
+      transform: scale(0.8);
+      animation-name: fade-in;
+      animation-timing-function: ease;
+      animation-fill-mode: both;
+      animation-duration: auto;
+      animation-timeline: view(); 
+    }
+
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+    }
+
+    @keyframes     
+        bg-shift {
+            from {
+                background-color: rgb(216, 206, 202);
+            }
+            to{
+                background-color: rgb(32, 221, 41);
+            }
+      }
+
+    header {
+        display: flex;
+        width: 100%;
+        height: 20vh;
+        background-color: chocolate;
+        overflow-x: scroll;
+        -webkit-mask: linear-gradient(
+            90deg,
+            transparent,
+            white,
+            white,
+            transparent
+        );
+        mask: linear-gradient(
+            90deg,
+            transparent,
+            white,
+            white,
+            transparent
+        );
+        animation: bg-shift linear;
+        animation-timeline: scroll(inline);
+        animation-delay: 6s;
+        /* animation-timing-function: ease;
+        animation-fill-mode: both;
+        animation-duration: auto; */
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+        margin-left: 50px;
+        margin-right: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    li {
+        animation: bg-shift linear;
+        animation-timeline: scroll(inline);
+        display: block;
+        border-radius: 6px;
+        margin: 5px;
+        padding: 5px;
+        width: 300px;
+        height: 10vh;
+        background-color: coral;
+        color: white;
+        text-align: center;
+        font-size: 25px;
+        line-height: 10vh;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+        </ul>
+    </header>
+    <main>
+        <img class="one" src="img/6.jpg" alt="Obrázek">
+    </main>
+
+    <footer>
+
+    </footer>
+  
+
+</body>
+</html>

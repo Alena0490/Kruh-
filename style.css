@@ -18,6 +18,7 @@
   --background-soft-transparent: #d6ddff50;
   --background-muted: #D2DAF3 ;
   --background-muted-tr: #d2daf3e0;
+  --backdrop: rgba(255, 255, 255, 0.2);
 
   --text: #2e2e2e;
   --text-muted: #4e4e4e;
@@ -63,6 +64,7 @@ body.dark {
   --background-soft-transparent:#25252530 ;
   --background-muted: #2D2D2D;
   --background-muted-tr: #2D2D2De0;
+  --backdrop: rgba(255, 255, 255, 0.3);
 
   --text: #eaeaea;
   --text-muted: #b0b0b0;
@@ -667,7 +669,7 @@ img.uvod:hover {
   font-weight: 400;
 }
 
-ol, ul:not(.menu-background ul) {
+ol, ul:not(.menu-background ul, ul.photo-segment) {
   max-width: 960px;
   width: 100%;
   list-style-position: inside;
@@ -1087,6 +1089,7 @@ input[type=submit]:hover {
 .photo-segment {
   display: flex;
   flex-wrap: wrap;
+  padding: 12px;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
@@ -1133,7 +1136,49 @@ input[type=submit]:hover {
 
 img.one {
   min-width: 180px;
+  /* display: block;
+  contain: layout;
+  opacity: 0;
+  transform: scale(0.8);
+  animation-name: fade-in;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+  animation-duration: auto;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+  animation-fill-mode: both; */
 }
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    scale: 0.8;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+/* @supports (animation-timeline: fadeScroll) {
+  img.one {
+    animation-name: fade-in;
+    animation-timeline: fadeScroll;
+    animation-duration: auto;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
+    animation-range: entry 0% cover 50%; 
+
+    opacity: unset;
+    scale: unset;
+  }
+}
+
+
+@scroll-timeline fadeScroll {
+  source: auto;
+  orientation: block;
+} */
 
 .col {
   display: flex;
@@ -1181,7 +1226,7 @@ img.one {
   text-align: center;
   font-size: clamp(1rem, 1.2rem + 0.1vw, 1.35rem);
   position: relative;
-  left: -32px;
+  left: -0px;
   margin: auto;
   width: 100%;
   letter-spacing: 1px;
@@ -1211,10 +1256,6 @@ img.one {
   line-height: 1.6rem;
 }
 
-li.none {
-  list-style: none;
-}
-
 li.none h4.place {
   padding-bottom: 6px;
 }
@@ -1236,7 +1277,9 @@ li.training-time {
 
 li.none {
   /* background: var(--background-soft-transparent); */
-  backdrop-filter: invert(20%);
+  list-style: none;
+  border: solid 1px var(--secondary-color-darkest);
+  backdrop-filter: drop-shadow(4px 4px 10px var(--backdrop));
   border-radius: 3px;
   padding: 24px;
   margin-bottom: 12px;
@@ -1245,9 +1288,17 @@ li.none {
   width: 100%;
 }
 
+li.none.season {
+  border-top: none;
+  border-radius: 0px 0px 3px 3px;
+  /* margin-top: -3px; */
+}
+
 li.none.first-item {
   margin-bottom: 0;
   padding-bottom: 0;
+  border-bottom: none;
+  box-sizing: 3px 3px 0px 0px;
 }
 
 li.none.season {
