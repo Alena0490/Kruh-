@@ -97,6 +97,7 @@ body.dark {
 
 html {
   font-size: 22px;
+  font-family: "Roboto", "Arial", sans-serif;
   scroll-behavior: smooth;
   scrollbar-gutter: stable;
 }
@@ -186,7 +187,6 @@ h1.nav-heading {
   cursor: default;
   text-align: left;
   color:  var(--text-muted);
-  font-family: "Roboto", "Arial", sans-serif;
   font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
   font-weight: 400;
 }
@@ -210,7 +210,6 @@ nav uli li.active {
   float: left;
   margin-right: 0;
   vertical-align: bottom;
-  font-family: "Roboto", "Arial", sans-serif;
   text-align: center;
   width: 20%;
   list-style-type: none;
@@ -418,7 +417,6 @@ li.heading-link.active::after {
   padding-top: 6px;
   text-shadow: var(--shadows) 4px 4px 5px;
   color: var(--heading-color);
-  font-family: "Roboto", sans-serif;
   position: relative;
   overflow: hidden; 
   transform: translateY(0);
@@ -504,10 +502,6 @@ section.visit {
   z-index: 200;
 }
 
-hr.reservation {
-  margin-top: 24px;
-}
-
 section.reservation {
   border: none;
   background: none;
@@ -517,10 +511,6 @@ section.reservation {
 
 section.reservation a {
   margin-bottom: 0;
-}
-
-h2.top0 {
-  margin-top: 0;
 }
 
 section.our-reference {
@@ -557,6 +547,18 @@ h2.top48 {
   margin-top: 48px;
 }
 
+h2.top0 {
+  margin-top: 0;
+}
+
+h2.before {
+  position: relative;
+  margin-bottom: 24px !important;
+  text-align: center;
+  margin-top: 48px;
+  width: 100%;
+}
+
 h3 {
   text-transform: uppercase;
   font-size: clamp(1rem, 1.2rem + 0.1vw, 1.35rem);
@@ -578,19 +580,15 @@ h4 ul {
   align-items: center;
 }
 
-h2.before {
-  position: relative;
-  margin-bottom: 24px !important;
-  text-align: center;
-  margin-top: 48px;
-  width: 100%;
-}
-
 hr {
   border: none; 
   height: 1.5px; 
   background-color: var(--secondary-color-darkest);
   margin: 24px 0 48px 0;
+}
+
+hr.reservation {
+  margin-top: 24px;
 }
 
 hr.hidden {
@@ -608,7 +606,6 @@ p {
   max-width: 960px;
   margin: 0% auto;
   color: var(--text);
-  font-family: "Roboto", "Arial", sans-serif;
   text-align: justify;
   font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
   line-height: 1.6;
@@ -633,7 +630,6 @@ a.basic {
   font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
   text-decoration: none;
   transition: color 0.7s ease-in;
-  font-family: "Roboto", "Arial", sans-serif;
   word-wrap: break-word;
   font-weight: 400;
   margin: 24px 0; 
@@ -675,7 +671,6 @@ img.uvod:hover {
   max-width: 960px;
   margin: 0% auto;
   color: var(--text);
-  font-family: "Roboto", "Arial", sans-serif;
   text-align: justify;
   font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
   line-height: 1.6;
@@ -718,7 +713,6 @@ ol li::before {
   text-align: center;
   color: var(--secondary-color-light);
   font-weight: 900;
-  font-family: "Roboto", "Arial", sans-serif;
   font-size: clamp(0.80rem, 1rem + 0.1vw, 1.1rem);
 }
 
@@ -731,7 +725,6 @@ ul:not(nav ul) {
   padding-bottom: 24px;
   z-index: 900;
   color: var(--text);
-  font-family: Lato, sans-serif;
   z-index: 100;
 }
 
@@ -760,7 +753,6 @@ ul:not(nav ul) {
   width: 100%;
   letter-spacing: 1px;
   margin-bottom: 48px;
-  font-family: "Roboto", "Arial", sans-serif;
   text-transform: uppercase;
   line-height: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
   cursor: pointer;
@@ -979,7 +971,6 @@ form > div:nth-of-type(5) {
 form label {
   display: block;
   margin-bottom: 6px;
-  font-family: Roboto, sans-serif;
   color: var(--text);
   font-weight: 700;
   margin-left: 3px;
@@ -1063,7 +1054,6 @@ input[type=submit]:hover {
   -webkit-backdrop-filter: blur(5px);
   text-align: center;
   font-weight: 700;
-  font-family: "Roboto", "Arial", sans-serif;
   line-height: 1.4;
   border-radius: 6px;
   letter-spacing: 1px;
@@ -1165,49 +1155,7 @@ input[type=submit]:hover {
 
 img.one {
   min-width: 180px;
-  /* display: block;
-  contain: layout;
-  opacity: 0;
-  transform: scale(0.8);
-  animation-name: fade-in;
-  animation-timing-function: ease;
-  animation-fill-mode: both;
-  animation-duration: auto;
-  animation-timeline: view();
-  animation-range: entry 0% cover 30%;
-  animation-fill-mode: both; */
 }
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    scale: 0.8;
-  }
-  to {
-    opacity: 1;
-    scale: 1;
-  }
-}
-
-/* @supports (animation-timeline: fadeScroll) {
-  img.one {
-    animation-name: fade-in;
-    animation-timeline: fadeScroll;
-    animation-duration: auto;
-    animation-fill-mode: both;
-    animation-timing-function: ease-out;
-    animation-range: entry 0% cover 50%; 
-
-    opacity: unset;
-    scale: unset;
-  }
-}
-
-
-@scroll-timeline fadeScroll {
-  source: auto;
-  orientation: block;
-} */
 
 .col {
   display: flex;
@@ -1259,7 +1207,6 @@ img.one {
   margin: auto;
   width: 100%;
   letter-spacing: 1px;
-  font-family: "Roboto", "Arial", sans-serif;
   text-transform: uppercase;
   transition: all 0.6s ease-in;
 }
@@ -1305,7 +1252,6 @@ li.training-time {
 }
 
 li.none {
-  /* background: var(--background-soft-transparent); */
   list-style: none;
   border: solid 1px var(--secondary-color-darkest);
   backdrop-filter: drop-shadow(4px 4px 10px var(--backdrop));
@@ -1320,7 +1266,6 @@ li.none {
 li.none.season {
   border-top: none;
   border-radius: 0px 0px 3px 3px;
-  /* margin-top: -3px; */
 }
 
 li.none.first-item {
@@ -1441,7 +1386,6 @@ footer {
   text-decoration: none;
   font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
   line-height: clamp(1.3rem, 1.6rem + 0.1vw, 1.8rem);
-  font-family: Lato, sans-serif;
 }
 
 .fb-logo i,
@@ -1573,7 +1517,6 @@ body[style*="position: fixed"] {
 
 /* 
 Other */
-
 .lb-loader, .lightbox {
   text-align: center;
   line-height: 0;
@@ -1758,7 +1701,6 @@ Other */
 }
 
 /*Grid*/
-
 .section {
   padding: 0;
   margin: 0;
@@ -1794,7 +1736,6 @@ Other */
 }
 
 /*Queries*/
-
 @media only screen and (max-width: 1100px) {
   .reference {
     margin: 0 auto;
@@ -2301,7 +2242,7 @@ Other */
   .col.map-container {
     max-width: calc(100% - 12px);
     margin: 12px 6px 12px 6px;
-}
+  }
 }
 
 @media (max-width: 350px) {
@@ -2358,7 +2299,6 @@ Other */
 }
 
 /***Dark/light mode**/
-
 .toggle-wrapper {
   position: absolute;
   width: 100%;
@@ -2439,4 +2379,16 @@ input:checked + .slider {
 input:checked + .slider::before {
   transform: translateX(26px);
   background-color: #f2f2f2;
+}
+
+/* Keyframes */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    scale: 0.8;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
 }
