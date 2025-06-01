@@ -252,6 +252,10 @@ nav ul li.heading-link i {
   margin: 0;
   vertical-align: middle;
   color: var(--secondary-color-light);
+  width: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
+  height: auto;
+  vertical-align:bottom;
+  margin-right: 8px;
 }
 
 nav ul li:last-child {
@@ -288,6 +292,18 @@ li.heading-link.active::after {
   border-bottom: 3px solid transparent;
 }
 
+.first::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: -100%;
+  margin-left: -100%;
+  width: 1000%;
+  height: 6px;
+  background-color: #76767610;
+  z-index: 0;
+}
+
 .first:hover::after,
 .first.active::after {
   content: "";
@@ -298,6 +314,7 @@ li.heading-link.active::after {
   width: 80%;
   height: 6px;
   background-color: var(--secondary-color);
+  z-index: 2;
 }
 
 .burger-menu {
@@ -721,12 +738,18 @@ ul:not(nav ul) {
 .contacts li {
   list-style: none;
   margin-bottom: 12px;
+  line-height: clamp(0.80rem, 1rem + 0.1vw, 1.1rem);;
 }
 
-.contacts li i {
+.contacts li i,
+.contacts li svg {
   color: var(--text);
   margin-right: 6px;
   font-size: clamp(0.80rem, 1rem + 0.1vw, 1.1rem);
+  width: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
+  height: auto;
+  vertical-align:bottom;
+  margin-right: 8px;
 }
 
 .rezervace {
@@ -744,9 +767,14 @@ ul:not(nav ul) {
   z-index: 500;
 }
 
-.rezervace i {
+.rezervace i,
+.rezervace svg {
   font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
   line-height: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
+  width: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
+  height: auto;
+  vertical-align:bottom;
+  margin-right: 8px;
 }
 
 a.rezervace:hover {
@@ -775,7 +803,7 @@ a.rezervace:hover {
   margin-bottom: 48px;
   margin-top: 48px;
   border-radius: 50%;
-  width: 60%;
+  width: 70%;
   border: 3px solid var(--secondary-color);
   filter: drop-shadow(2px 3px 4px var(--background));
   transition: all 0.6s ease-in;
@@ -958,7 +986,8 @@ form label {
   font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
 }
 
-form label i {
+form label i,
+form label svg {
   margin-right: 6px;
   color: var(--text);
   font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
@@ -1190,7 +1219,7 @@ img.one {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  margin: 2rem auto;
+  margin: 0px auto 24px;
   max-width: 1200px;
 }
 
@@ -1415,7 +1444,8 @@ footer {
   font-family: Lato, sans-serif;
 }
 
-.fb-logo i {
+.fb-logo i,
+.fb-logo svg {
   margin: 0;
   margin-right: 6px;
   color: var(--text);
@@ -2367,7 +2397,8 @@ Other */
   transition: background-color 0.4s ease-in;
 }
 
-header i {
+header i,
+  header svg {
   position: absolute;
   font-size: 1.4rem;
   color: var(--heading-color);
@@ -2375,12 +2406,14 @@ header i {
   bottom: 2px;
 }
 
-header i.sun {
+header i.sun,
+header svg.sun {
   position: absolute;
   left: 116px;
 }
 
-header i.moon {
+header i.moon,
+header svg.moon {
   position: absolute;
   bottom: -0.5px;
   left: 14px;
