@@ -472,6 +472,7 @@ main:not(.photo) {
   padding: 6%;
   width: 100%;
   background-color: var(--background);
+  background-size: cover;
   padding: 0% 6% 0% 6%;
   transform: translateZ(-1px) scale(1);
 }
@@ -534,14 +535,25 @@ h1.home {
 }
 
 h2 {
+  position: relative;
   text-transform: uppercase;
   text-align: center;
   color: var(--secondary-color);
   margin-top: 48px;
+  margin-bottom: 0px;
   font-family: "Teko", "Arial", sans-serif;
   letter-spacing: 1px;
   font-size: clamp(1.6rem, 2rem + 0.1vw, 2.3rem);
 }
+
+/* h2::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 3px;
+  background: var(--secondary-color);
+  margin: 0.5rem auto 0;
+} */
 
 h2.top48 {
   margin-top: 48px;
@@ -936,7 +948,7 @@ input[name=r] {
 }
 
 .col.map-container img {
-  width: 100%;
+  max-width: 100%;
   margin-top: 0;
   max-width: 500px;
   height: auto;
@@ -1822,7 +1834,7 @@ Other */
   }
 
   .contact-box {
-    margin: 0px auto;
+    margin: 48px auto 0px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -2019,12 +2031,25 @@ Other */
     margin-bottom: 100px;
   }
 
+  section.contact-box {
+    max-width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
   .col.map-container img {
-    max-width: 400px;
+    max-width: 100%;
     cursor: pointer;
   }
 
-  .reference {
+  .col.map-container {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+    .reference {
     margin-left: 1%;
     width: 100%;
     justify-content: center;
@@ -2183,11 +2208,7 @@ Other */
   }
 
   .col.map-container {
-    max-width: calc(100% - 24px);
-  }
-
-  .col.map-container img {
-    max-width: 300px;
+    /* max-width: calc(100% - 24px); */
   }
 
   .schedule {
@@ -2222,7 +2243,7 @@ Other */
   form {
     display: grid;
     grid-template-columns: 1fr;
-    padding: 12px;
+    padding: 24px;
     margin: 0 auto 48px auto;
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
@@ -2259,6 +2280,11 @@ Other */
   .col.map-container {
     max-width: calc(100% - 12px);
     margin: 12px 6px 12px 6px;
+  }
+
+  .address {
+    min-width: unset;
+    margin-left: 12px;
   }
 }
 

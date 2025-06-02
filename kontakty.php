@@ -10,21 +10,22 @@
         <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
         <link rel="manifest" href="img/site.webmanifest">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-        <link rel="stylesheet" href="style.css">
-        <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap">
-        <link rel="prefetch" href="/img/no-pain.webp">
-        <title>Kondiční cvičení - Kontakty</title>
-        <meta name="description" content="Kondiční cvičení v Lázních Bělohrad a Jičíně. Přidej se k nám a zlepši svou kondici!">
-        <meta name="author" content="Alena Pumprová">
-        <meta name="robots" content="index, follow">
-        <meta name="keywords" content="kondiční cvičení, Lázně Bělohrad, Jičín, tréninky, fitness">
-        <meta name="theme-color" content="#f34635">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap">
+    <link rel="prefetch" href="/img/no-pain.webp">
+    <title>Kondiční cvičení - Kontakty</title>
+    <meta name="description" content="Kondiční cvičení v Lázních Bělohrad a Jičíně. Přidej se k nám a zlepši svou kondici!">
+    <meta name="author" content="Alena Pumprová">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="kondiční cvičení, Lázně Bělohrad, Jičín, tréninky, fitness">
+    <meta name="theme-color" content="#f34635">
+    <meta name="color-scheme" content="light dark">
     </head>
 
-    <body class="dark">
+    <body>
         <header>
             <div class="toggle-wrapper">
                 <label class="theme-toggle" aria-label="Přepínání světlého a tmavého režimu">
@@ -85,7 +86,7 @@
                     
                     <h2 id="lb">Lázně Bělohrad</h2>
                     <p class="address">Tréninky probíhají celoročne v&nbsp;sokolovně Lázně Bělohrad. V&nbsp;létě máme také přístup na&nbsp;venkovní hřiště za&nbsp;sokolovnou.</p>
-                    <article class="contact-box"> 
+                    <section class="contact-box"> 
                         <div class="col address-content">
                             <address>
                                 <ul>
@@ -101,7 +102,7 @@
                                 <img class="map map-image" src="img/map-lb.webp" alt="Mapa - Lázně Bělohrad Lázeňská 295" width="800" height="500" loading="lazy">
                             </a>
                         </div>
-                    </article> 
+                    </section> 
                 </section> 
                     <hr class="hidden">
                     <section class="visit">
@@ -109,7 +110,7 @@
                             <p class="address">V&nbsp;zimním období probíhají kruhové tréninky v&nbsp;<strong>hale Základní školy Poděbradova.</strong>
                                 V&nbsp;létě se tréninky přesouvají na&nbsp;<strong>hřiště před&nbsp;školou.</strong></p>
                             
-                            <article class="contact-box">
+                            <section class="contact-box">
                                 <div class="col address-content">
                                     <address>
                                         <ul>
@@ -125,7 +126,7 @@
                                         <img class="map map-image" src="img/map-jicin.webp" alt="Mapa - Jičín Poděbradova 18"  width="800" height="500" loading="lazy">
                                     </a>
                                 </div>
-                        </article>
+                        </section>
                 </section>
                     
                     <h2 id="contact-form" class="contacts jq--form">Napiš nám</h2>
@@ -172,8 +173,7 @@ if (isset($_GET['success'])) {
                     </div>
                     
                     <input type="submit" value="Odeslat">
-                </form>
-                
+                </form>        
             </main>
         </div>
         <footer>
