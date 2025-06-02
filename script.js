@@ -36,19 +36,35 @@ window.addEventListener("load", function () {
 });
 
   /***Přepnutí na Light/Dark mode */
-  // script.js
   document.addEventListener("DOMContentLoaded", () => {
-    const toggle = document.getElementById("modeToggle");
+    const toggleInput = document.querySelector(".theme-toggle input");
+    const userTheme = localStorage.getItem("theme");
+    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
   
-    if (!toggle) {
-      console.warn("⚠️ modeToggle nenalezen");
-      return;
+    // Funkce, která přepne třídu a nastaví přepínač
+    const setTheme = (isLight) => {
+      document.body.classList.toggle("dark", !isLight); // Tmavý = bez checked
+      toggleInput.checked = isLight; // Světlý = checked
+    };
+  
+    // Výchozí chování
+    if (userTheme === "light") {
+      setTheme(true); // Světlý režim
+    } else if (userTheme === "dark") {
+      setTheme(false); // Tmavý režim
+    } else {
+      // Pokud není v localStorage nic, výchozí je tmavý režim
+      setTheme(false);
     }
   
-    toggle.addEventListener("change", () => {
-      document.body.classList.toggle("dark");
+    // Přepnutí přepínače
+    toggleInput.addEventListener("change", () => {
+      const isLight = toggleInput.checked;
+      setTheme(isLight);
+      localStorage.setItem("theme", isLight ? "light" : "dark");
     });
   });
+  
   
   
 /*Scrolování k formuláři*/
