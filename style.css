@@ -498,6 +498,11 @@ section.top {
   padding-top: 0;
 }
 
+section.main-text {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
 section.visit {
   padding-top: 0;
   z-index: 200;
@@ -2205,10 +2210,6 @@ Other */
   li.none {
     padding-left: 12px;
     padding-right: 12px;
-  }
-
-  .col.map-container {
-    /* max-width: calc(100% - 24px); */
   }
 
   .schedule {
