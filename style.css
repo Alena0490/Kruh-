@@ -603,10 +603,10 @@ hr.zero {
 }
 
 p {
-  max-width: 960px;
+  max-width: 900px;
   margin: 0% auto;
   color: var(--text);
-  text-align: justify;
+  text-align: left;
   font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
   line-height: 1.6;
   word-wrap: break-word;
@@ -791,11 +791,16 @@ a.rezervace:hover {
   padding: 12px;
 }
 
+.reference-b p {
+  text-align: justify;
+}
+
 .col3 .reference-b img {
   margin-bottom: 48px;
   margin-top: 48px;
   border-radius: 50%;
   width: 70%;
+  max-width: 300px;
   border: 3px solid var(--secondary-color);
   filter: drop-shadow(2px 3px 4px var(--background));
   transition: all 0.6s ease-in;
@@ -1830,6 +1835,14 @@ Other */
     margin-left: 10%;
   }
 
+  .col2 {
+    flex-wrap: wrap;
+  }
+
+  .col3 {
+    flex-wrap: wrap;
+  }
+
   .reference {
     margin-left: 1%;
     max-width: 100%;
@@ -2134,6 +2147,10 @@ Other */
 
   section.photo-gallery {
     padding: 24px 0;
+  }
+
+  .reference-b p {
+    text-align: left;
   }
 
   .photo-segment li {
