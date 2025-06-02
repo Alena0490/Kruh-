@@ -39,33 +39,29 @@ window.addEventListener("load", function () {
   document.addEventListener("DOMContentLoaded", () => {
     const toggleInput = document.querySelector(".theme-toggle input");
     const userTheme = localStorage.getItem("theme");
-    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
   
-    // Funkce, která přepne třídu a nastaví přepínač
     const setTheme = (isLight) => {
-      document.body.classList.toggle("dark", !isLight); // Tmavý = bez checked
-      toggleInput.checked = isLight; // Světlý = checked
+      document.documentElement.classList.toggle("dark", !isLight);
+      toggleInput.checked = isLight;
+      console.log("Switched to", isLight ? "Light" : "Dark", "mode");
     };
   
-    // Výchozí chování
+    // Výchozí: tmavý, pokud není výslovně "light"
     if (userTheme === "light") {
-      setTheme(true); // Světlý režim
-    } else if (userTheme === "dark") {
-      setTheme(false); // Tmavý režim
+      console.log("Light mode set");
+      setTheme(true);
     } else {
-      // Pokud není v localStorage nic, výchozí je tmavý režim
+      console.log("Dark mode set (default or explicitly)");
       setTheme(false);
     }
   
-    // Přepnutí přepínače
     toggleInput.addEventListener("change", () => {
       const isLight = toggleInput.checked;
       setTheme(isLight);
       localStorage.setItem("theme", isLight ? "light" : "dark");
+      console.log("Theme switched to:", isLight ? "light" : "dark");
     });
   });
-  
-  
   
 /*Scrolování k formuláři*/
 document.addEventListener('DOMContentLoaded', function () {

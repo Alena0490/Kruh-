@@ -43,7 +43,7 @@
   --input-border: rgba(255, 255, 255, 0.15);
 }
 
-body.dark {
+html.dark {
   --heading-color: #f9f9f9 ;
   --main-color: rgb(0, 0, 0);
   --main-color-darker: rgb(37, 37, 37);
