@@ -255,7 +255,8 @@ nav ul li.heading-link i {
   width: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
   height: auto;
   vertical-align:bottom;
-  margin-right: 8px;
+  margin-left: 6px;
+  margin-right: 6px;
 }
 
 nav ul li:last-child {
@@ -279,7 +280,7 @@ li.heading-link.active::after {
   justify-content: center;
   align-items: flex-end;
   padding-top: 0px;
-  font-size: clamp(0.80rem, 1rem + 0.1vw, 1.1rem);
+  font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
   height: 83px;
   top: 12px;
   margin-left: 0;
@@ -718,7 +719,7 @@ ol {
 ol li {
   counter-increment: list-counter;
   position: relative;
-  padding-left: 2rem;
+  padding-left: clamp(1.2rem, 1.5rem + 0.5vw, 1.7rem);
   margin-bottom: 24px;
   text-align: left;
 }
@@ -727,17 +728,18 @@ ol li::before {
   content: counter(list-counter);
   position: absolute;
   left: 0;
-  top: clamp(0.1rem, 0.2rem + 0.1vw, 0.22rem);
-  width: clamp(1rem, 1.1rem + 0.4vw, 1.3rem);
-  height: 1.6rem;
+  top: 0%;
+  /* top: clamp(0.1rem, 0.2rem + 0.1vw, 0.22rem); */
+  width: clamp(0.80rem, 1rem + 0.1vw, 1.1rem);
+  line-height: 1.6rem;
   text-align: center;
   color: var(--secondary-color-light);
   font-weight: 900;
-  font-size: clamp(0.80rem, 1rem + 0.1vw, 1.1rem);
+  font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
 }
 
 ul:not(nav ul) {
-  font-size: clamp(0.80rem, 1rem + 0.1vw, 1.1rem);
+  font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
   line-height: 130%;
   padding-top: 12px;
   padding-right: 24px;
@@ -758,7 +760,7 @@ ul:not(nav ul) {
 .contacts li svg {
   color: var(--text);
   margin-right: 6px;
-  font-size: clamp(0.80rem, 1rem + 0.1vw, 1.1rem);
+  font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
   width: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
   height: auto;
   vertical-align:bottom;
@@ -1897,7 +1899,7 @@ Other */
   }
 
   .mobile-nav-back {
-    height: 220px;
+    height: 260px;
     position: absolute;
     left: 0;
     top: 83.5px;
@@ -1946,7 +1948,17 @@ Other */
   }
 
   .menu-background nav ul li.heading-link.first {
-    display: none !important;
+    width: 100%;
+    margin: 24px;
+    margin-left: 48px;
+    letter-spacing: 1px;
+    margin: 24px 24px 6px 48px;
+    text-decoration: underline;
+    text-decoration-color: var(--secondary-color);
+  }
+
+  a.rezervace.basic {
+    font-weight: 700;
   }
   
   .first:not(.album) {
