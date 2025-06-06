@@ -1,4 +1,4 @@
- /***Přepnutí na Light/Dark mode */
+/***Přepnutí na Light/Dark mode */
  document.addEventListener("DOMContentLoaded", () => {
   const toggleInput = document.querySelector(".theme-toggle input");
   const userTheme = localStorage.getItem("theme");
@@ -6,15 +6,12 @@
   const setTheme = (isLight) => {
     document.documentElement.classList.toggle("dark", !isLight);
     toggleInput.checked = isLight;
-    console.log("Switched to", isLight ? "Light" : "Dark", "mode");
   };
 
   // Výchozí: tmavý, pokud není výslovně "light"
   if (userTheme === "light") {
-    console.log("Light mode set");
     setTheme(true);
   } else {
-    console.log("Dark mode set (default or explicitly)");
     setTheme(false);
   }
 
@@ -22,7 +19,6 @@
     const isLight = toggleInput.checked;
     setTheme(isLight);
     localStorage.setItem("theme", isLight ? "light" : "dark");
-    console.log("Theme switched to:", isLight ? "light" : "dark");
   });
 });
 
@@ -59,47 +55,8 @@ window.addEventListener("load", function () {
         window.scrollTo({ top: 0, left: 0, behavior: "instant" });
     }, 0);
 });
-
-/*Scrolování k formuláři*/
-document.addEventListener('DOMContentLoaded', function () {
-  const scrollLinks = document.querySelectorAll('.jq--scroll-form');
-  const target = document.getElementById('contact-form');
-
-  if (scrollLinks.length && target) {
-    scrollLinks.forEach(link => {
-      link.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        const yOffset = -90; // pro fixní menu
-        const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-        window.scrollTo({
-          top: y,
-          behavior: 'smooth'
-        });
-      });
-    });
-  }
-});
-
-/*Scrolování k adrese*/
-document.addEventListener("DOMContentLoaded", function () {
-    const hash = window.location.hash;
-    if (hash) {
-      const target = document.querySelector(hash);
-      if (target) {
-        const offset = -90; // Posun kvůli fixnímu menu
-        const y = target.getBoundingClientRect().top + window.pageYOffset + offset;
-  
-        window.scrollTo({
-          top: y,
-          behavior: "smooth"
-        });
-      }
-    }
-  });
-  
-/* Change Hamburger to Cross vice versa */
+ 
+/***Change Hamburger to Cross vice versa */
 document.addEventListener("DOMContentLoaded", function () {
     const burgerIcon = document.querySelector('.jq--nav-icon');
     const navItems = document.querySelectorAll('.first');
@@ -132,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-//Cookies
+/***Cookies*/
 document.addEventListener("DOMContentLoaded", function() {
     // Zkontrolujeme, zda uživatel už cookies přijal
     if (!localStorage.getItem("cookiesAccepted")) {
@@ -164,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-//Parallax
+/***Parallax*/
 window.addEventListener("scroll", function() {
     const parallaxElements = document.querySelectorAll(".parallax"); // Najde všechny prvky s třídou .parallax
     const offset = window.pageYOffset; // Aktuální pozice scrollu
@@ -179,18 +136,15 @@ toggle.addEventListener('change', () => {
   document.body.classList.toggle('dark');
 });
 
-/*Zobrazení galerie*/
+/***Zobrazení galerie*/
 $(function () {
   // Ujistíme se, že třída není přidaná na začátku
   $('body').removeClass('lb-disable-scrolling');
-  console.log('🚀 Script spuštěn, třída odebrána na začátku');
   
   // Animace při načtení stránky
   $(".slider-wrapper").hide().fadeIn(3000);
   $(".album").hide().fadeIn(4000);
   $("iframe").hide().fadeIn(4000);
-
-  console.log('📊 Lightbox elementy nalezeny:', $('[data-lightbox]').length);
 
   // SLEDOVÁNÍ PŘIDÁNÍ LIGHTBOXU DO DOM - POUZE PŘIDÁNÍ TŘÍDY
   var observer = new MutationObserver(function(mutations) {
@@ -200,13 +154,11 @@ $(function () {
           if (node.nodeType === 1) {
             var $node = $(node);
             if ($node.hasClass('lightboxOverlay') || $node.hasClass('lightbox')) {
-              console.log('🔍 Lightbox přidán do DOM');
               
               // Přidáme třídu po krátké prodlevě
               setTimeout(function() {
                 if ($('.lightboxOverlay').length && $('.lightbox').length) {
                   $('body').addClass('lb-disable-scrolling');
-                  console.log('✅ LIGHTBOX OTEVŘEN - scrollování zablokováno');
                 }
               }, 100);
             }
@@ -221,8 +173,6 @@ $(function () {
     childList: true,
     subtree: true
   });
-
-  console.log('✅ Gallery script načten úspěšně');
 });
 
 //Galerie swipe
