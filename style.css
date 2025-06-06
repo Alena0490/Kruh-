@@ -932,6 +932,11 @@ input[name=r] {
   background: var(--text);
 }
 
+.bar.active {
+  background: var(--text);
+  transform: scale(1.1);
+}
+
 .album {
   cursor: pointer;
 }
@@ -1899,11 +1904,15 @@ Other */
     z-index: 900;
   }
 
+  .menu-background-under {
+    height: 80px;
+  }
+
   .mobile-nav-back {
-    height: 260px;
+    height: 342px;
     position: absolute;
     left: 0;
-    top: 83.5px;
+    top: 80px;
     width: 72%;
     background-color: var(--background-muted-tr);
     z-index: -1;
@@ -1935,25 +1944,24 @@ Other */
     flex-direction: column;
     align-items: center;
     padding: 0;
-    margin: 60px 0 0;
+    margin: 80px 0 0;
   }
 
   nav ul li {
     text-align: left;
     display: block;
-    line-height: 130%;
+    line-height: 110%;
     width: 100%;
     margin: 0 12px;
-    padding: 6px 0;
-    margin-left: 48px;
+    padding: 12px 0;
+    margin-left: 96px;
+    font-size: clamp(1.6rem, 2rem + 0.1vw, 2.3rem);
   }
 
   .menu-background nav ul li.heading-link.first {
     width: 100%;
-    margin: 24px;
-    margin-left: 48px;
     letter-spacing: 1px;
-    margin: 24px 24px 6px 48px;
+    margin: 24px 24px 6px 96px;
     text-decoration: underline;
     text-decoration-color: var(--secondary-color);
   }
@@ -2094,6 +2102,8 @@ Other */
 
   section.photo-gallery.top {
     padding-top: 0;
+    /* margin-top: -48px; */
+    /* box-shadow: 3px -3px 24px var(--shadows); */
   }
 
   .row {
@@ -2104,10 +2114,14 @@ Other */
   }
 
   .photo-segment li {
-    width: 50%;
-    padding-left: 12px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* padding-left: 12px; */
     box-sizing: border-box;
-    display: inline-block;
+    padding-left: 0;
+    padding-right: 0;
+
   }
 
   section.contact-box {
@@ -2200,6 +2214,12 @@ Other */
 }
 
 @media (max-width: 480px) {
+
+  nav ul li,
+  .menu-background nav ul li.heading-link.first {
+    margin-left: 48px;
+  }
+
   .burger-menu {
     top: 5%;
     right: 73%;
@@ -2363,6 +2383,15 @@ Other */
   #logo2 img {
     right: 4%;
     width: 40%;
+  }
+
+  .mobile-nav-back {
+    width: 75%;
+  }
+
+  nav ul li,
+  .menu-background nav ul li.heading-link.first {
+    margin-left: 24px;
   }
 
   .burger-menu {

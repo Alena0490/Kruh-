@@ -135,7 +135,45 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
   
+  /****Slider animace */
+  document.addEventListener("DOMContentLoaded", () => {
+    const radios = document.querySelectorAll('input[name="r"]');
+    const bars = document.querySelectorAll('.bar');
+    let current = [...radios].findIndex(r => r.checked);
+    const total = radios.length;
+    let autoplay = true;
 
+    const updateSlider = (index) => {
+      radios[index].checked = true;
+      bars.forEach(bar => bar.classList.remove('active'));
+      if (bars[index]) bars[index].classList.add('active');
+      current = index;
+    };
+
+    // Autoplay
+    let interval = setInterval(() => {
+      if (!autoplay) return;
+      const next = (current + 1) % total;
+      updateSlider(next);
+    }, 5000); // přepíná každých 5 sekund
+
+    // Klikání na radio tlačítka (přeruší autoplay na 15s)
+    radios.forEach((radio, index) => {
+      radio.addEventListener("change", () => {
+        updateSlider(index);
+        autoplay = false;
+        clearTimeout(autoResume);
+        autoResume = setTimeout(() => autoplay = true, 15000); // obnoví autoplay za 15s
+      });
+    });
+
+    // Spuštění na začátku
+    updateSlider(current === -1 ? 0 : current);
+
+    let autoResume; // pro odložený návrat autoplay
+  });
+
+  
 /*Zobrazení galerie*/
   $(function() {
     $(".slider-wrapper").hide().fadeIn(3000);
