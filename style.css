@@ -233,7 +233,7 @@ nav ul li.heading-link a {
   white-space: nowrap; 
   margin: 0px;
   line-height: 1.1;
-  gap: 6px;
+  gap: 0.273rem;
   color: var(--text);
   text-decoration: none;
   transition: all 0.6s ease-in;
@@ -255,8 +255,8 @@ nav ul li.heading-link i {
   width: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
   height: auto;
   vertical-align:bottom;
-  margin-left: 6px;
-  margin-right: 6px;
+  margin-left: 0.273rem;
+  margin-right: 0.273rem;
 }
 
 nav ul li:last-child {
@@ -341,9 +341,9 @@ li.heading-link.active::after {
 
 #logo img {
   position: absolute;
-  top: 60px;
-  right: 12px;
-  width: 170px;
+  top: 2.727rem;
+  right: 0.545rem;
+  width: 7.727rem;
   background-color: transparent;
   height: auto;
   max-width: 100%;
@@ -375,9 +375,9 @@ li.heading-link.active::after {
   background-repeat: no-repeat;
   width: 100%;
   height: 80vh;
-  padding: 24px;
-  margin-top: 48px;
-  margin-bottom: 48px;
+  padding: 1.09rem;
+  margin-top: 2.18rem;
+  margin-bottom: 2.18rem;
   z-index: 0;
 }
 
@@ -459,8 +459,8 @@ main {
   display: flex;
   flex-direction: column;
   background-color: var(--overlay-soft);
-  padding-left: 48px;
-  padding-right: 48px;
+  padding-left: 2.18rem;
+  padding-right: 2.18rem;
 }
 
 main:not(.photo) {
@@ -485,14 +485,14 @@ article.homepage {
 }
 
 section {
-  padding: 24px;
+  padding: 1.09rem;
   border-radius: 6px;
   background-color: var(--form-bg);
   border: 1.5px solid var(--form-border);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   margin-top: 0px;
-  margin-bottom: 12px;
+  margin-bottom: 0.545rem;
   z-index: -0;
   scroll-snap-align: start;      /* nebo center, end */
   scroll-snap-stop: always; 
@@ -503,8 +503,8 @@ section.top {
 }
 
 section.main-text {
-  padding-top: 48px;
-  padding-bottom: 48px;
+  padding-top: 2.18rem;
+  padding-bottom: 2.18rem;
 }
 
 section.visit {
@@ -526,7 +526,7 @@ section.reservation a {
 section.our-reference {
   margin-top: 0px;
   padding-top: 0;
-  margin-bottom: 48px;
+  margin-bottom: 2.18rem;
 }
 
 h1 {
@@ -548,24 +548,15 @@ h2 {
   text-transform: uppercase;
   text-align: center;
   color: var(--secondary-color);
-  margin-top: 48px;
+  margin-top: 2.18rem;
   margin-bottom: 0px;
   font-family: "Teko", "Arial", sans-serif;
   letter-spacing: 1px;
   font-size: clamp(1.6rem, 2rem + 0.1vw, 2.3rem);
 }
 
-/* h2::after {
-  content: "";
-  display: block;
-  width: 60%;
-  height: 3px;
-  background: var(--secondary-color);
-  margin: 0.5rem auto 0;
-} */
-
 h2.top48 {
-  margin-top: 48px;
+  margin-top: 2.18rem;
 }
 
 h2.top0 {
@@ -574,9 +565,9 @@ h2.top0 {
 
 h2.before {
   position: relative;
-  margin-bottom: 24px !important;
+  margin-bottom: 1.09rem !important;
   text-align: center;
-  margin-top: 48px;
+  margin-top: 2.18rem;
   width: 100%;
 }
 
@@ -588,7 +579,7 @@ h3 {
 h4 {
   color: var(--text);
   font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
-  margin-bottom: 6px;
+  margin-bottom: 0.273rem;
 }
 
 h4 ul {
@@ -605,17 +596,17 @@ hr {
   border: none; 
   height: 1.5px; 
   background-color: var(--secondary-color-darkest);
-  margin: 24px 0 48px 0;
+  margin: 1.09rem 0 2.18rem 0;
 }
 
 hr.reservation {
-  margin-top: 24px;
+  margin-top: 1.09rem;
 }
 
 hr.hidden {
   visibility: hidden;
   margin: 0;
-  margin-top: 36px;
+  margin-top: 1.554rem;
 }
 
 hr.zero {
@@ -638,7 +629,7 @@ p {
 }
 
 p.terms {
-  margin-bottom: 48px;
+  margin-bottom: 2.18rem;
 }
 
 p.address {
@@ -653,7 +644,7 @@ a.basic {
   transition: color 0.7s ease-in;
   word-wrap: break-word;
   font-weight: 400;
-  margin: 24px 0; 
+  margin: 1.09rem 0; 
 }
 
 a.jq--scroll-form:hover,
@@ -720,7 +711,7 @@ ol li {
   counter-increment: list-counter;
   position: relative;
   padding-left: clamp(1.2rem, 1.5rem + 0.5vw, 1.7rem);
-  margin-bottom: 24px;
+  margin-bottom: 1.09rem;
   text-align: left;
 }
 
@@ -741,10 +732,10 @@ ol li::before {
 ul:not(nav ul) {
   font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
   line-height: 130%;
-  padding-top: 12px;
-  padding-right: 24px;
+  padding-top: 0.545rem;
+  padding-right: 1.09rem;
   text-align: left;
-  padding-bottom: 24px;
+  padding-bottom: 1.09rem;
   z-index: 900;
   color: var(--text);
   z-index: 100;
@@ -752,29 +743,29 @@ ul:not(nav ul) {
 
 .contacts li {
   list-style: none;
-  margin-bottom: 12px;
+  margin-bottom: 0.545rem;
   line-height: clamp(0.80rem, 1rem + 0.1vw, 1.1rem);;
 }
 
 .contacts li i,
 .contacts li svg {
   color: var(--text);
-  margin-right: 6px;
+  margin-right: 0.273rem;
   font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
   width: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
   height: auto;
   vertical-align:bottom;
-  margin-right: 8px;
+  margin-right: 0.364rem;
 }
 
 .rezervace {
   display: inline-block;
   text-align: center;
   font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
-  margin: 12px auto;
+  margin: 0.545rem auto;
   width: 100%;
   letter-spacing: 1px;
-  margin-bottom: 48px;
+  margin-bottom: 2.18rem;
   text-transform: uppercase;
   line-height: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
   cursor: pointer;
@@ -788,7 +779,7 @@ ul:not(nav ul) {
   width: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
   height: auto;
   vertical-align:bottom;
-  margin-right: 8px;
+  margin-right: 0.364rem;
 }
 
 a.rezervace:hover {
@@ -810,7 +801,7 @@ a.rezervace:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 12px;
+  padding: 0.545rem;
 }
 
 .reference-b p {
@@ -818,8 +809,8 @@ a.rezervace:hover {
 }
 
 .col3 .reference-b img {
-  margin-bottom: 48px;
-  margin-top: 48px;
+  margin-bottom: 2.18rem;
+  margin-top: 2.18rem;
   border-radius: 50%;
   width: 70%;
   max-width: 300px;
@@ -846,7 +837,7 @@ a.rezervace:hover {
   overflow: hidden;
   width: 100%;
   /* max-width: 960px; */
-  margin: 12px auto;
+  margin: 0.545rem auto;
   margin-bottom: 100px;
   border-radius: 6px;
   transition: all 0.6s ease-in;
@@ -880,7 +871,7 @@ a.rezervace:hover {
 }
 
 .navigation {
-  margin-bottom: 24px;
+  margin-bottom: 0.545rem;
 }
 
 .navigation.r {
@@ -922,7 +913,7 @@ input[name=r] {
   width: 110px;
   height: 18px;
   border: 2px solid var(--text);
-  margin: 6px;
+  margin: 0.273rem;
   cursor: pointer;
   background: none;
   transition: all 0.7s ease-in;
@@ -945,17 +936,17 @@ input[name=r] {
   flex: 1;
   min-width: 300px;
   max-width: 45%;
-  margin-left: 24px;
-  margin-right: 24px;
+  margin-left: 1.09rem;
+  margin-right: 1.09rem;
 }
 
 .col.map-container {
   position: relative;
-  max-width: calc(100% - 48px);
+  max-width: calc(100% - 2.18rem);
   max-width: 800px;
   display: flex;
   justify-content: center;
-  margin: 24px 12px 24px 12px;
+  margin: 1.09rem 0.545rem 1.09rem 0.545rem;
 }
 
 .col.map-container a{
@@ -990,16 +981,16 @@ input[name=r] {
 form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+  gap: 1.09rem;
   width: 100%;
-  padding: 24px;
+  padding: 1.09rem;
   background-color: var(--form-bg);
   border: 1.5px solid var(--form-border);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  margin: 24px auto 60px;
-  margin-bottom: 48px;
-  border-radius: 6px;
+  margin: 1.09rem auto 60px;
+  margin-bottom: 2.18rem;
+  border-radius: 0.273rem;
   max-width: 1000px;
   scroll-snap-align: start;      /* nebo center, end */
   scroll-snap-stop: always; 
@@ -1011,16 +1002,16 @@ form > div:nth-of-type(5) {
 
 form label {
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 0.273rem;
   color: var(--text);
   font-weight: 700;
-  margin-left: 3px;
+  margin-left: 0.136rem;
   font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
 }
 
 form label i,
 form label svg {
-  margin-right: 6px;
+  margin-right: 0.273rem;
   color: var(--text);
   font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
   vertical-align: middle;
@@ -1031,9 +1022,9 @@ form input[type=text],
 form input[type="tel"], 
 form textarea {
   width: 100%;
-  padding: 12px;
+  padding: 0.546rem;
   border: 1.5px solid var(--secondary-color-transparent);
-  border-radius: 6px;
+  border-radius: 0.273rem;
   box-sizing: border-box;
   background: var(--input-bg);
   color: #3B2F02;
@@ -1054,7 +1045,7 @@ form textarea {
   border: 1.5px solid var(--secondary-color-transparent);
   background: var(--input-bg);
   font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
-  margin-bottom: 24px;
+  margin-bottom: 1.09rem;
 }
 
 form input[type="text"]:focus,
@@ -1071,10 +1062,10 @@ input[type=submit] {
   cursor: pointer;
   font-weight: 700;
   width: 100%;
-  padding: 12px;
+  padding: 0.545rem;
   color: var(--text);
   font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
-  border-radius: 6px;
+  border-radius: 0.273rem;
   border: none;
   background-color: var(--secondary-color);
   transition: all 0.7s ease-in;
@@ -1089,15 +1080,15 @@ input[type=submit]:hover {
 .form-result {
   max-width: 1000px;
   color: var(--text);
-  padding: 12px !important;
-  margin: 24px auto 0px;
+  padding: 0.545rem !important;
+  margin: 1.09rem auto 0px;
   font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   text-align: center;
   font-weight: 700;
   line-height: 1.4;
-  border-radius: 6px;
+  border-radius: 0.273rem;
   letter-spacing: 1px;
   filter: drop-shadow(2px 3px 4px var(--background));
 }
@@ -1121,11 +1112,11 @@ input[type=submit]:hover {
 .photo-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 12px;
+  gap: 0.545rem;
   padding-top: 0;
   justify-content: center;
   align-items: center;
-  margin: 24px auto;
+  margin: 1.09rem auto;
   margin-top: 0;
   z-index: 1;
   position: relative;
@@ -1150,21 +1141,21 @@ input[type=submit]:hover {
 .photo-segment {
   display: flex;
   flex-wrap: wrap;
-  padding: 12px;
+  padding: 0.545rem;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
 }
 
 .photo-segment li {
-  margin-left: 3px;
+  margin-left: 0.136rem;
   width: 21.5%;
   height: 35vh;
   min-height: 250px;
   min-width: 250px;
-  padding: 6px;
+  padding: 0.273rem;
   overflow: hidden;
-  border-radius: 6px; 
+  border-radius: 0.273rem; 
   position: relative;
   margin: 1%;
   display: inline-block;
@@ -1178,13 +1169,13 @@ input[type=submit]:hover {
 }
 
 .photo-segment li:first-child {
-  margin-left: 3px;
+  margin-left: 0.135rem;
 }
 
 .photo-segment li img {
   width: 100%;
   height: 100%;
-  border-radius: 6px;
+  border-radius: 0.273rem;
   -o-object-fit: cover;
   object-fit: cover;
   transition: all 0.7s ease-in;
@@ -1202,14 +1193,14 @@ img.one {
 .col {
   display: flex;
   justify-content: space-around;
-  margin: 12px 0 12px 24px;
+  margin: 0.545rem 0 0.545rem 1.09rem;
 }
 
 .col2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  margin: 0px auto 24px;
+  margin: 0px auto 1.09rem;
   max-width: 1200px;
 }
 
@@ -1223,14 +1214,14 @@ img.one {
   align-items: center;
   justify-content: flex-start;
   font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
-  padding: 12px 12px;
+  padding: 0.545rem;
   border-radius: 10px;
-  margin-bottom: 12px;
-  margin: 6px;
+  margin-bottom: 0.545rem;
+  margin: 0.273rem;
 }
 
 .reference .schedule {
-  margin-top: 24px;
+  margin-top: 1.09rem;
 }
 
 .reference ul {
@@ -1275,7 +1266,7 @@ img.one {
 }
 
 li.none h4.place {
-  padding-bottom: 6px;
+  padding-bottom: 0.273rem;
 }
 
 li.training-time {
@@ -1285,8 +1276,6 @@ li.training-time {
   align-items: center;
   font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
   border-top: 1px solid var(--secondary-color-darkest);
-  /* padding: 6px 24px; */
-  /* margin-bottom: 6px; */
 }
 
 .training-time.second {
@@ -1298,8 +1287,8 @@ li.none {
   border: solid 1px var(--secondary-color-darkest);
   backdrop-filter: drop-shadow(4px 4px 10px var(--backdrop));
   border-radius: 3px;
-  padding: 24px;
-  margin-bottom: 12px;
+  padding: 1.09rem;
+  margin-bottom: 0.545rem;
   text-align: left;
   transition: all 0.3s ease;
   width: 100%;
@@ -1347,13 +1336,13 @@ ul.price li.free {
   font-weight: 700;
   font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
   letter-spacing: 0.5px;
-  margin-top: 24px;
-  padding: 6px 0;
+  margin-top: 1.09rem;
+  padding: 0.273rem 0;
   border-top: 1px solid var(--secondary-color-darkest);
 }
 
 .col ul {
-  margin: 24px auto 0 auto;
+  margin: 1.09rem auto 0 auto;
   font-style: normal;
 }
 
@@ -1368,10 +1357,10 @@ section.contact-box {
   background: none;
   backdrop-filter: none;
   margin-top: 24px;
-  padding-top: 24px;
-  margin-left: 24px;
-  margin-right: 24px;
-  max-width: calc(100% - 48px);
+  padding-top: 1.09rem;
+  margin-left: 1.09rem;
+  margin-right: 1.09rem;
+  max-width: calc(100% - 2.18rem);
 }
 
 footer {
@@ -1382,7 +1371,7 @@ footer {
   align-items: center;
   margin: 0 auto;
   background-color: var(--secondary-color);
-  padding-bottom: 12px;
+  padding-bottom: 0.545rem;
 }
 
 .foot {
@@ -1399,9 +1388,9 @@ footer {
   width: 100%;
   justify-content: flex-end;
   align-items: end;
-  padding: 0px 24px;
+  padding: 0px 1.09rem;
   margin: 0 auto;
-  padding-bottom: 12px;
+  padding-bottom: 0.545rem;
   margin-bottom: 0;
 }
 
@@ -1415,7 +1404,7 @@ footer {
 
 .fb-logo {
   display: inline-block;
-  margin: 12px;
+  margin: 0.545rem;
   margin-bottom: 0;
   width: auto;
   height: 1.6rem;
@@ -1433,7 +1422,7 @@ footer {
 .fb-logo i,
 .fb-logo svg {
   margin: 0;
-  margin-right: 6px;
+  margin-right: 0.273rem;
   color: var(--text);
   font-size: clamp(1.3rem, 1.6rem + 0.1vw, 1.8rem);
   line-height: clamp(1.3rem, 1.6rem + 0.1vw, 1.8rem);
@@ -1451,18 +1440,18 @@ footer {
   left: 0;
   background-color: var(--background);
   color: var(--text);
-  padding: 15px 24px;
+  padding: 0.545rem 1.09rem;
   z-index: 1000;
   font-size: clamp(0.7rem, 0.8rem + 0.1vw, 0.9rem);
 }
 
 #accept-cookies {
-  margin-left: 12px;
-  padding: 6px 12px;
+  margin-left: 0.545rem;
+  padding: 0.273rem 0.545rem;
   background-color: var(--secondary-color);
   color: var(--text);
   border: none;
-  border-radius: 6px;
+  border-radius: 0.273rem;
   font-weight: 700;
   font-size: clamp(0.7rem, 0.8rem + 0.1vw, 0.9rem);
   transition: all 0.6s ease-in;
@@ -1683,10 +1672,10 @@ Other */
 
 .lb-dataContainer {
   margin: 0 auto;
-  padding-top: 6px;
+  padding-top: 0.273rem;
   width: 100%;
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 0.273rem;
+  border-bottom-right-radius: 0.273rem;
 }
 
 .lb-dataContainer:after {
@@ -1696,7 +1685,7 @@ Other */
 }
 
 .lb-data {
-  padding: 0 3px;
+  padding: 0 0.135rem;
   color: var(--text);
 }
 
@@ -1754,7 +1743,7 @@ Other */
 
 .col {
   display: block;
-  margin: 3px 0 3px 6px;
+  margin: 0.135rem 0 0.135rem 0.273rem;
 }
 
 .col:first-child {
@@ -1791,8 +1780,8 @@ Other */
 
   li.none {
     width: 100%;
-    margin: 6px auto;
-    padding: 24px 12px;
+    margin: 0.273rem auto;
+    padding: 1.09rem 0.545rem;
   }
 
   li.training-time, 
@@ -1812,9 +1801,9 @@ Other */
 
   #logo img {
     position: absolute;
-    top: 60px;
-    right: 12px;
-    margin: 12px;
+    top: 2.727rem;
+    right: 0.545rem;
+    margin: 0.545rem;
   }
 
   .welcome {
@@ -1826,7 +1815,7 @@ Other */
   }
 
   .uvod {
-    margin: 0px auto 48px auto !important;
+    margin: 0px auto 2.18rem auto !important;
   }
 
   .row2 {
@@ -1837,7 +1826,7 @@ Other */
   }
 
   .terminy {
-    padding: 24px 12px;
+    padding: 1.09rem 0.545rem;
   }
 
   .center li ul {
@@ -1859,7 +1848,7 @@ Other */
   }
 
   .contact-box {
-    margin: 48px auto 0px;
+    margin: 2.18rem auto 0;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -1868,7 +1857,7 @@ Other */
   ul:not(nav ul, .photo-segment) {
     display: block;
     line-height: 130%;
-    padding-top: 12px;
+    padding-top: 0.545rem;
     margin-left: 10%;
   }
 
@@ -1952,7 +1941,7 @@ Other */
     display: block;
     line-height: 110%;
     width: 100%;
-    margin: 0 12px;
+    margin: 0 0.545rem;
     padding: 12px 0;
     margin-left: 96px;
     font-size: clamp(1.6rem, 2rem + 0.1vw, 2.3rem);
@@ -1961,7 +1950,7 @@ Other */
   .menu-background nav ul li.heading-link.first {
     width: 100%;
     letter-spacing: 1px;
-    margin: 24px 24px 6px 96px;
+    margin: 1.09rem 1.09rem 0.273rem 4.36rem;
     text-decoration: underline;
     text-decoration-color: var(--secondary-color);
   }
@@ -1989,12 +1978,12 @@ Other */
 
   #logo {
     height: 8rem;
-    margin-top: 4rem;
+    margin-top: 2.18rem;
     margin-bottom: 2rem;
   }
 
   .introduction {
-    margin: 48px;
+    margin: 1.09rem;
   }
 
   .welcome {
@@ -2015,7 +2004,7 @@ Other */
   }
 
   .uvod {
-    margin: 0px auto 48px auto;
+    margin: 0 auto 2.18rem auto;
   }
 
   .schedule {
@@ -2024,20 +2013,20 @@ Other */
 
   .terminy {
     min-height: 60vh;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    margin-bottom: 24px;
+    padding-top: 0.545rem;
+    padding-bottom: 0.545rem;
+    margin-bottom: 1.09rem;
   }
 
   li.none {
-    padding: 24px;
-    padding-bottom: 12px;
-    margin: 0 auto 12px;
+    padding: 1.09rem;
+    padding-bottom: 1.09rem;
+    margin: 0 auto 0.545rem;
 
   }
 
   ul.price {
-    padding-bottom: 12px;
+    padding-bottom: 0.545rem;
   }
 
   img.image {
@@ -2089,8 +2078,8 @@ Other */
   }
 
   h2.top48 {
-    margin-top: 0;
-    margin-bottom: 48px;
+    margin-top: 48px;
+    margin-bottom: 0px;
   }
 
   .album {
@@ -2117,7 +2106,7 @@ Other */
     width: 100%;
     display: flex;
     justify-content: center;
-    /* padding-left: 12px; */
+    padding-left: 0.545rem;
     box-sizing: border-box;
     padding-left: 0;
     padding-right: 0;
@@ -2128,8 +2117,8 @@ Other */
     max-width: 100%;
     margin-left: 0px;
     margin-right: 0px;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 0.545rem;
+    padding-right: 0.545rem;
   }
 
   .col.map-container img {
@@ -2238,16 +2227,17 @@ Other */
 
   .introduction {
     min-width: 250px;
+    margin: 0.545rem;
   }
 
   #logo img {
-    width: 150px;
+    width: 6.818rem;
     margin: auto;
   }
 
   main {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 1.09rem;
+    padding-right: 1.09rem;
   }
 
   a.basic {
@@ -2265,8 +2255,13 @@ Other */
     padding-right: 0;
   }
 
+  section {
+    padding-left: 0.545rem;
+    padding-right: 0.545rem;
+  }
+
   section.photo-gallery {
-    padding: 24px 0;
+    padding: 1.09rem 0;
   }
 
   .reference-b p {
@@ -2274,7 +2269,7 @@ Other */
   }
 
   .photo-segment li {
-    padding: 12px 0px;
+    padding: 0.545rem 0px;
     margin: 0;
   }
 
@@ -2298,8 +2293,8 @@ Other */
   }
 
   li.none {
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 0.545rem;
+    padding-right: 0.545rem;
   }
 
   .schedule {
@@ -2334,30 +2329,38 @@ Other */
   form {
     display: grid;
     grid-template-columns: 1fr;
-    padding: 24px;
-    margin: 0 auto 48px auto;
+    padding: 1.09rem;
+    margin: 0 auto 2.18rem auto;
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: 0.545rem;
     max-width: 600px;
     display: block;
   }
 
   form textarea {
     height: 150px;
-    margin-top: 6px;
+    margin-top: 0.273rem;
     width: 100%;
   }
 
   label {
-    margin-top: 24px;
+    margin-top: 1.09rem;
   }
 
   label.first-label {
-    margin-top: 6px;
+    margin-top: 0.273rem;
   }
 }
 
 @media (max-width: 435px) {
+
+  .welcome {
+    padding: 0.545rem;
+  }
+
+  .introduction {
+    padding-top: 0;
+  }
 
   h1 {
     margin-top: 0rem;
@@ -2369,13 +2372,13 @@ Other */
   }
 
   .col.map-container {
-    max-width: calc(100% - 12px);
-    margin: 12px 6px 12px 6px;
+    max-width: calc(100% - 0.545rem);
+    margin: 0.545rem 0.273rem 0.545rem 0.273rem;
   }
 
   .address {
     min-width: unset;
-    margin-left: 12px;
+    margin-left: 1.09rem;
   }
 }
 
@@ -2391,7 +2394,7 @@ Other */
 
   nav ul li,
   .menu-background nav ul li.heading-link.first {
-    margin-left: 24px;
+    margin-left: 1.09rem;
   }
 
   .burger-menu {
@@ -2409,8 +2412,16 @@ Other */
     margin-bottom: 0;
     height: 100px;
     width: 100%;
-    padding: 0 24px;
+    padding: 0 1.09rem;
     justify-content: center;
+  }
+
+  h1.home {
+    margin-top: 0;
+  }
+
+  .introduction {
+    display: none;
   }
 
   img.image {
@@ -2433,7 +2444,7 @@ Other */
 
   .col.map-container {
       max-width: 100%;
-      margin: 6px 0px 6px 0px;
+      margin: 0.273rem 0px 0.273rem 0px;
   }
 
   .col.map-container img {
