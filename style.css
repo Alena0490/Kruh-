@@ -4,9 +4,9 @@
   --main-color-darker: rgb(224, 224, 224);
   --main-color-darker-transparent: rgba(224, 224, 224, 0.4);
 
-  --secondary-color: #f34635;
+  --secondary-color: #f14c3d;
   --secondary-color-transparent: #f34635b0;
-  --secondary-color-light: #ff5343;
+  --secondary-color-light: #fb6456;
   --secondary-color-link: #bf372a;
   --secondary-color-darkest: #bf372a80;
   --secondary-color-gradient: #87878730;
@@ -163,6 +163,8 @@ header {
   height: 80px;
   max-width: 1400px;
   background: transparent;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   z-index: 1000;
 }
 
@@ -175,6 +177,7 @@ header {
   width: 100%;
   height: 82px;
   background: var(--main-color-darker);
+  opacity: 0.9;
   z-index: 900;
 }
 
@@ -280,7 +283,8 @@ li.heading-link.active::after {
 .first.active,
 .first:focus {
   color: var(--text);
-  background: var(--main-color-darker-transparent);
+  background: transparent;
+  /* background: var(--main-color-darker-transparent); */
   font-weight: 400;
   vertical-align: bottom;
   display: flex;
@@ -971,7 +975,7 @@ input[name=r] {
 }
 
 .col.map-container a:hover {
-  transform: scale(1.02);
+  transform: scale(1.01);
 }
 
 .col.map-container img {
@@ -979,7 +983,13 @@ input[name=r] {
   margin-top: 0;
   max-width: 500px;
   height: auto;
+  filter: saturate(0.8) brightness(0.95);
   cursor: pointer;
+  transition: all 0.6s ease-in;
+}
+
+.col.map-container img:hover {
+  filter: saturate(1.1);
 }
 
 .col {
@@ -1299,7 +1309,8 @@ li.training-time {
 li.none {
   list-style: none;
   border: solid 1px var(--white-border);
-  backdrop-filter: drop-shadow(4px 4px 10px var(--backdrop));
+  backdrop-filter: drop-shadow(4px 4px 10px var(--backdrop)) blur(5px);
+  -webkit-backdrop-filter: drop-shadow(4px 4px 10px var(--backdrop));
   border-radius: 3px;
   padding: 1.09rem;
   margin-bottom: 0.545rem;
@@ -1432,13 +1443,19 @@ footer {
   text-decoration: none;
   font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
   line-height: clamp(1.3rem, 1.6rem + 0.1vw, 1.8rem);
+  transition: all 0.6s ease-in;
+}
+
+.fb-logo:hover {
+  transform: scale(1.04);
+  /* color: #f5f5f5; */
 }
 
 .fb-logo i,
 .fb-logo svg {
   margin: 0;
   margin-right: 0.273rem;
-  color: var(--text);
+  color: inherit;
   font-size: clamp(1.3rem, 1.6rem + 0.1vw, 1.8rem);
   line-height: clamp(1.3rem, 1.6rem + 0.1vw, 1.8rem);
   position: relative;
@@ -1456,8 +1473,11 @@ footer {
   background-color: var(--background);
   color: var(--text);
   padding: 0.545rem 1.09rem;
+  border-top: 1px solid var(--white-border);
   z-index: 1000;
   font-size: clamp(0.7rem, 0.8rem + 0.1vw, 0.9rem);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 #accept-cookies {
@@ -1536,13 +1556,11 @@ footer {
 /* Pro mobilní zařízení - jemnější ovládání */
 @media (max-width: 768px) {
   .lightboxOverlay {
-    /* Na mobilu jen minimální omezení */
     overscroll-behavior: auto;
     touch-action: manipulation;
   }
   
   .lightbox {
-    /* Lightbox může být scrollovatelný na mobilu */
     /* max-height: 90vh; */
     overflow-y: auto;
   }
@@ -1550,7 +1568,6 @@ footer {
 
 /* Fallback pro problematické situace */
 body:not(.lightbox-safe) {
-  /* Pokud není explicitně označeno jako safe, zachovej scrollování */
   overflow: auto;
 }
 
@@ -1579,8 +1596,10 @@ Other */
   top: 0;
   left: 0;
   z-index: 9999;
-  background-color: #000;
-  opacity: 0.8;
+  background-color: #000000d7;
+  opacity: 1;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   display: none;
 }
 
@@ -1703,7 +1722,7 @@ Other */
 
 .lb-data {
   padding: 0 0.135rem;
-  color: var(--text);
+  color: var(--heading-color);
 }
 
 .lb-data .lb-details {
@@ -1942,13 +1961,13 @@ Other */
   }
 
   .mobile-nav-back {
-    height: 342px;
+    height: 15.545rem;
     position: absolute;
     left: 0;
     top: 80px;
     width: 72%;
     background-color: var(--background-muted-tr);
-    z-index: -1;
+    z-index: 0;
     display: none;
   }
 
@@ -2526,7 +2545,7 @@ Other */
   min-height: 1.364rem;
   left: 0;
   top: 5.455rem;
-  z-index: 999;
+  z-index: 900;
 }
 
 .theme-toggle {
@@ -2579,6 +2598,7 @@ header svg.moon {
   bottom: -0.5px;
   left: 0.636rem;
   font-size: 1.55rem;
+  z-index: -3;
 }
 
 .slider::before {
