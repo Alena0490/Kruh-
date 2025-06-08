@@ -136,42 +136,40 @@ document.addEventListener("DOMContentLoaded", function () {
   /****Slider animace */
   document.addEventListener("DOMContentLoaded", () => {
     const radios = document.querySelectorAll('input[name="r"]');
+    if (radios.length === 0) return; // Tady žádný slider není → dál nic nespouštěj
+  
     const bars = document.querySelectorAll('.bar');
     let current = [...radios].findIndex(r => r.checked);
     const total = radios.length;
     let autoplay = true;
-
+  
     const updateSlider = (index) => {
       radios[index].checked = true;
       bars.forEach(bar => bar.classList.remove('active'));
       if (bars[index]) bars[index].classList.add('active');
       current = index;
     };
-
-    // Autoplay
+  
     let interval = setInterval(() => {
       if (!autoplay) return;
       const next = (current + 1) % total;
       updateSlider(next);
-    }, 5000); // přepíná každých 5 sekund
-
-    // Klikání na radio tlačítka (přeruší autoplay na 15s)
+    }, 5000);
+  
     radios.forEach((radio, index) => {
       radio.addEventListener("change", () => {
         updateSlider(index);
         autoplay = false;
         clearTimeout(autoResume);
-        autoResume = setTimeout(() => autoplay = true, 15000); // obnoví autoplay za 15s
+        autoResume = setTimeout(() => autoplay = true, 15000);
       });
     });
-
-    // Spuštění na začátku
+  
     updateSlider(current === -1 ? 0 : current);
-
-    let autoResume; // pro odložený návrat autoplay
+  
+    let autoResume;
   });
-
-
+  
 /**Zobrazení galerie*/
   $(function() {
     $(".slider-wrapper").hide().fadeIn(3000);
@@ -219,21 +217,23 @@ if (!motionQuery.matches) {
 
 
 /*** Automatický text***/
-const heading = document.querySelector(".introduction")
-const text ="Získej energii, sebevědomí a sílu! Přijď si vyzkoušet kondiční cvičení na vlastní kůži!     "
-let idLetter = 1
-let delay = 100
+const heading = document.querySelector(".introduction");
+if (heading) {
+  const text = "Získej energii, sebevědomí a sílu! Přijď si vyzkoušet kondiční cvičení na vlastní kůži!";
+  let idLetter = 1;
+  let delay = 100;
 
-function printText(){
-  heading.innerText = text.slice(0,idLetter)
-  idLetter++ //idLetter = idLetter + 1
-  
-  // spustí funkci printText se zpožděním delay
-  setTimeout(printText, delay)
+  function printText() {
+    heading.innerText = text.slice(0, idLetter);
+    idLetter++;
 
-  if (idLetter>text.length) {
-    idLetter = 1
+    setTimeout(printText, delay);
+
+    if (idLetter > text.length) {
+      idLetter = 1;
+    }
   }
+
+  printText();
 }
 
-printText()
