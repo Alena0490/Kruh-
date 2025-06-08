@@ -122,19 +122,21 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 /***Parallax*/
-window.addEventListener("scroll", function() {
-    const parallaxElements = document.querySelectorAll(".parallax"); // Najde všechny prvky s třídou .parallax
-    const offset = window.pageYOffset; // Aktuální pozice scrollu
+// Zkontroluj, jestli uživatel povolil pohyb
+const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+if (!motionQuery.matches) {
+  // Jen pokud není omezený pohyb, přidej efekt
+  window.addEventListener("scroll", function () {
+    const parallaxElements = document.querySelectorAll(".parallax");
+    const offset = window.pageYOffset;
 
     parallaxElements.forEach((parallaxImage) => {
-        parallaxImage.style.transform = `translateY(${offset * -0.017}px)`; // Aplikuje transformaci
+      parallaxImage.style.transform = `translateY(${offset * -0.017}px)`;
     });
-});
+  });
+}
 
-const toggle = document.getElementById('modeToggle');
-toggle.addEventListener('change', () => {
-  document.body.classList.toggle('dark');
-});
 
 /***Zobrazení galerie*/
 $(function () {
