@@ -939,6 +939,7 @@ input[name=r] {
 
 .bar:hover {
   background: var(--text);
+  transform: scale(1.1);
 }
 
 .bar.active {
@@ -1188,7 +1189,7 @@ input[type=submit]:hover {
 }
 
 .photo-segment li:hover {
-  transform: scale(1.05);
+  transform: scale(1.01);
   box-shadow: var(--text) 2px 2px 4px;
 }
 
@@ -1206,7 +1207,7 @@ input[type=submit]:hover {
 }
 
 .photo-segment li img:hover {
-  transform: scale(1.1);
+  transform: scale(1.02);
   filter: brightness(1.1);
 }
 
