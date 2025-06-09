@@ -2059,6 +2059,9 @@ Other */
 
   .welcome {
     height: 65vh;
+    background: url(img/no-pain-m.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   .arrow-down {
