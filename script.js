@@ -217,23 +217,25 @@ if (!motionQuery.matches) {
 
 
 /*** Automatický text***/
-const heading = document.querySelector(".introduction");
-if (heading) {
-  const text = "Získej energii, sebevědomí a sílu! Přijď si vyzkoušet kondiční cvičení na vlastní kůži!";
-  let idLetter = 1;
-  let delay = 100;
+if (window.matchMedia("(min-width: 351px)").matches) {
+  const heading = document.querySelector(".introduction");
+  if (heading) {
+    const text = "Získej energii, sebevědomí a sílu! Přijď si vyzkoušet kondiční cvičení na vlastní kůži!";
+    let idLetter = 1;
+    let delay = 100;
 
-  function printText() {
-    heading.innerText = text.slice(0, idLetter);
-    idLetter++;
+    function printText() {
+      heading.innerText = text.slice(0, idLetter);
+      idLetter++;
 
-    setTimeout(printText, delay);
+      setTimeout(printText, delay);
 
-    if (idLetter > text.length) {
-      idLetter = 1;
+      if (idLetter > text.length) {
+        idLetter = 1;
+      }
     }
-  }
 
-  printText();
+    printText();
+  }
 }
 
