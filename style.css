@@ -879,20 +879,13 @@ a.rezervace:hover {
   max-height: 90vh;
 }
 
-.slide img {
+.slide img,
+.slide picture {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 0.273rem;
   border: none;
-}
-
-.only-mobile {
-  display: none;
-}
-
-.only-desktop {
-  display: block;
 }
 
 .navigation {
@@ -2153,14 +2146,6 @@ Other */
   .col2 {
     margin: 0;
     grid-template-columns: 1fr;
-  }
-
-  .only-mobile {
-    display: block;
-  }
-
-  .only-desktop {
-    display: none;
   }
 
  .gallery h2.before {
