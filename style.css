@@ -1260,7 +1260,6 @@ img.one {
   font-weight: 700;
   display: inline-block;
   text-align: center;
-  font-size: clamp(1rem, 1.2rem + 0.1vw, 1.35rem);
   position: relative;
   left: -0;
   margin: auto;
@@ -1310,6 +1309,7 @@ li.training-time {
 
 li.none {
   list-style: none;
+  color: var(--text-muted);
   border: solid 1px var(--white-border);
   backdrop-filter: drop-shadow(4px 4px 10px var(--backdrop)) blur(5px);
   -webkit-backdrop-filter: drop-shadow(4px 4px 10px var(--backdrop));
@@ -1317,6 +1317,7 @@ li.none {
   padding: 1.09rem;
   margin-bottom: 0.545rem;
   text-align: left;
+  font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
   transition: all 0.3s ease;
   width: 100%;
 }
@@ -1343,12 +1344,9 @@ ul.price li {
   list-style: none;
   justify-content: space-between;
   align-items: center;
+  font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
   list-style-type: none;
   width: 100%;
-}
-
-ul.price li:not(.free) {
-  font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
 }
 
 .red {
@@ -1361,7 +1359,6 @@ ul.price li.free {
   text-transform: uppercase;
   list-style: none;
   font-weight: 700;
-  font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
   letter-spacing: 0.5px;
   margin-top: 1.09rem;
   padding: 0.273rem 0;
@@ -1399,15 +1396,16 @@ footer {
   align-items: center;
   margin: 0 auto;
   background-color: var(--secondary-color);
-  padding-bottom: 0.545rem;
+  padding:  0.273rem 1.09rem;
 }
 
 .foot {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: flex-start;
   margin-bottom: 0;
+  margin-left: -0.545rem;
 }
 
 .ff {
@@ -1433,7 +1431,7 @@ footer {
 .fb-logo {
   display: inline-block;
   margin: 0.545rem;
-  margin-bottom: 0;
+  /* margin-bottom: 0; */
   width: auto;
   height: 1.6rem;
   flex-shrink: 0;
@@ -2406,7 +2404,7 @@ Other */
   }
 
 .fb-logo {
-  margin-bottom: 1.09rem;
+  margin: 0.273rem 1.09rem 0.273rem 0rem;
   }
 
   form {
@@ -2470,6 +2468,15 @@ Other */
   .address {
     min-width: unset;
     margin-left: 1.09rem;
+  }
+
+  footer .copyright,
+  footer .fb-logo {
+    font-size: clamp(0.6rem, 0.8rem + 0.1vw, 1rem);
+  }
+  .fb-logo i,
+  .fb-logo svg {
+    font-size: clamp(1.1rem, 1.4rem + 0.1vw, 1.6rem);
   }
 }
 
