@@ -4,10 +4,10 @@
   --main-color-darker: rgb(224, 224, 224);
   --main-color-darker-transparent: rgba(224, 224, 224, 0.4);
 
-  --secondary-color: #f14c3d;
+  --secondary-color: #ec4637;
   --secondary-color-transparent: #f34635b0;
-  --secondary-color-light: #fb6456;
-  --secondary-color-link: #bf372a;
+  --secondary-color-light: #fe6354;
+  --secondary-color-link: #da3223;
   --secondary-color-darkest: #bf372a80;
   --secondary-color-gradient: #87878730;
   /* --secondary-color-gradient: #ed423240; */
@@ -53,10 +53,10 @@ html.dark {
   --main-color-darker: rgb(37, 37, 37);
   --main-color-darker-transparent: rgb(37, 37, 37, 0.5);
 
-  --secondary-color: #f43924;
+  --secondary-color: #fd4a36;
   --secondary-color-transparent: #f35341b0;
-  --secondary-color-light: #ff6a5a;
-  --secondary-color-link: #ff6a5a;
+  --secondary-color-light: #fd6352;
+  --secondary-color-link: #fd7364;
   --secondary-color-darkest: #d94a3a80;
   --secondary-color-gradient: #64646440;
   /* --secondary-color-gradient: #d94a3a40; */
@@ -1395,7 +1395,9 @@ footer {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  background-color: var(--secondary-color);
+  background-color: var(--background-muted-tr);
+  border-top: 1px solid var(--background);
+  backdrop-filter: blur(5px);
   padding:  0.273rem 1.09rem;
 }
 
