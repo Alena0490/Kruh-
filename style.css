@@ -53,7 +53,7 @@ html.dark {
   --main-color-darker: rgb(37, 37, 37);
   --main-color-darker-transparent: rgb(37, 37, 37, 0.5);
 
-  --secondary-color: #f14431;
+  --secondary-color: #f43924;
   --secondary-color-transparent: #f35341b0;
   --secondary-color-light: #ff6a5a;
   --secondary-color-link: #ff6a5a;
@@ -262,7 +262,7 @@ nav ul li.heading-link i {
   line-height: 1;
   margin: 0;
   vertical-align: middle;
-  color: var(--secondary-color-light);
+  color: var(--secondary-color);
   width: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
   height: auto;
   vertical-align:bottom;
