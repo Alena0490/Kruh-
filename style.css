@@ -53,7 +53,7 @@ html.dark {
   --main-color-darker: rgb(37, 37, 37);
   --main-color-darker-transparent: rgb(37, 37, 37, 0.5);
 
-  --secondary-color: #f35341;
+  --secondary-color: #f14431;
   --secondary-color-transparent: #f35341b0;
   --secondary-color-light: #ff6a5a;
   --secondary-color-link: #ff6a5a;
@@ -700,7 +700,7 @@ img.uvod:hover {
   max-width: 960px;
   /* margin: 0% auto; */
   color: var(--text);
-  text-align: justify;
+  text-align: left;
   font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
   line-height: 1.6;
   word-wrap: break-word;
@@ -1484,7 +1484,7 @@ footer {
   margin-left: 0.545rem;
   padding: 0.273rem 0.545rem;
   background-color: var(--secondary-color);
-  color: var(--text);
+  color: white;
   border: none;
   border-radius: 0.273rem;
   font-weight: 700;
@@ -1495,8 +1495,8 @@ footer {
 
 #accept-cookies:hover {
   transform: scale(1.04);
-  background-color: var(--secondary-color-light);
-  color: var(--text);
+  background-color: var(--btn-border);
+  color: var(--heading-color);
 }
 
 .reference-b img.parallax {
