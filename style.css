@@ -897,13 +897,15 @@ a.rezervace:hover {
 
 .navigation.r {
   position: fixed;
-  top: 0%;
+  top: 10%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: flex-end;
   position: absolute;
-  bottom: 0;
-  width: 100%;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 0px;
+  width: 90%;
 }
 
 #r1:checked ~ .s1 {
@@ -931,8 +933,10 @@ input[name=r] {
 }
 
 .bar {
-  width: 110px;
-  height: 18px;
+  width: 20%;
+  height: 4%;
+  max-height: 22px;
+  max-width: 160px;
   border: 2px solid var(--text);
   margin: 0.273rem;
   cursor: pointer;

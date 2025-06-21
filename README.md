@@ -1,68 +1,59 @@
-# 💪 Kondiční cvičení – první reálný projekt pro klienta
+# 💪 Kondiční cvičení – web pro místní kondiční tréninky
 
-Tento web jsem vytvořila pro trenéra kruhových tréninků, který působí ve dvou městech – v Lázních Bělohrad a Jičíně. Jedná se o můj první skutečný klientský projekt. Nešlo o placenou zakázku, ale o domluvu výměnou za lekce cvičení zdarma. Cílem bylo získat zkušenosti, reference a vytvořit plně funkční, vizuálně příjemný a přehledný web, který bude sloužit návštěvníkům i trenérovi.
+Responzivní vícestránkový web vytvořený pro trenéra kruhových tréninků působícího v Lázních Bělohrad a Jičíně.  
+Cílem bylo vytvořit přehlednou prezentaci služeb s možností rezervace a moderním vizuálním zpracováním.
 
 ---
 
-## ✨ Co web nabízí
+## 📸 Náhled
 
-- **Vícestránkový responzivní web** – hlavní stránka, o nás, fotogalerie, rezervace, kontakty
-- **Světlý a tmavý režim** – s přepínačem a výchozím nastavením na tmavý mód
-- **Moderní design** s použitím vlastních CSS proměnných, fontů a přechodů
-- **Kontaktní formulář** s validací a zpětnou vazbou (odesláno / chyba)
-- **Rezervace** přes externí systém
-- **Fotogalerie** Lightbox2 s přidanou podporou swipe na mobilních zařízeních
-- **Připraveno pro HTTPS a Google Analytics**
-  
+![Kondiční cvičení – mockup](img/kruhac-mockup.jpg)
+
+---
+
+## ✨ Funkce
+
+- **Vícestránkový web**: hlavní stránka, o nás, fotogalerie, rezervace, kontakty
+- **Přepínání světlého a tmavého režimu** s výchozím nastavením na tmavý mód + automatická detekce preferencí
+- **Responzivní layout** optimalizovaný pro mobilní zařízení, tablety i desktop
+- **Kontaktní formulář** s validací a zpětnou vazbou
+- **Lightbox galerie** s podporou swipe gest na mobilu
+- **Implementace externího rezervačního systému** (Reservio)
+- **Připraveno na HTTPS a měření návštěvnosti (Google Analytics)**
+
 ---
 
 ## 🧰 Použité technologie
 
-- HTML5 + SCSS (vlastní proměnné, media queries)
-- JavaScript (lightbox, slider, režim barev, burger menu, cookies, automatický text...)
-- FontAwesome, Google Fonts
-- Lightbox2 (doplněno o swipe)
-- CSS Grid a Flexbox
-- Responsivita testována napříč velikostmi zařízení
+- **HTML5**
+- **SCSS** – vlastní proměnné, media queries
+- **JavaScript (vanilla)** – přepínač režimu, detekce systému, lightbox, slider, burger menu, cookies, dynamický text
+- **Font Awesome**, **Google Fonts**
+- **Lightbox2** s doplněnou podporou pro swipe
+- **CSS Grid a Flexbox**
 
 ---
 
 ## 🌍 Cílová skupina
 
-Web cílí na lokální návštěvníky z okolí Lázní Bělohrad a Jičína, kteří mají zájem o kondiční cvičení. 
----
-
-## 🧪 Co jsem se naučila
-
-- Jak přemýšlet nad strukturou obsahu z pohledu běžného návštěvníka
-- Jak navrhnout přehledné UX i na mobilních zařízeních
-- Jak pracovat s proměnnými a navrhovat design pro různé typy barevných režimů
-- Jak propojit design, použitelnost a funkčnost do jednoho celku
-- Jak ladit detaily a dotahovat projekt do finální podoby
+Web cílí na obyvatele z okolí Lázní Bělohrad a Jičína se zájmem o pravidelné kondiční tréninky.
 
 ---
 
-## ⚠️ Co zatím web **neobsahuje**
+## 📌 Zaměření
 
-- žádné vlastní administrační rozhraní (napojení na databázi prozatím pouze zvažuji)
-- bez CMS
-- rezervační systém je externí (Reservio.com)
-
----
-
-## 📸 Náhled
-![image](https://github.com/user-attachments/assets/ade67b33-96d5-4732-afca-7d2e93c2847e)
-
+- Přehledná struktura obsahu
+- Optimalizace pro rychlou orientaci a jednoduchou navigaci
+- Vizuální kontrast a čitelnost v obou barevných režimech
+- Plně funkční front-end bez závislosti na CMS
 
 ---
 
-## 📍 Budoucí plány
+## 🔧 Budoucí úpravy
+
 - Napojení Google Analytics
-- Optimalizace a SEO
-- Doplnění o základní backend.
-- Možnost archivace minulých aktualit
-- Automatické rozpoznání preferovaného režimu prohlížeče (dark/light)
-- Ukládání přepnutého režimu do `localStorage`
+- HTTPS
+- Aktivace kontaktního formuláře
 
 ---
 
@@ -73,4 +64,4 @@ Web cílí na lokální návštěvníky z okolí Lázní Bělohrad a Jičína, k
 
 ---
 
-Pokud vás moje práce zaujala, neváhejte mě kontaktovat. Ráda se zapojím i do dalších projektů, kde mohu získávat zkušenosti a dál se rozvíjet.
+V případě zájmu o podobný projekt mě neváhejte kontaktovat.
