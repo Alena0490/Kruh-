@@ -12,24 +12,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Kontrola dat
     if (empty($name) || empty($surname) || empty($message) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        header("Location: https://www.alena-pumprova.cz/kontakt.php?success=-1#contact-form");
+        header("Location: /kontakty.php?success=-1#contact-form");
         exit;
     }
 
     // Odesílání e-mailu
-    $recipient = "alenapumprova@seznam.cz";
-    $subject = "Máte nový kontakt od: $name $surname";
+    $recipient = "najman.donap@seznam.cz";
+    $subject = "🏋️ Máte novou zprávu od: $name $surname";
     $email_content = "Jméno: $name\n";
     $email_content .= "Příjmení: $surname\n";
     $email_content .= "Email: $email\n";
     $email_content .= "Telefon: $phone\n\n";
     $email_content .= "Zpráva:\n$message\n";
-    $email_headers = "From: $name <$email>";
+    $email_headers = "From: $name <$email>\r\n";
+    $email_headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+    $email_headers .= "MIME-Version: 1.0\r\n";
 
     if (mail($recipient, $subject, $email_content, $email_headers)) {
-        header("Location: https://www.alena-pumprova.cz/kontakt.php?success=1#contact-form");
+        header("Location: /kontakty.php?success=1#contact-form");
     } else {
-        header("Location: https://www.alena-pumprova.cz/kontakt.php?success=-1#contact-form");
+        header("Location: /kontakty.php?success=-1#contact-form");
     }
     exit;
 } else {

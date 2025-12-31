@@ -4,36 +4,59 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="canonical" href="https://www.kondicni-cviceni.eu/o-nas">
         <link rel="icon" href="img/favicon.ico" type="image/png" sizes="16x16">
         <link rel="icon" href="img/favicon-32x32.png" type="image/png" sizes="32x32">
         <link rel="icon" href="img/android-chrome-192x192.png" type="image/png" sizes="192x192">
         <link rel="icon" href="img/android-chrome-512x512.png" type="image/png" sizes="512x512">
         <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
         <link rel="manifest" href="img/site.webmanifest">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z5Y0ZX1J36"></script>
+        <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-Z5Y0ZX1J36');</script>
         <link rel="preload" as="image" href="img/no-pain.webp">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" media="print" onload="this.media='all'">  
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Teko:wght@700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
-        <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap">
-        <title>O nás - Kondiční cvičení Jičín a Lázně Bělohrad</title>
+        <title>O nás | Kondiční cvičení Jičín a Lázně Bělohrad</title>
         <meta name="description" content="Aktuální rozvrh kondičního cvičení v Jičíně a Lázních Bělohrad. Vyber si místo i čas, který ti vyhovuje, a rezervuj si své místo.">
         <meta name="author" content="Alena Pumprová">
         <meta name="robots" content="index, follow">
         <meta name="keywords" content="kondiční cvičení, Lázně Bělohrad, Jičín, tréninky, fitness">
         <meta name="theme-color" content="#f34635">
         <meta name="color-scheme" content="light dark">
+
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.kondicni-cviceni.eu/o-nas">
+        <meta property="og:title" content="O nás - Kondiční cvičení">
+        <meta property="og:description" content="Rozvrh a ceny kondičního cvičení v Jičíně a Lázních Bělohrad. Cvičení 4× týdně, první lekce zdarma.">
+        <meta property="og:image" content="https://www.kondicni-cviceni.eu/img/og-image.jpg">
+
+        <script src="https://kit.fontawesome.com/47d6fc0e08.js" crossorigin="anonymous" defer></script>
+        <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "O nás - Rozvrh a ceny",
+        "description": "Rozvrh kondičních tréninků v Jičíně a Lázních Bělohrad. Cvičení 4× týdně, první lekce zdarma.",
+        "url": "https://www.kondicni-cviceni.eu/o-nas"
+        }
+        </script>
     </head>
 
     <body>
         <header>
             <div class="toggle-wrapper">
-                <label class="theme-toggle" aria-label="Přepínání světlého a tmavého režimu">
-                    <i class="fa-solid fa-moon moon"></i>
+                <label class="theme-toggle" for="modeToggle">
+                    <svg class="icon moon" aria-hidden="true">
+                        <use href="/img/icons.svg#icon-moon-fill"></use>
+                    </svg>
                     <input type="checkbox" id="modeToggle">
                     <span class="slider"></span>
-                    <i class="fa-solid fa-sun sun"></i>
+                    <svg class="icon sun" aria-hidden="true">
+                        <use href="/img/icons.svg#icon-sun-fill"></use>
+                    </svg>
+                    <span class="sr-only">Přepnout tmavý/světlý režim</span>
                 </label>
             </div>
             <div class="menu-background-under">
@@ -44,15 +67,18 @@
                 <nav>
                     <ul>
                         <li class="heading-link first">
-                            <a class="rezervace basic" href="https://alena-pumprova.reservio.com" target="_blank" title="Rezervace cvičení">
-                                <i class="fa-solid fa-calendar-days"></i>
+                            <a class="reservation" href="/kontakty#kontaktni-udaje" 
+                            title="Rezervace tréninku">
+                                <svg class="icon" aria-hidden="true">
+                                    <use href="/img/icons.svg#icon-calendar-date"></use>
+                                </svg>
                                 Rezervace
                             </a>
                         </li>
-                        <li><a class="first" href="index.html" title="Přejít na hlavní stránku">Hlavní stránka</a></li>
-                        <li><a class="first active" href="o-nas.html" title="Přejít na stránku O nás">O nás</a></li>
-                        <li><a class="first" href="fotogalerie.html" title="Přejít na stránku Fotogalerie">Fotogalerie</a></li>
-                        <li><a class="first" href="kontakty.html" title="Přejít na stránku Kontakty">Kontakty</a></li>
+                        <li><a class="first" href="/" title="Přejít na hlavní stránku">Hlavní stránka</a></li>
+                        <li><a class="first active" href="/o-nas" title="Přejít na stránku O nás">O nás</a></li>
+                        <li><a class="first" href="/fotogalerie" title="Přejít na stránku Fotogalerie">Fotogalerie</a></li>
+                        <li><a class="first" href="/kontakty" title="Přejít na stránku Kontakty">Kontakty</a></li>
                     </ul>
                     <div class="mobile-nav-back"></div>
                     <a class="mobile-nav-icon" aria-label="menu" href="#" title="Otevřít burger menu"><img class="burger-menu jq--nav-icon" src="img/burger-barw.png" alt="Hamburger menu"></a>
@@ -62,18 +88,35 @@
         </header> 
 
         <div class="welcome">
-            <a id="logo" aria-label="Logo" href="index.html" title="Přejít na hlavní stránku">
+            <picture class="welcome-bg">
+                <source
+                    media="(max-width: 768px)"
+                    srcset="/img/no-pain-m.webp"
+                    type="image/webp"
+                    width="768"
+                    height="450">
+                <img
+                    src="/img/no-pain.webp"
+                    width="1150"
+                    height="450"
+                    alt="Kondiční cvičení – kruhové tréninky"
+                    fetchpriority="high">
+            </picture>
+
+            <a id="logo" aria-label="Logo" href="/" title="Přejít na hlavní stránku">
                 <img src="img/kondicnicvičení2.svg" alt="Logo - Kondiční cvičení" width="179" height="179" decoding="async">
             </a>
             <h1>O nás</h1>
             <a href="#" class="move-down scroll-start" aria-label="scroll down to header" title="Přejít k obsahu">
-                <i class="fa-solid fa-angles-down arrow-down"></i>
+                <svg class="icon arrow-down" aria-hidden="true" width="16" height="16">
+                    <use href="/img/icons.svg#icon-chevron-double-down"></use>
+                </svg>
             </a>
         </div>
 
         <div class="container">
             <main>
-                <h2 class=" before col2 scroll-end">Kdy a&nbsp;kde</h2>
+                <h2 id="kdy-a-kde" class=" top48 col2 scroll-end">Kdy a&nbsp;kde</h2>
                 <p>
                     Kondiční tréninky probíhají pravidelně v&nbsp;<strong>Jičíně</strong> a&nbsp;<strong>Lázních Bělohrad</strong>. Cvičení je <strong>vhodné pro začátečníky i&nbsp;pokročilé</strong>, cvičíme ve&nbsp;skupině, s&nbsp;vlastní vahou i&nbsp;pomůckami.
                 </p>
@@ -83,11 +126,11 @@
                 </p>
         
                 <div class="col2">
-                    <section class="terminy">
+                    <section class="classes">
                         <div class="reference">
                             <div class="schedule">
                                 <h3>
-                                    <a href="kontakty.html#jc" class="jq--scroll basic">Jičín</a>
+                                    <a href="/kontakty#jc" class="jq--scroll basic">Jičín</a>
                                 </h3>
                             </div>
             
@@ -114,9 +157,9 @@
                                     <h4>Cena:</h4>
                                     <ul class="price">
                                         <li>
-                                            <span class="red">Permanentka:</span> 1&nbsp;200&nbsp;Kč
+                                            <span class="red">Permanentka:</span> 1&nbsp;500&nbsp;Kč
                                         </li>
-                                        <li><span class="one-lesson">Jednotlivé lekce:</span> 120&nbsp;Kč</li>
+                                        <li><span class="one-lesson">Jednotlivé lekce:</span> 150&nbsp;Kč</li>
                                         <li class="free">První lekce zdarma!</li>
 
                                     </ul>
@@ -125,11 +168,11 @@
                         </div>
                     </section>
 
-                    <section class="terminy">
+                    <section class="classes">
                         <div class="reference">
                             <div class="schedule">
                                 <h3>
-                                    <a href="kontakty.html#lb" class="jq--scroll basic">
+                                    <a href="/kontakty#lb" class="jq--scroll basic">
                                         Lázně Bělohrad
                                     </a>
                                 </h3>
@@ -148,9 +191,9 @@
                                     <h4>Cena:</h4>
                                     <ul class="price">
                                         <li>
-                                            <span class="red">Permanentka: </span> 1&nbsp;000&nbsp;Kč
+                                            <span class="red">Permanentka: </span> 1&nbsp;200&nbsp;Kč
                                         </li>
-                                        <li><span class="one-lesson">Jednotlivé lekce:</span> 100&nbsp;Kč</li>
+                                        <li><span class="one-lesson">Jednotlivé lekce:</span> 120&nbsp;Kč</li>
                                         <li class="free">První lekce zdarma!</li>
                                     </ul>
                                 </li>
@@ -166,8 +209,11 @@
                     Na každé cvičení je nutné se předem zaregistrovat, a&nbsp;to <strong>nejpozději 2&nbsp;hodiny před začátkem lekce</strong>. 
                     Klikni na&nbsp;odkaz níže a&nbsp;v&nbsp;kalendáři si vyber termín a&nbsp;místo – cvičení probíhá v&nbsp;<strong>Lázních Bělohrad</strong> a&nbsp;v&nbsp;<strong>Jičíně</strong>.
                 </p>
-                <a class="rezervace basic" href="https://alena-pumprova.reservio.com" title="Rezervace cviičení">
-                    <i class="fa-solid fa-calendar-days"></i> Přihlásit se</a>
+                <a class="reservation basic" href="/kontakty#kontaktni-udaje" title="Rezervace cviičení">
+                    <svg class="icon" aria-hidden="true">
+                        <use href="/img/icons.svg#icon-calendar-date"></use>
+                    </svg>
+                    Přihlásit se</a>
                 </section>
                 <hr>
 
@@ -206,27 +252,34 @@
             <div class="ff">
                 <div class="foot">
                     <a class="fb-logo" href="https://www.facebook.com/LBkruhovecviceni" target="_blank" title="Facebook Kondiční cvičení Lázně Bělohrad">
-                        <i class="fa-brands fa-square-facebook"></i>
-                        Lázně Bělohrad
+                        <svg class="icon" aria-hidden="true" width="16" height="16">
+                            <use href="/img/icons.svg#icon-facebook"></use>
+                        </svg>
+                        <span class="place-full">Lázně&nbsp;Bělohrad</span>
+                        <span class="place-short">LB</span>
                     </a>
                     
                     <a class="fb-logo" href="https://www.facebook.com/jicinkondicnicviceni" target="_blank" title="Facebook Kondiční cvičení Jičín">
-                        <i class="fa-brands fa-square-facebook"></i>
+                        <svg class="icon" aria-hidden="true" width="16" height="16">
+                            <use href="/img/icons.svg#icon-facebook"></use>
+                        </svg>
                         Jičín
                     </a>
                 </div>
 
                     <div class="copyright">
-                        Copyright © Alena Pumprová 2025
+                        © 2025 Kondiční cvičení
                 </div>
             </div>
         </footer>
 
         <div id="cookie-banner">
-            Tento web používá cookies, bla bla bla... 
-            <button id="accept-cookies">Souhlasím</button>
+            Tento web používá cookies pro zlepšení funkčnosti a&nbsp;analýzu návštěvnosti.
+            <div class="cookie-btn">
+                <a id="view-cookies" rel="privacy-policy" href="/zasady-ochrany-osobnich-udaju-cookies" title="Zásady ochrany osobních údajů" target="_blank">Více informací</a>
+                <button id="accept-cookies">Souhlasím</button>
+            </div> 
         </div>
-        <script src="https://code.jquery.com/jquery-3.6.4.min.js" defer></script>
         <script src="script.js" defer></script>  
     </body>
 </html>

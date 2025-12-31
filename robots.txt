@@ -1,0 +1,6 @@
+Sitemap: https://www.kondicni-cviceni.eu/sitemap.xml
+
+User-agent: *
+Disallow: /mailer.php
+
+Allow: /

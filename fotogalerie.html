@@ -4,35 +4,58 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="canonical" href="https://www.kondicni-cviceni.eu/fotogalerie">
         <link rel="icon" href="img/favicon.ico" type="image/png" sizes="16x16">
         <link rel="icon" href="img/favicon-32x32.png" type="image/png" sizes="32x32">
         <link rel="icon" href="img/android-chrome-192x192.png" type="image/png" sizes="192x192">
         <link rel="icon" href="img/android-chrome-512x512.png" type="image/png" sizes="512x512">
         <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
         <link rel="manifest" href="img/site.webmanifest">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z5Y0ZX1J36"></script>
+        <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-Z5Y0ZX1J36');</script>
         <link rel="preload" as="image" href="img/no-pain.webp">
+        <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" media="print" onload="this.media='all'">   
-        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Teko:wght@700&display=swap" rel="stylesheet">
         <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap">
-        <title>Fotogalerie - Kondiční cvičení Jičín a Lázně Bělohrad</title>
+        <title>Fotogalerie | Kondiční cvičení Jičín a Lázně Bělohrad</title>
         <meta name="description" content="Fotografie nejen ze cvičení. Prohlédni si obrázky z našich tréninků v Lázních Bělohrad a Jičíně.">
+        <meta name="author" content="Alena Pumprová">
         <meta name="robots" content="index, follow">
         <meta name="keywords" content="kondiční cvičení, Lázně Bělohrad, Jičín, tréninky, fitness">
         <meta name="theme-color" content="#f34635">
         <meta name="color-scheme" content="light dark">
+
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.kondicni-cviceni.eu/fotogalerie">
+        <meta property="og:title" content="Fotogalerie - Kondiční cvičení">
+        <meta property="og:description" content="Fotografie z našich tréninků v Lázních Bělohrad a Jičíně. Prohlédni si, jak to u nás vypadá!">
+        <meta property="og:image" content="https://www.kondicni-cviceni.eu/img/lb1.webp">
+        <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "ImageGallery",
+        "name": "Fotogalerie z tréninků",
+        "description": "Fotografie z kondičních tréninků v Lázních Bělohrad a Jičíně",
+        "url": "https://www.kondicni-cviceni.eu/fotogalerie"
+        }
+        </script>
     </head>
 
     <body>
         <header>
             <div class="toggle-wrapper">
-                <label class="theme-toggle" aria-label="Přepínání světlého a tmavého režimu">
-                    <i class="fa-solid fa-moon moon"></i>
+                <label class="theme-toggle" for="modeToggle">
+                    <svg class="icon moon" aria-hidden="true">
+                        <use href="/img/icons.svg#icon-moon-fill"></use>
+                    </svg>
                     <input type="checkbox" id="modeToggle">
                     <span class="slider"></span>
-                    <i class="fa-solid fa-sun sun"></i>
+                    <svg class="icon sun" aria-hidden="true">
+                        <use href="/img/icons.svg#icon-sun-fill"></use>
+                    </svg>
+                    <span class="sr-only">Přepnout tmavý/světlý režim</span>
                 </label>
             </div>
             <div class="menu-background-under">
@@ -43,15 +66,18 @@
                 <nav>
                     <ul>
                         <li class="heading-link first">
-                            <a class="rezervace basic" href="https://alena-pumprova.reservio.com" target="_blank" title="Rezervace cvičení">
-                                <i class="fa-solid fa-calendar-days"></i>
+                            <a class="reservation" href="/kontakty#kontaktni-udaje" 
+                            title="Rezervace tréninku">
+                                <svg class="icon" aria-hidden="true">
+                                    <use href="/img/icons.svg#icon-calendar-date"></use>
+                                </svg>
                                 Rezervace
                             </a>
                         </li>
-                        <li><a class="first" href="index.html" title="Přejít na hlavní stránku">Hlavní stránka</a></li>
-                        <li><a class="first" href="o-nas.html" title="Přejít na stránku o návštěvnost">O nás</a></li>
-                        <li><a class="first active" href="fotogalerie.html" title="Přejít na stránku Fotogalerie">Fotogalerie</a></li>
-                        <li><a class="first" href="kontakty.html" title="Přejít na stránku Kontakty">Kontakty</a></li>
+                        <li><a class="first" href="/" title="Přejít na hlavní stránku">Hlavní stránka</a></li>
+                        <li><a class="first" href="/o-nas" title="Přejít na stránku o návštěvnost">O nás</a></li>
+                        <li><a class="first active" href="/fotogalerie" title="Přejít na stránku Fotogalerie">Fotogalerie</a></li>
+                        <li><a class="first" href="/kontakty" title="Přejít na stránku Kontakty">Kontakty</a></li>
                     </ul>
 
                     <div class="mobile-nav-back"></div>
@@ -62,12 +88,29 @@
         </header> 
 
         <div class="welcome">
-            <a id="logo" aria-label="Fotogalerie" href="index.html" title="Přejít na hlavní stránku">
+            <picture class="welcome-bg">
+                <source
+                    media="(max-width: 768px)"
+                    srcset="/img/no-pain-m.webp"
+                    type="image/webp"
+                    width="768"
+                    height="450">
+                <img
+                    src="/img/no-pain.webp"
+                    width="1150"
+                    height="450"
+                    alt="Kondiční cvičení – kruhové tréninky"
+                    fetchpriority="high">
+            </picture>
+
+            <a id="logo" aria-label="Fotogalerie" href="/" title="Přejít na hlavní stránku">
                 <img src="img/kondicnicvičení2.svg" alt="Logo - Kondiční cvičení" width="179" height="179" decoding="async">
             </a>
             <h1>Fotogalerie</h1>
             <a href="#" class="move-down scroll-start" aria-label="scroll down to header" title="Přejít k obsahu">
-                <i class="fa-solid fa-angles-down arrow-down"></i>
+                <svg class="icon arrow-down" aria-hidden="true" width="16" height="16">
+                    <use href="/img/icons.svg#icon-chevron-double-down"></use>
+                </svg>
             </a>
         </div>
 
@@ -77,7 +120,7 @@
                 <section class= "photo-gallery row top">
                     <div class="gallery">
 
-                        <h2 class="before scroll-end">Lázně Bělohrad</h2>
+                        <h2 class="top48 scroll-end">Lázně Bělohrad</h2>
                 
                     </div>
                     <div class= "photos row">
@@ -248,27 +291,35 @@
             <div class="ff">
                 <div class="foot">
                     <a class="fb-logo" href="https://www.facebook.com/LBkruhovecviceni" target="_blank" title="Facebook Kondiční cvičení Lázně Bělohrad">
-                        <i class="fa-brands fa-square-facebook"></i>
-                        Lázně Bělohrad
+                        <svg class="icon" aria-hidden="true" width="16" height="16">
+                            <use href="/img/icons.svg#icon-facebook"></use>
+                        </svg>
+                        <span class="place-full">Lázně&nbsp;Bělohrad</span>
+                        <span class="place-short">LB</span>
                     </a>
                     
                     <a class="fb-logo" href="https://www.facebook.com/jicinkondicnicviceni" target="_blank" title="Facebook Kondiční cvičení Jičín">
-                        <i class="fa-brands fa-square-facebook"></i>
+                        <svg class="icon" aria-hidden="true" width="16" height="16">
+                            <use href="/img/icons.svg#icon-facebook"></use>
+                        </svg>
                         Jičín
                     </a>
                 </div>
 
                     <div class="copyright">
-                        Copyright © Alena Pumprová 2025
+                        © 2025 Kondiční cvičení
                 </div>
             </div>
         </footer>
         
         <div id="cookie-banner">
-            Tento web používá cookies, bla bla bla... 
-            <button id="accept-cookies">Souhlasím</button>
+            Tento web používá cookies pro zlepšení funkčnosti a&nbsp;analýzu návštěvnosti.
+            <div class="cookie-btn">
+                <a id="view-cookies" rel="privacy-policy" href="/zasady-ochrany-osobnich-udaju-cookies" title="Zásady ochrany osobních údajů" target="_blank">Více informací</a>
+                <button id="accept-cookies">Souhlasím</button>
+            </div> 
         </div>
         <script src="https://code.jquery.com/jquery-3.6.4.min.js" defer></script>
-        <script src="script-f.js" defer></script> 
+        <script src="script-f.js?v=2" defer></script> 
     </body>
 </html>
