@@ -46,32 +46,18 @@
 
     <body>
         <header>
-            <div class="toggle-wrapper">
-                <label class="theme-toggle" for="modeToggle">
-                    <svg class="icon moon" aria-hidden="true">
-                        <use href="/img/icons.svg#icon-moon-fill"></use>
-                    </svg>
-                    <input type="checkbox" id="modeToggle">
-                    <span class="slider"></span>
-                    <svg class="icon sun" aria-hidden="true">
-                        <use href="/img/icons.svg#icon-sun-fill"></use>
-                    </svg>
-                    <span class="sr-only">Přepnout tmavý/světlý režim</span>
-                </label>
-            </div>
-
-            </div>
-            
             <div class="menu-background">
                 <nav>
                     <ul>
                         <li class="heading-link">
                             <a class="reservation first" href="/kontakty#kontaktni-udaje" 
                             title="Rezervace tréninku">
-                                <svg class="icon" aria-hidden="true">
-                                    <use href="/img/icons.svg#icon-calendar-date"></use>
-                                </svg>
-                                Rezervace
+                                <span class="nav-row">
+                                    <svg class="icon" aria-hidden="true">
+                                        <use href="/img/icons.svg#icon-calendar-date"></use>
+                                    </svg>
+                                    Rezervace
+                                </span>
                             </a>
                         </li>
                         <li><a class="first" href="/" title="Přejít na hlavní stránku">Hlavní stránka</a></li>
@@ -85,6 +71,20 @@
                 </nav>
             </div>
         </header> 
+
+        <div class="toggle-wrapper">
+            <label class="theme-toggle" for="modeToggle">
+                <svg class="icon moon" aria-hidden="true">
+                    <use href="/img/icons.svg#icon-moon-fill"></use>
+                </svg>
+                <input type="checkbox" id="modeToggle">
+                <span class="slider"></span>
+                <svg class="icon sun" aria-hidden="true">
+                    <use href="/img/icons.svg#icon-sun-fill"></use>
+                </svg>
+                <span class="sr-only">Přepnout tmavý/světlý režim</span>
+            </label>
+        </div>
 
         <div class="welcome">
             <picture class="welcome-bg">
@@ -114,7 +114,7 @@
         </div>
 
         <div class="container">
-            <main>
+            <main class="about">
                 <h2 id="kdy-a-kde" class=" top48 col2 scroll-end">Kdy a&nbsp;kde</h2>
                 <p>
                     Kondiční tréninky probíhají pravidelně v&nbsp;<strong>Jičíně</strong> a&nbsp;<strong>Lázních Bělohrad</strong>. Cvičení je <strong>vhodné pro začátečníky i&nbsp;pokročilé</strong>, cvičíme ve&nbsp;skupině, s&nbsp;vlastní vahou i&nbsp;pomůckami.
