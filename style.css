@@ -2103,6 +2103,10 @@ input:checked + .slider::before {
     z-index: 500;
   }
 
+  a.first::before {
+    content: none;
+  }
+
   .mobile-nav-back {
     width: 55%;
     height: 15.545rem;
