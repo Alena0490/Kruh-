@@ -10,15 +10,22 @@
         <link rel="icon" href="img/android-chrome-512x512.png" type="image/png" sizes="512x512">
         <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
         <link rel="manifest" href="img/site.webmanifest">
-         <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z5Y0ZX1J36"></script>
-        <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-Z5Y0ZX1J36');</script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style-photo.css">
-         <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style-contacts.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Teko:wght@700&display=swap" rel="stylesheet">
+        <link
+        rel="preload"
+        as="style"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Teko:wght@700&display=swap&v=2"
+        >
+        <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Teko:wght@700&display=swap&v=2"
+        >
         <title>Kontakty | Kondiční cvičení Jičín a Lázně Bělohrad</title>
         <meta name="description" content="Kondiční cvičení v Lázních Bělohrad a Jičíně. Přidej se k nám a zlepši svou kondici!">
         <meta name="author" content="Alena Pumprová">
@@ -62,6 +69,26 @@
             ]
         }
         }
+        </script>
+
+        <script>
+            function loadAnalytics() {
+            var script = document.createElement('script');
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-Z5Y0ZX1J36';
+            script.async = true;
+            document.head.appendChild(script);
+            
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-Z5Y0ZX1J36');
+            }
+
+            if ('requestIdleCallback' in window) {
+            requestIdleCallback(loadAnalytics);
+            } else {
+            setTimeout(loadAnalytics, 1);
+            }
         </script>
     </head>
 
@@ -200,7 +227,7 @@
 
                         <div class="col map-container lb">
                             <a href="https://www.google.com/maps/place/Sokolovna+L%C3%A1zn%C4%9B+B%C4%9Blohrad/@50.4292988,15.584839,17z/data=!4m6!3m5!1s0x470e9984eca1dbcf:0xd5d4f17f88d01fff!8m2!3d50.4292988!4d15.5874139!16s%2Fg%2F11dym5rbqq?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" title="Mapa Lázně Bělohrad">
-                                <img class="map map-image" src="img/map-lb.webp" alt="Mapa - Lázně Bělohrad Lázeňská 295" width="800" height="500" loading="lazy">
+                                <img class="map map-image" src="img/map-lb.webp" alt="Mapa - Lázně Bělohrad Lázeňská 295" width="500" height="313" loading="lazy">
                             </a>
                         </div>
                     </div> 
@@ -225,7 +252,7 @@
 
                         <div class="col map-container jc">
                             <a href="https://www.google.com/maps/place/Z%C3%A1kladn%C3%AD+%C5%A1kola,+Pod%C4%9Bbradova/@50.4298503,15.3457451,17.25z/data=!4m6!3m5!1s0x470ea40c4aa71ab7:0xd05800013369f1de!8m2!3d50.4299134!4d15.3475724!16s%2Fg%2F1tkbwyyq?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" title="Mapa Lázně Bělohrad">
-                                <img class="map map-image" src="img/map-jicin.webp" alt="Mapa - Jičín Poděbradova 18"  width="800" height="500" loading="lazy">
+                                <img class="map map-image" src="img/map-jicin.webp" alt="Mapa - Jičín Poděbradova 18"  width="500" height="313" loading="lazy">
                             </a>
                         </div>
                     </div>

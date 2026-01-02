@@ -1,0 +1,305 @@
+.contacts li {
+  list-style: none;
+  margin-bottom: var(--space-2);
+  line-height: 1.2;
+}
+
+.contacts li svg {
+  display: inline-block;
+  vertical-align: -0.15em; 
+  width: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
+  height: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
+  fill: currentColor;
+  color: var(--text);
+  margin-right: 0.364rem;
+}
+
+
+.contact-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: calc(100% - var(--space-4));
+  padding-top: var(--space-3);
+  margin-top: var(--space-3);
+  margin-inline: var(--space-3);
+  border-top: 1.5px solid var(--secondary-color);
+}
+
+.address {
+  flex: 1;
+  min-width: 300px;
+  max-width: 45%;
+  margin-inline: var(--space-3);
+}
+
+
+p.address {
+    max-width: none;
+    text-align: left;
+}
+
+.col {
+  display: flex;
+  justify-content: space-around;
+  margin: 0.135rem 0 0.135rem var(--space-1);
+}
+
+.col:first-child {
+  margin-left: 0;
+}
+
+.col ul {
+  margin: var(--space-3) auto 0;
+  font-style: normal;
+  line-height: 1.4;
+}
+
+.col.map-container {
+  position: relative;
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+  margin: var(--space-3) var(--space-2) var(--space-3) var(--space-2);
+}
+
+.col.map-container a{
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  transition: transform var(--dur-slow) var(--ease-emphasized);
+}
+
+.col.map-container a:hover {
+  transform: scale(1.01);
+}
+
+.col.map-container img {
+  max-width: 500px;
+  margin-top: 0;
+  height: auto;
+  filter: saturate(0.8) brightness(0.95);
+  cursor: pointer;
+  transition: filter var(--dur-med) var(--ease-standard);
+}
+
+.col.map-container img:hover {
+  filter: saturate(1.1);
+}
+
+.visit {
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+  padding: var(--space-3);
+  background-color: var(--form-bg);
+  border: 1.5px solid var(--form-border);
+  backdrop-filter: blur(5px);
+  margin: var(--space-3) auto var(--space-4);
+  border-radius: var(--r-sm);
+  max-width: 1000px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always; 
+}
+
+form > div:nth-of-type(5) {
+  grid-column: 1 / -1;
+}
+
+form label {
+  display: flex;
+  align-items: center;
+  margin: 0 0 var(--space-1) var(--space-05);
+  color: var(--text);
+  font-weight: 700;
+}
+
+form label svg {
+  width: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
+  height: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
+  margin-right: var(--space-1);
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+form input[type=email], 
+form input[type=text],
+form input[type=tel], 
+form textarea {
+  width: 100%;
+  padding: 0.546rem;
+  border: 1.5px solid var(--secondary-color-transparent);
+  border-radius: var(--r-sm);
+  background: var(--input-bg);
+  color: #3B2F02;
+  font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
+  outline: 0;
+  transition:
+    border-color var(--dur-fast) var(--ease-standard),
+    box-shadow var(--dur-med) var(--ease-standard),
+    background-color var(--dur-fast) var(--ease-standard);
+}
+
+form input[type=email]:invalid {
+  color: red;
+}
+
+form textarea {
+  grid-column: 1 / -1;
+  width: 100%;
+  height: 9rem;
+  margin-bottom: var(--space-3);
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="tel"]:focus,
+form textarea:focus {
+  border:  1px solid var(--secondary-color-darkest);
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 0 1px var(--secondary-color-darkest);
+}
+
+input[type=submit] {
+  grid-column: span 2;
+  cursor: pointer;
+  font-weight: 700;
+  padding: var(--space-2);
+  color: var(--heading-color);
+  font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
+  border-radius: var(--r-sm);
+  border: none;
+  background-color: var(--btn-background-full);
+  transition:
+    transform var(--dur-fast) var(--ease-standard),
+    background-color var(--dur-med) var(--ease-standard);
+}
+
+input[type=submit]:hover {
+  transform: scale(1.02);
+  color: var(--heading-color);
+  background-color: var(--secondary-color-light);
+}
+
+.form-result {
+  max-width: 1000px;
+  color: var(--text);
+  padding: var(--space-2);
+  margin: var(--space-3) auto 0;
+  font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
+  backdrop-filter: blur(5px);
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.4;
+  border-radius: var(--r-sm);
+  letter-spacing: 1px;
+  filter: drop-shadow(2px 3px 4px var(--background));
+}
+
+.form-result.success {
+  display: block;
+  border: 1px solid #56a73bC0;
+  background: rgba(86, 167, 59, 0.35);
+}
+
+.form-result.error {
+  display: block;
+  border: 1px solid #bf372aC0;
+  background: rgba(191, 55, 42, 0.35);
+}
+
+@media only screen and (max-width: 995px) {
+    
+  .contact-box {
+    max-width: 100%;
+    margin-inline: 0;
+    padding-inline: var(--space-2);
+  }
+
+  .col.map-container {
+    margin-inline: 0;
+  }
+
+  .col.map-container img {
+    max-width: 100%;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+    .contact-box {
+        margin: var(--space-4) auto 0;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+  
+  .col {
+    margin: 0;
+  }
+
+    form {
+    display: block;
+    padding: var(--space-3);
+    margin: 0 auto var(--space-4);
+    max-width: 600px;
+  }
+
+    form textarea {
+    height: 9rem;
+    margin-top: var(--space-1);
+    width: 100%;
+  }
+
+  form label {
+    margin: var(--space-2) 0 var(--space-05) var(--space-05);
+  }
+
+  label {
+    margin-top: var(--space-3);
+  }
+
+  label.first-label {
+    margin-top: var(--space-1);
+  }
+
+  input[type=submit] {
+    width: 100%;
+  }
+}
+
+@media (max-width: 435px) {
+    .col.map-container {
+        max-width: calc(100% - var(--space-2));
+        margin: var(--space-2) var(--space-1);
+    }
+
+    .address {
+        min-width: unset;
+        margin-left: var(--space-3);
+    }
+}
+
+@media (max-width: 350px) {
+    .address iframe {
+        width: 80%;
+    }
+
+  .col.map-container {
+        max-width: 100%;
+        margin: var(--space-1) 0;
+  }
+
+  .col.map-container img {
+        max-width: 200px;
+  }
+}

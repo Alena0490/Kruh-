@@ -1,0 +1,463 @@
+:root {
+  --lb-radius: 8px;
+  --lb-focus-size: 3rem;
+  --lb-focus-offset: 1rem;
+  --lb-nav-vertical: 48%;
+  --lb-transition-slow: 0.6s;
+  --lb-transition-fast: 0.2s;
+}
+
+.container.parallax-layer{
+  transform: translateZ(-1px) scale(1);
+}
+
+.image {
+  max-width: 400px;
+  height: auto;
+  margin: 0;
+  border-radius: var(--r-sm);
+}
+
+.album {
+  cursor: pointer;
+}
+
+.gallery {
+  width: 100%;
+}
+
+.photo-gallery {
+  position: relative;
+  padding-top: 0;
+  margin: 0 auto var(--space-3);
+  z-index: 1;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.photos {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.photo-segment {
+  display: flex;
+  flex-wrap: wrap;
+  padding: var(--space-2);
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.photo-segment li {
+  width: 21.5%;
+  height: 35vh;
+  height: 35dvh;
+  min-height: 250px;
+  min-width: 250px;
+  border-radius: var(--r-sm); 
+  position: relative;
+  margin: 1%;
+  display: inline-block;
+  transition: 
+    transform var(--dur-med) var(--ease-standard), 
+    box-shadow var(--dur-med) var(--ease-standard);
+}
+
+.photo-segment li:hover {
+  box-shadow: var(--text-secondary) 2px 2px 4px;
+}
+
+.photo-segment li:first-child {
+  margin-left: 0.135rem;
+}
+
+.photo-segment li img {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--r-sm);
+  object-fit: cover;
+  transition: filter var(--dur-slow) var(--ease-emphasized);
+}
+
+.photo-segment li img:hover {
+  filter: brightness(1.1);
+}
+
+img.one {
+  min-width: 180px;
+}
+
+
+.col {
+  display: flex;
+  justify-content: space-around;
+  margin: 0.135rem 0 0.135rem var(--space-1);
+}
+
+.col:first-child {
+  margin-left: 0;
+}
+
+.col ul {
+  margin: var(--space-3) auto 0;
+  font-style: normal;
+  line-height: 1.4;
+}
+
+.col2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 0 auto var(--space-3);
+  max-width: 1200px;
+}
+
+/****Lightbox****/
+/* Lightbox active - scroll blocking */
+body.lb-disable-scrolling {
+  overflow: hidden !important;
+  top: 0;
+}
+
+/* Basic components */
+.lb-loader, 
+.lightbox {
+  text-align: center;
+  line-height: 0;
+}
+
+.lb-image {
+  margin: 0;
+}
+
+.lightboxOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: #000000d7;
+  backdrop-filter: blur(5px);
+  display: none;
+}
+
+.lightbox {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  /* transform: translate(-50%, -50%); */
+  z-index: 10000;
+  font-weight: 400;
+  outline: 0;
+}
+
+.lightbox .lb-image {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100vw;
+  max-height: 100vh;
+  max-height: 100svh;
+  object-fit: contain;
+  border-radius: var(--lb-radius);
+}
+
+.lightbox a img {
+  border: none;
+}
+
+/* Containers */
+.lb-outerContainer {
+  position: relative;
+  margin: 0 auto;
+  border-radius: var(--lb-radius);
+  background-color: var(--background-muted);
+}
+
+.lb-loader, 
+.lb-nav {
+  position: absolute;
+  left: 0;
+}
+
+/* Clearfix */
+.lb-outerContainer::after,
+.lb-dataContainer::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.lb-loader {
+  top: 43%;
+  width: 1.4545rem;
+  height: 1.4545rem;
+}
+
+.lb-cancel {
+  display: block;
+  width: 1.455rem;
+  height: 1.455rem;
+  margin: 0 auto;
+  background: url(img/loading.gif) no-repeat;
+}
+
+/* Navigation container */
+.lb-nav {
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+
+.lb-container > .nav {
+  left: 0;
+}
+
+.lb-nav a {
+  position: relative;
+  outline: 0;
+  background-image: url(data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==);
+}
+
+/* Focus indicators - shared styles */
+.lb-nav a:focus-visible::after,
+.lb-close:focus-visible::after {
+  content: "";
+  position: absolute;
+  width: var(--lb-focus-size);
+  height: var(--lb-focus-size);
+  border-radius: 50%;
+  pointer-events: none;
+  filter: drop-shadow(0 0 0.6rem var(--secondary-color));
+  border: 2px solid var(--secondary-color);
+}
+
+/* Focus ring positions */
+.lb-nav a.lb-prev:focus-visible::after {
+  left: var(--lb-focus-offset);
+  top: var(--lb-nav-vertical);
+  transform: translate(-17%, -41%);
+}
+
+.lb-nav a.lb-next:focus-visible::after {
+  right: var(--lb-focus-offset);
+  top: var(--lb-nav-vertical);
+  transform: translate(17%, -41%);
+}
+
+.lb-close:focus-visible::after {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Navigation buttons - shared properties */
+.lb-next, 
+.lb-prev {
+  position: absolute;
+  height: 100%;
+  cursor: pointer;
+  display: block;
+}
+
+/* Prev button */
+.lb-nav a.lb-prev {
+  width: 34%;
+  top: 0;
+  left: 0;
+  float: left;
+  background: url(img/prev.png) left var(--lb-nav-vertical) no-repeat;
+  opacity: 0;
+  transition: opacity var(--lb-transition-slow);
+}
+
+.lb-nav a.lb-prev:hover,
+.lb-nav a.lb-prev:focus-visible {   
+  opacity: 1;
+}
+
+/* Next button */
+.lb-nav a.lb-next {
+  width: 64%;
+  right: 0;
+  top: 0;
+  float: right;
+  background: url(img/next.png) right var(--lb-nav-vertical) no-repeat;
+  opacity: 0;
+  transition: opacity var(--lb-transition-slow);
+}
+
+.lb-nav a.lb-next:hover,
+.lb-nav a.lb-next:focus-visible {   
+  opacity: 1;
+}
+
+/* Data container */
+.lb-dataContainer {
+  margin: 0 auto;
+  padding-top: var(--lb-radius);
+  width: 100%;
+  border-bottom-left-radius: var(--lb-radius);
+  border-bottom-right-radius: var(--lb-radius);
+}
+
+.lb-data {
+  padding: 0 0.135rem;
+  color: var(--heading-color);
+}
+
+.lb-data .lb-details {
+  width: 85%;
+  float: left;
+  text-align: left;
+  line-height: 1.1em;
+}
+
+.lb-data .lb-caption {
+  font-size: 0.6rem;
+  font-weight: 700;
+  line-height: 1em;
+}
+
+.lb-data .lb-caption a {
+  color: var(--main-color);
+}
+
+.lb-data .lb-number {
+  display: block;
+  clear: left;
+  padding-bottom: 1em;
+  font-size: 0.6rem;
+  color: var(--text-secondary);
+}
+
+/* Close button */
+.lb-data .lb-close {
+  display: block;
+  float: right;
+  width: 1.364rem;
+  height: 1.364rem;
+  background: url(img/close.png) top right no-repeat;
+  text-align: right;
+  outline: 0;
+  opacity: 0.7;
+  transition: opacity var(--lb-transition-fast);
+  position: relative;
+}
+
+.lb-data .lb-close:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+/*Queries*/
+@media (prefers-reduced-motion: no-preference) {
+  .parallax,
+  .parallax2 {
+    transform-style: preserve-3d;
+    transform: translateY(0.1%) scale(98%);
+  }
+
+  .parallax {
+    position: relative;
+    z-index: 0;
+    height: inherit;
+    transition: transform 1.5s ease-in;
+  }
+
+  .parallax2 {
+    transition: transform 2s ease-in;
+  }
+}
+
+@media only screen and (max-width: 995px) {
+  .parallax {
+    transform: translateY(0);
+  }
+
+  body.lb-disable-scrolling {
+    overflow: hidden !important;
+    position: fixed !important;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+
+  .album {
+    text-align: center;
+    width: 65%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  section.photo-gallery.top {
+    padding-top: 0;
+  }
+
+  .photo-segment li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-inline: 0;
+  }
+}
+
+/* Mobile viewport */
+@media (max-width: 768px) {
+    .parallax {
+    transform: none;
+  }
+  .lightbox {
+    max-width: 100vw;
+    max-height: 100vh;
+    max-height: 100dvh;
+  }
+  
+  .lb-outerContainer {
+    max-width: 95vw !important;
+  }
+  
+  .lb-image {
+    max-width: 95vw !important;
+    max-height: 85vh !important;
+    max-height: 85dvh !important;
+  }
+}
+
+@media (max-width: 480px) {
+  
+  .col {
+    margin: 0;
+  }
+
+  .photo-segment li {
+    padding: var(--space-2) var(--space-1);
+    margin: 0;
+  }
+
+  img.image {
+    margin: 0 auto;
+    max-width: 50vh;
+    max-width: 50dvh;
+  }
+}
+
+@media (max-width: 435px) {
+
+  .photo-segment li {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+
