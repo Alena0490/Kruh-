@@ -151,7 +151,7 @@
             </picture>
 
             <a id="logo" aria-label="Kontakty" href="/">
-                <img src="img/kondicnicvičení2.svg" alt="Logo" width="179" height="179" decoding="async" title="Přejít na hlavní stránku">
+                <img src="img/kondicnicvičení2.svg" alt="Logo - Kondiční cvičení" width="179" height="179" decoding="async" title="Přejít na hlavní stránku">
             </a>
             <h1>Kontakty</h1>
             <a href="#" class="move-down scroll-start" aria-label="scroll down to header" title="Přejít k obsahu">
@@ -251,7 +251,7 @@
                         </div>
 
                         <div class="col map-container jc">
-                            <a href="https://www.google.com/maps/place/Z%C3%A1kladn%C3%AD+%C5%A1kola,+Pod%C4%9Bbradova/@50.4298503,15.3457451,17.25z/data=!4m6!3m5!1s0x470ea40c4aa71ab7:0xd05800013369f1de!8m2!3d50.4299134!4d15.3475724!16s%2Fg%2F1tkbwyyq?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" title="Mapa Lázně Bělohrad">
+                            <a href="https://www.google.com/maps/place/Z%C3%A1kladn%C3%AD+%C5%A1kola,+Pod%C4%9Bbradova/@50.4298503,15.3457451,17.25z/data=!4m6!3m5!1s0x470ea40c4aa71ab7:0xd05800013369f1de!8m2!3d50.4299134!4d15.3475724!16s%2Fg%2F1tkbwyyq?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" title="Mapa Jičín">
                                 <img class="map map-image" src="img/map-jicin.webp" alt="Mapa - Jičín Poděbradova 18"  width="500" height="313" loading="lazy">
                             </a>
                         </div>
@@ -272,12 +272,15 @@
             ?>
 
             <form  action="/mailer.php" method="post">
+                <label for="website" class="sr-only">Nechte prosím prázdné</label>
+                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" style="position: absolute; left: -9999px; width: 1px; height: 1px;">
+
                 <div>
                     <label for="name" class="first-label">
                         <svg class="icon" aria-hidden="true">
                             <use href="/img/icons.svg?v=3#icon-person"></use>
                         </svg>
-                        Jméno
+                        Jméno *
                     </label>
                     <input type="text" id="name" name="name" required>
                 </div>
@@ -287,7 +290,7 @@
                         <svg class="icon" aria-hidden="true">
                             <use href="/img/icons.svg?v=3#icon-person-vcard"></use>
                         </svg>
-                        Příjmení
+                        Příjmení *
                     </label>
                     <input type="text" id="surname" name="surname" required>
                 </div>
@@ -297,7 +300,7 @@
                         <svg class="icon" aria-hidden="true">
                             <use href="/img/icons.svg?v=3#icon-envelope"></use>
                         </svg>
-                         E-mail
+                         E-mail *
                         </label>
                     <input type="email" id="email" name="email" required>
                 </div>
@@ -307,7 +310,7 @@
                         <svg class="icon" aria-hidden="true">
                         <use href="/img/icons.svg?v=3#icon-telephone"></use>
                             </svg>
-                         Telefon (nepovinné)
+                         Telefon
                         </label>
                     <input type="tel" id="phone" name="phone">
                 </div>
@@ -317,13 +320,14 @@
                         <svg class="icon" aria-hidden="true">
                             <use href="/img/icons.svg?v=3#icon-pencil"></use>
                         </svg>
-                         Tvůj vzkaz
+                         Tvůj vzkaz *
                         </label>
                     <textarea id="message" name="message" required></textarea>
                 </div>
                 
                 <input type="submit" value="Odeslat">
-            </form>        
+            </form>  
+            <p class="form-note">Pole označená * jsou povinná.</p>      
         </main>
     </div>
         <footer>

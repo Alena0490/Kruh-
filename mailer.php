@@ -2,6 +2,13 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
+// Honeypot ochrana
+if (!empty($_POST['website'])) {
+    //Bot vyplnil honeypot pole - přesměrujeme s chybou
+    header('Location: /kontakty?success=-1');
+    exit;
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Načtení dat z formuláře
     $name = isset($_POST['name']) ? strip_tags(trim($_POST["name"])) : '';

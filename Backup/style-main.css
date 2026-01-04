@@ -29,7 +29,7 @@
 
   --secondary-color: #B11F0E;
   --secondary-color-transparent: rgba(177, 31, 14, 0.7);
-  --secondary-color-light: #C24E41;
+  --secondary-color-light: #D62010;
   --secondary-color-link: #9C1101;
   --secondary-color-darkest: #820E01;
   --secondary-color-gradient: #87878730;
@@ -51,12 +51,11 @@
 
   --btn-background: rgba(204, 34, 34, 0.1);
   --btn-background-full: rgb(173, 19, 1);
-  --btn-background-hover: #881111;
 
-  --clr-success: #5ea97c;
-  --clr-success-hover: #499263;
-  --clr-error: #d95f58;
-  --clr-error-hover: #c94c45;
+  --clr-success: rgba(86, 167, 59, 0.35);
+  --clr-success-border: #56a73bC0;
+  --clr-error: #f93a2f75;
+  --clr-error-border: #ad130152;
   --shadows: rgba(36, 36, 36, 0.737);
 
   --form-bg: #ebebeb60;
@@ -76,7 +75,7 @@ html.dark {
   --secondary-color-transparent: rgba(255, 68, 68, 0.12);
   --secondary-color-light: #FF5757;
   --secondary-color-link: #FF6969;
-  --secondary-color-darkest: #A62C2C;
+  --secondary-color-darkest: #CC0000;
   --secondary-color-gradient: #64646440;
 
   --background: #191919b0;
@@ -95,12 +94,12 @@ html.dark {
 
   --btn-background: rgba(179, 48, 48, 0.1);
   --btn-background-full: #B33030;
-  --btn-background-hover: #CC3636;
+  --btn-background-border: #CC3636;
 
-  --clr-success: #75c697;
-  --clr-success-hover: #59b57e;
-  --clr-error: #e36d66;
-  --clr-error-hover: #d4554e;
+  --clr-success: #0f7d3db0;
+  --clr-success-border: #2f9959b3;
+  --clr-error: #ff443975;
+  --clr-error-border: #c6554e;
   --shadows: rgba(255, 255, 255, 0.27);
 
   --form-bg: rgb(72 72 72 / 73%);
@@ -524,11 +523,11 @@ h1 {
   text-align: center;
   color: var(--heading-color);
   font-weight: 700;
+  z-index: 10;
 }
 
 h1.home {
   margin-top: 20%;
-  z-index: 10;
 }
 
 h2 {
@@ -743,7 +742,7 @@ a.reservation {
   width:  clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
   height: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
   fill: currentColor;
-  color: var(--secondary-color-link);
+  color: var(--secondary-color-light);
   margin-right: var(--space-1);
 }
 
@@ -770,13 +769,22 @@ a.reservation:hover svg {
   text-align: justify;
 }
 
+.reference-b p strong {
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+}
+
 .col3 .reference-b img {
-  margin-block: var(--space-4);
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-2);
   border-radius: 50%;
   width: 70%;
+  height: auto;
   max-width: 300px;
   border: 3px solid var(--secondary-color);
-  filter: drop-shadow(2px 3px 4px var(--background));
+  object-fit: cover; 
+  aspect-ratio: 1 / 1;
   transition: 
     transform var(--dur-slow) var(--ease-emphasized), 
     border var(--dur-med) var(--ease-standard);
@@ -815,14 +823,20 @@ a.reservation:hover svg {
 .slides {
   display: flex;
   width: 500%;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
   transition: margin-left var(--dur-slow) var(--ease-emphasized);
 }
 
 .slide {
   position: relative;
+  display: block;
   width: 20%;
   max-height: 90vh;
   max-height: 90dvh;
+  border-radius: var(--r-sm);
 }
 
 .slide img,
@@ -1682,6 +1696,10 @@ input:checked + .slider::before {
 
   li.training-time {
     flex-wrap: wrap;
+  }
+
+  .ff {
+    align-items: flex-start;
   }
 
 .fb-logo {

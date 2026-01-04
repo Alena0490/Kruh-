@@ -327,13 +327,15 @@
                 <article class="homepage">
                     <h2 class="top0">Začátky kruháče</h2>
                     <div class="slider-wrapper">
-                        <div class="sliderhome middle">                
-                            <div class="slides">
-                                <input type="radio" name="r" id="r1" checked>
-                                <input type="radio" name="r" id="r2">
-                                <input type="radio" name="r" id="r3">
-                                <input type="radio" name="r" id="r4">
-                                <input type="radio" name="r" id="r5">
+                        <div class="sliderhome middle">
+                            <fieldset class="slides">
+                                <legend class="sr-only">Galerie fotografií z historie kondičního cvičení</legend>
+                                
+                                <input type="radio" name="r" id="r1" checked aria-label="Slide 1 z 5">
+                                <input type="radio" name="r" id="r2" aria-label="Slide 2 z 5">
+                                <input type="radio" name="r" id="r3" aria-label="Slide 3 z 5">
+                                <input type="radio" name="r" id="r4" aria-label="Slide 4 z 5">
+                                <input type="radio" name="r" id="r5" aria-label="Slide 5 z 5">
                             
                                 <div class="slide s1">
                                     <picture>
@@ -344,42 +346,52 @@
                             
                                 <div class="slide">
                                     <picture>
-                                      <source srcset="img/k2m.webp" media="(max-width: 768px)">
-                                      <img src="img/k2.webp" alt="začátky kruháče na workoutovém hřišti" loading="lazy">
+                                        <source srcset="img/k2m.webp" media="(max-width: 768px)">
+                                        <img src="img/k2.webp" alt="začátky kruháče na workoutovém hřišti" loading="lazy">
                                     </picture>
-                                  </div>
-                                  
-                                  <div class="slide">
+                                </div>
+                                
+                                <div class="slide">
                                     <picture>
-                                      <source srcset="img/k3m.webp" media="(max-width: 768px)">
-                                      <img src="img/k3.webp" alt="workout pod pergolou" loading="lazy">
+                                        <source srcset="img/k3m.webp" media="(max-width: 768px)">
+                                        <img src="img/k3.webp" alt="workout pod pergolou" loading="lazy">
                                     </picture>
-                                  </div>
-                                  
-                                  <div class="slide">
+                                </div>
+                                
+                                <div class="slide">
                                     <picture>
-                                      <source srcset="img/k4m.webp" media="(max-width: 768px)">
-                                      <img src="img/k4.webp" alt="společný trénink kondice na workoutu" loading="lazy">
+                                        <source srcset="img/k4m.webp" media="(max-width: 768px)">
+                                        <img src="img/k4.webp" alt="společný trénink kondice na workoutu" loading="lazy">
                                     </picture>
-                                  </div>
-                                  
-                                  <div class="slide">
+                                </div>
+                                
+                                <div class="slide">
                                     <picture>
-                                      <source srcset="img/k6m.webp" media="(max-width: 768px)">
-                                      <img src="img/k6.webp" alt="trenér cvičí s lanem" loading="lazy">
+                                        <source srcset="img/k6m.webp" media="(max-width: 768px)">
+                                        <img src="img/k6.webp" alt="trenér cvičí s lanem" loading="lazy">
                                     </picture>
-                                  </div>                          
-                            </div>
+                                </div>
+                            </fieldset>
                         
                             <div class="navigation r" role="group" aria-label="Navigace mezi slidy">
-                                <label for="r1"  class="bar"></label>
-                                <label for="r2" class="bar"></label>
-                                <label for="r3" class="bar"></label>
-                                <label for="r4" class="bar"></label>
-                                <label for="r5" class="bar"></label>
+                                <label for="r1" class="bar">
+                                    <span class="sr-only">Přejít na slide 1</span>
+                                </label>
+                                <label for="r2" class="bar">
+                                    <span class="sr-only">Přejít na slide 2</span>
+                                </label>
+                                <label for="r3" class="bar">
+                                    <span class="sr-only">Přejít na slide 3</span>
+                                </label>
+                                <label for="r4" class="bar">
+                                    <span class="sr-only">Přejít na slide 4</span>
+                                </label>
+                                <label for="r5" class="bar">
+                                    <span class="sr-only">Přejít na slide 5</span>
+                                </label>
                             </div>
                         </div>
-                         <p class="end-text" title="Zobrazit fotogalerii" >Více fotografií z tréninků kondičního cvičení v Lázních Bělohrad i v Jičíně najdeš v naší <a href="/fotogalerie" class="basic">fotogalerii</a>.</p>
+                        <p class="end-text" title="Zobrazit fotogalerii">Více fotografií z tréninků kondičního cvičení v Lázních Bělohrad i v Jičíně najdeš v naší <a href="/fotogalerie" class="basic">fotogalerii</a>.</p>
                     </div>
                 </article>
             </main>

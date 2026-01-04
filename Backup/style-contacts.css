@@ -1,3 +1,13 @@
+:root {
+  --form-text: #3b2f02;
+  --form-text-active: #3b2f02;
+}
+
+html.dark {
+   --form-text: var(--text);
+   --form-text-active: #3b2f02;
+}
+
 .contacts li {
   list-style: none;
   margin-bottom: var(--space-2);
@@ -102,7 +112,7 @@ form {
   background-color: var(--form-bg);
   border: 1.5px solid var(--form-border);
   backdrop-filter: blur(5px);
-  margin: var(--space-3) auto var(--space-4);
+  margin: var(--space-3) auto 0;
   border-radius: var(--r-sm);
   max-width: 1000px;
   scroll-snap-align: start;
@@ -111,6 +121,18 @@ form {
 
 form > div:nth-of-type(5) {
   grid-column: 1 / -1;
+}
+
+/* Honeypot - hides the field for users */
+.hp-field {
+    position: absolute !important;
+    left: -9999px !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    overflow: hidden !important;
 }
 
 form label {
@@ -138,7 +160,7 @@ form textarea {
   border: 1.5px solid var(--secondary-color-transparent);
   border-radius: var(--r-sm);
   background: var(--input-bg);
-  color: #3B2F02;
+  color: var(--form-text);
   font-size: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
   outline: 0;
   transition:
@@ -165,6 +187,7 @@ form textarea:focus {
   border:  1px solid var(--secondary-color-darkest);
   background-color: rgba(255, 255, 255, 0.4);
   box-shadow: 0 0 0 1px var(--secondary-color-darkest);
+  color: var(--form-text-active);
 }
 
 input[type=submit] {
@@ -188,6 +211,17 @@ input[type=submit]:hover {
   background-color: var(--secondary-color-light);
 }
 
+.form-note {
+  width: 100%;
+  max-width: 1000px;
+  margin: var(--space-1) auto var(--space-4);
+  padding-left: var(--space-1);
+  text-align: left;
+  font-size: clamp(0.75rem, 0.85rem + 0.1vw, 0.9rem);
+  color: var(--text);
+  opacity: 0.8;
+}
+
 .form-result {
   max-width: 1000px;
   color: var(--text);
@@ -200,19 +234,18 @@ input[type=submit]:hover {
   line-height: 1.4;
   border-radius: var(--r-sm);
   letter-spacing: 1px;
-  filter: drop-shadow(2px 3px 4px var(--background));
 }
 
 .form-result.success {
   display: block;
-  border: 1px solid #56a73bC0;
-  background: rgba(86, 167, 59, 0.35);
+  border: 1px solid var(--clr-success-border);
+  background: var(--clr-success);
 }
 
 .form-result.error {
   display: block;
-  border: 1px solid #bf372aC0;
-  background: rgba(191, 55, 42, 0.35);
+  border: 1px solid var(--clr-error-border);
+  background: var(--clr-error);
 }
 
 @media only screen and (max-width: 995px) {

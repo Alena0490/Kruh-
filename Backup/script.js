@@ -267,10 +267,14 @@ const link = document.getElementById("email-link");
 const text = document.getElementById("email-text");
 
 if (link && text) {
-  const user = "najman.donap";
-  const domain = "seznam.cz";
-  const address = `${user}@${domain}`;
-
-  link.href = `mailto:${address}`;
+  // ROT13 encoded email
+  const encoded = "anwzna.qbanc@frmanz.pm";
+  
+  // ROT13 decode
+  const decoded = encoded.replace(/[a-zA-Z]/g, c => 
+    String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26)
+  );
+  
+  link.href = `mailto:${decoded}`;
   text.textContent = "Tomáš Najman";
 }
