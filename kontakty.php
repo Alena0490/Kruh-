@@ -98,8 +98,12 @@
                 <nav>
                     <ul>
                         <li class="heading-link">
-                            <a class="reservation first" href="/kontakty#kontaktni-udaje" 
-                            title="Rezervace tréninku">
+                            <a class="reservation first" 
+                                href="https://kondicni-cviceni3.reservio.com/"
+                                target="_blank" 
+                                title="Rezervace tréninku"
+                                rel="noopener noreferrer"
+                            >
                                 <span class="nav-row">
                                     <svg class="icon" aria-hidden="true">
                                         <use href="/img/icons.svg#icon-calendar-date"></use>
